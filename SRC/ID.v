@@ -1,21 +1,21 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: ZJU
-// Engineer: 
-// 
-// Create Date:	16:02:45 11/12/2009 
-// Design Name: 
-// Module Name:	ID 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
+//Company: ZJU
+//Engineer: 
 //
-// Dependencies: 
+//Create Date:	16:02:45 11/12/2009 
+//Design Name: 
+//Module Name:	ID 
+//Project Name: 
+//Target Devices: 
+//Tool versions: 
+//Description: 
 //
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: recommend <<Clean Code>>
+//Dependencies: 
+//
+//Revision: 
+//Revision 0.01 - File Created
+//Additional Comments: recommend <<Clean Code>>
 //
 //////////////////////////////////////////////////////////////////////////////////
 module ID(clk,Instruction_id, NextPC_id, RegWrite_wb, RegWriteAddr_wb, RegWriteData_wb, MemRead_ex, 
@@ -94,9 +94,9 @@ module ID(clk,Instruction_id, NextPC_id, RegWrite_wb, RegWriteAddr_wb, RegWriteD
 	assign Stall=((RegWriteAddr_ex==RsAddr_id)||(RegWriteAddr_ex==RtAddr_id))&&MemRead_ex;
 	assign PC_IFWrite=~Stall;
 
-	// Decode inst
+	//Decode inst
 	Decode  Decode(   
-		// Outputs
+		//Outputs
 		.MemtoReg(MemtoReg_id), 
 		.RegWrite(RegWrite_id), 
 		.MemWrite(MemWrite_id), 
@@ -107,20 +107,20 @@ module ID(clk,Instruction_id, NextPC_id, RegWrite_wb, RegWriteAddr_wb, RegWriteD
 		.RegDst(RegDst_id),
 		.J(J) ,
 		.JR(JR), 
-		// Inputs
+		//Inputs
 	  .Instruction(Instruction_id)
 	);
  	 
-	// Registers inst
+	//Registers inst
 
-	// MultiRegisters inst
+	//MultiRegisters inst
 	wire [31:0] RsData_temp,RtData_temp;
 	
 	MultiRegisters   MultiRegisters(
-	// Outputs
+	//Outputs
 	.RsData(RsData_temp), 
 	.RtData(RtData_temp), 
-	// Inputs
+	//Inputs
 	.clk(clk),
 	.WriteData(RegWriteData_wb), 
 	.WriteAddr(RegWriteAddr_wb), 
@@ -129,11 +129,11 @@ module ID(clk,Instruction_id, NextPC_id, RegWrite_wb, RegWriteAddr_wb, RegWriteD
 	.RtAddr(RtAddr_id)
 	);
 
-	// RsSel & RtSel
+	//RsSel & RtSel
 	assign RsSel=RegWrite_wb&&(~(RegWriteAddr_wb==0))&&(RegWriteAddr_wb==RsAddr_id);
 	assign RtSel=RegWrite_wb&&(~(RegWriteAddr_wb==0))&&(RegWriteAddr_wb==RtAddr_id);
 
-	// MUX for RsData_id  &  MUX for RtData_id
+	//MUX for RsData_id  &  MUX for RtData_id
 	assign RsData_id=RsSel==0?RsData_temp:RegWriteData_wb;
 	assign RtData_id=RtSel==0?RtData_temp:RegWriteData_wb;
 
