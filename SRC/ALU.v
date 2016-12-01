@@ -12,30 +12,29 @@
 //
 //******************************************************************************
 
-module ALU (
+module ALU(
 	// Outputs
 	Result,overflow,
 	// Inputs
-	ALUCode, A, B
+	ALUCode,A,B
 );
 
-	input [4:0]	ALUCode;				// Operation select
-	input [31:0]	A, B;
+	input [4:0]	ALUCode;// Operation select
+	input [31:0] A,B;
 
-	output [31:0]	Result;
+	output [31:0] Result;
 	output overflow;
 
 //******************************************************************************
-// Shift operation: ">>>" will perform an arithmetic shift, but the operand
+// Shift operation: ">>>" will perform an arithmetic shift,but the operand
 // must be reg signed
 //******************************************************************************
 	reg signed [31:0] B_reg;
 	
 	always @(B) begin
-		B_reg = B;
+		B_reg=B;
 	end
 
-	
 // Decoded ALU operation select (ALUsel) signals
 	parameter	 alu_add=  5'b00000;
 	parameter	 alu_and=  5'b00001;
@@ -58,12 +57,6 @@ module ALU (
 	parameter	 alu_sra=  5'b10010;	
 	parameter	 alu_slt=  5'b10011;
 	parameter	 alu_sltu= 5'b10100;
-	
-  
-  
-	
-	
-
 	
 //******************************************************************************
 // ALU Result datapath
