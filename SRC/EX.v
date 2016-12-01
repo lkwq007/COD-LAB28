@@ -18,9 +18,9 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module EX(RegDst_ex, ALUCode_ex, ALUSrcA_ex, ALUSrcB_ex, Imm_ex, Sa_ex, RsAddr_ex, RtAddr_ex, RdAddr_ex,
-		  RsData_ex, RtData_ex, RegWriteData_wb, ALUResult_mem, RegWriteAddr_wb, RegWriteAddr_mem, 
-			 RegWrite_wb, RegWrite_mem, RegWriteAddr_ex, ALUResult_ex, MemWriteData_ex, ALU_A, ALU_B);
+module EX(RegDst_ex,ALUCode_ex,ALUSrcA_ex,ALUSrcB_ex,Imm_ex,Sa_ex,RsAddr_ex,RtAddr_ex,RdAddr_ex,
+		  RsData_ex,RtData_ex,RegWriteData_wb,ALUResult_mem,RegWriteAddr_wb,RegWriteAddr_mem,
+			 RegWrite_wb,RegWrite_mem,RegWriteAddr_ex,ALUResult_ex,MemWriteData_ex,ALU_A,ALU_B);
 	input RegDst_ex;
 	input [4:0] ALUCode_ex;
 	input ALUSrcA_ex;
@@ -80,8 +80,8 @@ module EX(RegDst_ex, ALUCode_ex, ALUSrcA_ex, ALUSrcB_ex, Imm_ex, Sa_ex, RsAddr_e
 		.Result(ALUResult_ex),
 		.overflow(),
 		// Inputs
-		.ALUCode(ALUCode_ex), 
-		.A(ALU_A), 
+		.ALUCode(ALUCode_ex),
+		.A(ALU_A),
 		.B(ALU_B)
 	);
 
