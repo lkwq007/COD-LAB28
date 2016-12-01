@@ -91,8 +91,8 @@ module ID(clk,Instruction_id, NextPC_id, RegWrite_wb, RegWriteAddr_wb, RegWriteD
 	end
  
 	//Hazard detectior
-	Stall=((RegWriteAddr_ex==RsAddr_id)||(RegWriteAddr_ex==RtAddr_id))&&MemRead_ex;
-	PC_IFWrite=~Stall;
+	assign Stall=((RegWriteAddr_ex==RsAddr_id)||(RegWriteAddr_ex==RtAddr_id))&&MemRead_ex;
+	assign PC_IFWrite=~Stall;
 
 	// Decode inst
 	Decode  Decode(   
@@ -130,8 +130,8 @@ module ID(clk,Instruction_id, NextPC_id, RegWrite_wb, RegWriteAddr_wb, RegWriteD
 	);
 
 	// RsSel & RtSel
-	RsSel=RegWrite_wb&&(~(RegWriteAddr_wb==0))&&(RegWriteAddr_wb==RsAddr_id);
-	RtSel=RegWrite_wb&&(~(RegWriteAddr_wb==0))&&(RegWriteAddr_wb==RtAddr_id);
+	assign RsSel=RegWrite_wb&&(~(RegWriteAddr_wb==0))&&(RegWriteAddr_wb==RsAddr_id);
+	assign RtSel=RegWrite_wb&&(~(RegWriteAddr_wb==0))&&(RegWriteAddr_wb==RtAddr_id);
 
 	// MUX for RsData_id  &  MUX for RtData_id
 	assign RsData_id=RsSel==0?RsData_temp:RegWriteData_wb;
