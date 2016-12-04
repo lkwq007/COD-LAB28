@@ -72,8 +72,9 @@ module ALU(
 	// result wires
 	//wire[31:0] result_add,result_and,result_xor,result_or,result_nor,result_sub,result_andi,result_xori,result_ori,result_jr,result_beq,result_bne,result_bgez,result_bgtz,result_blez,result_bltz,result_sll,result_srl,result_sra,result_slt,result_sltu,
 	wire[31:0] result_sum;
+	wire co;
 	//module adder_32bits(a,b,ci,s,co);
-	adder_32bits adder(.a(A),.b({32{Binvert}}^B),.ci(Binvert),.co(overflow),.s(result_sum));
+	adder_32bits adder(.a(A),.b({32{Binvert}}^B),.ci(Binvert),.co(co),.s(result_sum));
 	//adder_32bits adder(.a(A),.b({32{Binvert}}^B),.ci(Binvert),.co(),.s(result_add));
 
 /*	assign result_and=A&B;
@@ -116,5 +117,6 @@ module ALU(
 		default:result_final=32'bx;
 		endcase
 	end
-
+	assign overflow=(ALUCode==alu_add?(A[31]~^B[31])^result_sum[31]:2'b0)|(ALUCode==alu_sub?(A[31]^B[31])^result_sum[31]:2'b0);
+	
 endmodule
