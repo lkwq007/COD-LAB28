@@ -41,6 +41,7 @@ module IF(clk,reset,Z,J,JR,PC_IFWrite,JumpAddr,
 		2:PC_in<=JumpAddr;
 		4:PC_in<=JrAddr;
 		default:PC_in<=NextPC_if;
+		endcase
 	end
 
 	//PC REG
