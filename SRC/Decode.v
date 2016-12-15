@@ -63,28 +63,6 @@ Instruction
 	parameter SRA_funct= 6'b000011;
 	parameter SRAV_funct=6'b000111;
 	parameter JR_funct= 6'b001000;
-	reg[4:0] ALUfunct;
-	always @(funct) begin
-		case(funct)
-		ADD_funct :ALUfunct<=alu_add;
-		ADDU_funct :ALUfunct<=alu_add;
-		AND_funct :ALUfunct<=alu_and;
-		XOR_funct :ALUfunct<=alu_xor;
-		OR_funct :ALUfunct<=alu_or;
-		NOR_funct :ALUfunct<=alu_nor;
-		SUB_funct :ALUfunct<=alu_sub;
-		SUBU_funct :ALUfunct<=alu_sub;
-		SLT_funct :ALUfunct<=alu_slt;
-		SLTU_funct :ALUfunct<=alu_sltu;
-		SLL_funct:ALUfunct<=alu_sll;
-		SLLV_funct:ALUfunct<=alu_sll;
-		SRL_funct:ALUfunct<=alu_srl;
-		SRLV_funct:ALUfunct<=alu_srl;
-		SRA_funct:ALUfunct<=alu_sra;
-		SRAV_funct:ALUfunct<=alu_sra;
-		default:5'bx;
-		endcase
-	end
 
 //******************************************************************************
 // R_type1 instruction decode
@@ -225,6 +203,28 @@ Instruction
 	parameter alu_sltu = 5'b10100;
 
 	reg[4:0] ALUtemp;
+	reg[4:0] ALUfunct;
+	always @(funct) begin
+		case(funct)
+		ADD_funct:ALUfunct<=alu_add;
+		ADDU_funct:ALUfunct<=alu_add;
+		AND_funct:ALUfunct<=alu_and;
+		XOR_funct:ALUfunct<=alu_xor;
+		OR_funct:ALUfunct<=alu_or;
+		NOR_funct:ALUfunct<=alu_nor;
+		SUB_funct:ALUfunct<=alu_sub;
+		SUBU_funct:ALUfunct<=alu_sub;
+		SLT_funct:ALUfunct<=alu_slt;
+		SLTU_funct:ALUfunct<=alu_sltu;
+		SLL_funct:ALUfunct<=alu_sll;
+		SLLV_funct:ALUfunct<=alu_sll;
+		SRL_funct:ALUfunct<=alu_srl;
+		SRLV_funct:ALUfunct<=alu_srl;
+		SRA_funct:ALUfunct<=alu_sra;
+		SRAV_funct:ALUfunct<=alu_sra;
+		default:ALUfunct<=5'bx;
+		endcase
+	end
 	always @(op) begin
 		case(op)
 		BEQ_op:ALUtemp<=alu_beq;
@@ -243,6 +243,8 @@ Instruction
 		SLTIU_op:ALUtemp<=alu_sltu;
 		SW_op:ALUtemp<=alu_add;
 		LW_op:ALUtemp<=alu_add;
+		default:ALUtemp<=5'bx;
+		endcase
 	end
-
+	assign ALUCode=ALUtemp;
 endmodule
