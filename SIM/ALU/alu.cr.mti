@@ -1,0 +1,36 @@
+D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SIM/ALU/ALU_tb.v {1 {vlog -work work -vopt D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SIM/ALU/ALU_tb.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module ALU_tb_v
+
+Top level modules:
+	ALU_tb_v
+
+} {} {}} D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/adder_4bits.v {1 {vlog -work work -vopt D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/adder_4bits.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module adder_4bits
+
+Top level modules:
+	adder_4bits
+
+} {} {}} D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/mux_2_to_1.v {1 {vlog -work work -vopt D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/mux_2_to_1.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module mux_2_to_1
+
+Top level modules:
+	mux_2_to_1
+
+} {} {}} D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/ALU.v {1 {vlog -work work -vopt D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/ALU.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}} D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/adder_32bits.v {1 {vlog -work work -vopt D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/adder_32bits.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module adder_32bits
+
+Top level modules:
+	adder_32bits
+
+} {} {}}
