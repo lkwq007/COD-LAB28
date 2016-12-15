@@ -8,9 +8,9 @@ VL6e;SYF<=NogI]DgcbZD_0
 r1
 !s85 0
 31
-In^`5eLWXczU>l;30m9>nN1
+IR27n9mH[o?aHW7_jDeH`L0
 Z0 dD:\Course\Computer-Organization\Homework\lab28\PipelineCPU\SIM\Decode
-w1481771521
+w1481772218
 8D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/Decode.v
 FD:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/Decode.v
 L0 13
@@ -19,8 +19,8 @@ Z2 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
 n@decode
 !s90 -reportprogress|300|-work|work|-vopt|D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/Decode.v|
 !i10b 1
-!s100 <TIhh[F^hmzHH9<Z44a0;3
-!s108 1481771525.760000
+!s100 ]GY>NAn;i<KDmCLLfS<Ll3
+!s108 1481772222.046000
 !s107 D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/Decode.v|
 vDecode_tb_v
 VNBQjZaeFV?6o2QInj[zFQ2
@@ -38,6 +38,6 @@ n@decode_tb_v
 !s85 0
 !s100 ?>`<Pidm3DR`gTgfdJ]540
 !s90 -reportprogress|300|-work|work|-vopt|D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SIM/Decode/Decode_tb.v|
-!s108 1481771525.506000
+!s108 1481772221.799000
 !s107 D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SIM/Decode/Decode_tb.v|
 !i10b 1
