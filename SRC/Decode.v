@@ -225,7 +225,7 @@ Instruction
 		default:ALUfunct<=5'bx;
 		endcase
 	end
-	always @(Instruction) begin
+	always @(*) begin
 		case(op)
 		BEQ_op:ALUtemp<=alu_beq;
 		BNE_op:ALUtemp<=alu_bne;
