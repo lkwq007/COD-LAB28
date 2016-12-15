@@ -52,7 +52,7 @@ module IF(clk,reset,Z,J,JR,PC_IFWrite,JumpAddr,
 	end
 	 
 	//Adder for NextPC
-	adder_32bits pcAdd4(.a(pc),.b({29'b0,3'b100}),.ci(1'b0),.s(NextPC_if),.co());
+	adder_32bits pcAdd4(.a(PC),.b({29'b0,3'b100}),.ci(1'b0),.s(NextPC_if),.co());
   
 	//ROM
 	InstructionROM InstructionROM(
