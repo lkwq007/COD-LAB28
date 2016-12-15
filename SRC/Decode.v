@@ -225,7 +225,7 @@ Instruction
 		default:ALUfunct<=5'bx;
 		endcase
 	end
-	always @(op) begin
+	always @(Instruction) begin
 		case(op)
 		BEQ_op:ALUtemp<=alu_beq;
 		BNE_op:ALUtemp<=alu_bne;
@@ -233,7 +233,7 @@ Instruction
 		BGTZ_op:ALUtemp<=alu_bgtz;
 		BLEZ_op:ALUtemp<=alu_blez;
 		BLTZ_op:ALUtemp<=alu_bltz;
-		R_type_op:ALUtemp<=ALUfunct;
+		R_type_op:ALUtemp=ALUfunct;
 		ADDI_op:ALUtemp<=alu_add;
 		ADDIU_op:ALUtemp<=alu_add;
 		ANDI_op:ALUtemp<=alu_andi;
