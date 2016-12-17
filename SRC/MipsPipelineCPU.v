@@ -60,6 +60,7 @@ module MipsPipelineCPU(clk,reset,JumpFlag,Instruction_id,ALU_A,
  
 	//IF->ID Register
 	dffre #(.WIDTH(64)) if_id(.clk(clk),.en(PC_IFWrite),.r(IF_flush),.d({NextPC_if,Instruction_if}),.q({NextPC_id,Instruction_id}));	 
+	wire[31:0] NextPC_id;
 	//ID Module	
 	wire[4:0] RtAddr_id,RdAddr_id,RsAddr_id;
 	wire RegWrite_wb,MemRead_ex,MemtoReg_id,RegWrite_id,MemWrite_id;

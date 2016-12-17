@@ -232,7 +232,8 @@ Instruction
 		BGEZ_op:ALUtemp=alu_bgez;
 		BGTZ_op:ALUtemp=alu_bgtz;
 		BLEZ_op:ALUtemp=alu_blez;
-		BLTZ_op:ALUtemp=alu_bltz;
+		//BLTZ_op:ALUtemp=alu_bltz;
+		//same op code!
 		R_type_op:ALUtemp=ALUfunct;
 		ADDI_op:ALUtemp=alu_add;
 		ADDIU_op:ALUtemp=alu_add;
