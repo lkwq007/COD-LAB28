@@ -65,7 +65,7 @@ module ID(clk,Instruction_id, NextPC_id, RegWrite_wb, RegWriteAddr_wb, RegWriteD
 	assign JumpAddr={NextPC_id[31:28],Instruction_id[25:0],2'b00};
 
 	//BranchAddrress
-	adder_32bits addOffset(.a(NextPC_id),.b({Imm_id[29:0],2'b0}),.ci(0),.s(BranchAddr),.co()));
+	adder_32bits addOffset(.a(NextPC_id),.b({Imm_id[29:0],2'b0}),.ci(0),.s(BranchAddr),.co());
 
 	//JrAddress
 	assign JrAddr=RsData_id;
@@ -80,14 +80,15 @@ module ID(clk,Instruction_id, NextPC_id, RegWrite_wb, RegWriteAddr_wb, RegWriteD
 	parameter alu_bltz=5'b01111;
 	reg Z;
 	always @(*) begin
-		case(ALUCode)
-		alu_beq:Z=&(RsData~^RtData);
-		alu_bne:Z=|(RsData^RtData);
-		alu_bgez:Z=~RsData[31];
-		alu_bgtz:Z=~RsData[31]&&(|RsData);
-		alu_bltz:Z=RsData[31];
-		alu_blez:Z=RsData[31]||~(|RsData);
+		case(ALUCode_id)
+		alu_beq:Z=&(RsData_id~^RtData_id);
+		alu_bne:Z=|(RsData_id^RtData_id);
+		alu_bgez:Z=~RsData_id[31];
+		alu_bgtz:Z=~RsData_id[31]&&(|RsData_id);
+		alu_bltz:Z=RsData_id[31];
+		alu_blez:Z=RsData_id[31]||~(|RsData_id);
 		default:Z=1'b0;
+		endcase
 	end
  
 	//Hazard detectior
