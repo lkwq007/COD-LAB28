@@ -1,0 +1,1539 @@
+Release 9.2i - xst J.36
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 0.31 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Parameter xsthdpdir set to ./xst
+CPU : 0.00 / 0.31 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Reading design: MipsPipelineCPU.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) Partition Resource Summary
+     9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "MipsPipelineCPU.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "MipsPipelineCPU"
+Output Format                      : NGC
+Target Device                      : xc2vp30-7-ff896
+
+---- Source Options
+Top Module Name                    : MipsPipelineCPU
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Convert Tristates To Logic         : Yes
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Library Search Order               : MipsPipelineCPU.lso
+Keep Hierarchy                     : NO
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "../SRC/mux_2_to_1.v" in library work
+Compiling verilog file "../SRC/adder_4bits.v" in library work
+Module <mux_2_to_1> compiled
+Compiling verilog file "../SRC/adder_32bits.v" in library work
+Module <adder_4bits> compiled
+Compiling verilog file "../SRC/Registers.v" in library work
+Module <adder_32bits> compiled
+Compiling verilog file "../SRC/InstructionROM.v" in library work
+Module <Registers> compiled
+Compiling verilog file "../SRC/Decode.v" in library work
+Module <InstructionROM> compiled
+Compiling verilog file "../SRC/ALU.v" in library work
+Module <Decode> compiled
+Compiling verilog file "../SRC/ff_lib.v" in library work
+Module <ALU> compiled
+Module <dff> compiled
+Module <dffr> compiled
+Compiling verilog file "../SRC/IF.v" in library work
+Module <dffre> compiled
+Compiling verilog file "../SRC/ID.v" in library work
+Module <IF> compiled
+Compiling verilog file "../SRC/EX.v" in library work
+Module <ID> compiled
+Compiling verilog file "./DataRAM.v" in library work
+Module <EX> compiled
+Compiling verilog file "../SRC/MipsPipelineCPU.v" in library work
+Module <DataRAM> compiled
+Module <MipsPipelineCPU> compiled
+No errors in compilation
+Analysis of file <"MipsPipelineCPU.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <MipsPipelineCPU> in library <work>.
+
+Analyzing hierarchy for module <IF> in library <work>.
+
+Analyzing hierarchy for module <dffre> in library <work> with parameters.
+	WIDTH = "00000000000000000000000001000000"
+
+Analyzing hierarchy for module <ID> in library <work> with parameters.
+	alu_beq = "01010"
+	alu_bgez = "01100"
+	alu_bgtz = "01101"
+	alu_blez = "01110"
+	alu_bltz = "01111"
+	alu_bne = "01011"
+
+Analyzing hierarchy for module <dffre> in library <work> with parameters.
+	WIDTH = "00000000000000000000000000000010"
+
+Analyzing hierarchy for module <dffre> in library <work> with parameters.
+	WIDTH = "00000000000000000000000000000111"
+
+Analyzing hierarchy for module <dffre> in library <work> with parameters.
+	WIDTH = "00000000000000000000000010000000"
+
+Analyzing hierarchy for module <dffre> in library <work> with parameters.
+	WIDTH = "00000000000000000000000000001111"
+
+Analyzing hierarchy for module <EX> in library <work>.
+
+Analyzing hierarchy for module <dffre> in library <work> with parameters.
+	WIDTH = "00000000000000000000000000000001"
+
+Analyzing hierarchy for module <dffre> in library <work> with parameters.
+	WIDTH = "00000000000000000000000001000101"
+
+Analyzing hierarchy for module <dffre> in library <work> with parameters.
+	WIDTH = "00000000000000000000000000100000"
+
+Analyzing hierarchy for module <adder_32bits> in library <work>.
+
+Analyzing hierarchy for module <InstructionROM> in library <work>.
+
+Analyzing hierarchy for module <Decode> in library <work> with parameters.
+	ADDIU_op = "001001"
+	ADDI_op = "001000"
+	ADDU_funct = "100001"
+	ADD_funct = "100000"
+	ANDI_op = "001100"
+	AND_funct = "100100"
+	BEQ_op = "000100"
+	BGEZ_op = "000001"
+	BGEZ_rt = "00001"
+	BGTZ_op = "000111"
+	BGTZ_rt = "00000"
+	BLEZ_op = "000110"
+	BLEZ_rt = "00000"
+	BLTZ_op = "000001"
+	BLTZ_rt = "00000"
+	BNE_op = "000101"
+	JR_funct = "001000"
+	J_op = "000010"
+	LW_op = "100011"
+	NOR_funct = "100111"
+	ORI_op = "001101"
+	OR_funct = "100101"
+	R_type_op = "000000"
+	SLLV_funct = "000100"
+	SLL_funct = "000000"
+	SLTIU_op = "001011"
+	SLTI_op = "001010"
+	SLTU_funct = "101011"
+	SLT_funct = "101010"
+	SRAV_funct = "000111"
+	SRA_funct = "000011"
+	SRLV_funct = "000110"
+	SRL_funct = "000010"
+	SUBU_funct = "100011"
+	SUB_funct = "100010"
+	SW_op = "101011"
+	XORI_op = "001110"
+	XOR_funct = "100110"
+	alu_add = "00000"
+	alu_and = "00001"
+	alu_andi = "00110"
+	alu_beq = "01010"
+	alu_bgez = "01100"
+	alu_bgtz = "01101"
+	alu_blez = "01110"
+	alu_bltz = "01111"
+	alu_bne = "01011"
+	alu_jr = "01001"
+	alu_nor = "00100"
+	alu_or = "00011"
+	alu_ori = "01000"
+	alu_sll = "10000"
+	alu_slt = "10011"
+	alu_sltu = "10100"
+	alu_sra = "10010"
+	alu_srl = "10001"
+	alu_sub = "00101"
+	alu_xor = "00010"
+	alu_xori = "00111"
+
+Analyzing hierarchy for module <Registers> in library <work>.
+
+Analyzing hierarchy for module <ALU> in library <work> with parameters.
+	alu_add = "00000"
+	alu_and = "00001"
+	alu_andi = "00110"
+	alu_beq = "01010"
+	alu_bgez = "01100"
+	alu_bgtz = "01101"
+	alu_blez = "01110"
+	alu_bltz = "01111"
+	alu_bne = "01011"
+	alu_jr = "01001"
+	alu_nor = "00100"
+	alu_or = "00011"
+	alu_ori = "01000"
+	alu_sll = "10000"
+	alu_slt = "10011"
+	alu_sltu = "10100"
+	alu_sra = "10010"
+	alu_srl = "10001"
+	alu_sub = "00101"
+	alu_xor = "00010"
+	alu_xori = "00111"
+
+Analyzing hierarchy for module <adder_4bits> in library <work>.
+
+Analyzing hierarchy for module <mux_2_to_1> in library <work> with parameters.
+	N = "00000000000000000000000000000100"
+
+Analyzing hierarchy for module <adder_32bits> in library <work>.
+
+Analyzing hierarchy for module <adder_4bits> in library <work>.
+
+Analyzing hierarchy for module <mux_2_to_1> in library <work> with parameters.
+	N = "00000000000000000000000000000100"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <MipsPipelineCPU>.
+WARNING:Xst:863 - "../SRC/MipsPipelineCPU.v" line 34: Name conflict (<stall> and <Stall>, renaming stall as stall_rnm0).
+Module <MipsPipelineCPU> is correct for synthesis.
+ 
+Analyzing module <IF> in library <work>.
+Module <IF> is correct for synthesis.
+ 
+Analyzing module <adder_32bits> in library <work>.
+Module <adder_32bits> is correct for synthesis.
+ 
+Analyzing module <adder_4bits> in library <work>.
+Module <adder_4bits> is correct for synthesis.
+ 
+Analyzing module <mux_2_to_1> in library <work>.
+	N = 32'sb00000000000000000000000000000100
+Module <mux_2_to_1> is correct for synthesis.
+ 
+Analyzing module <InstructionROM> in library <work>.
+Module <InstructionROM> is correct for synthesis.
+ 
+Analyzing module <dffre.1> in library <work>.
+	WIDTH = 32'sb00000000000000000000000001000000
+Module <dffre.1> is correct for synthesis.
+ 
+Analyzing module <ID> in library <work>.
+	alu_beq = 5'b01010
+	alu_bgez = 5'b01100
+	alu_bgtz = 5'b01101
+	alu_blez = 5'b01110
+	alu_bltz = 5'b01111
+	alu_bne = 5'b01011
+Module <ID> is correct for synthesis.
+ 
+Analyzing module <Decode> in library <work>.
+	ADDIU_op = 6'b001001
+	ADDI_op = 6'b001000
+	ADDU_funct = 6'b100001
+	ADD_funct = 6'b100000
+	ANDI_op = 6'b001100
+	AND_funct = 6'b100100
+	BEQ_op = 6'b000100
+	BGEZ_op = 6'b000001
+	BGEZ_rt = 5'b00001
+	BGTZ_op = 6'b000111
+	BGTZ_rt = 5'b00000
+	BLEZ_op = 6'b000110
+	BLEZ_rt = 5'b00000
+	BLTZ_op = 6'b000001
+	BLTZ_rt = 5'b00000
+	BNE_op = 6'b000101
+	JR_funct = 6'b001000
+	J_op = 6'b000010
+	LW_op = 6'b100011
+	NOR_funct = 6'b100111
+	ORI_op = 6'b001101
+	OR_funct = 6'b100101
+	R_type_op = 6'b000000
+	SLLV_funct = 6'b000100
+	SLL_funct = 6'b000000
+	SLTIU_op = 6'b001011
+	SLTI_op = 6'b001010
+	SLTU_funct = 6'b101011
+	SLT_funct = 6'b101010
+	SRAV_funct = 6'b000111
+	SRA_funct = 6'b000011
+	SRLV_funct = 6'b000110
+	SRL_funct = 6'b000010
+	SUBU_funct = 6'b100011
+	SUB_funct = 6'b100010
+	SW_op = 6'b101011
+	XORI_op = 6'b001110
+	XOR_funct = 6'b100110
+	alu_add = 5'b00000
+	alu_and = 5'b00001
+	alu_andi = 5'b00110
+	alu_beq = 5'b01010
+	alu_bgez = 5'b01100
+	alu_bgtz = 5'b01101
+	alu_blez = 5'b01110
+	alu_bltz = 5'b01111
+	alu_bne = 5'b01011
+	alu_jr = 5'b01001
+	alu_nor = 5'b00100
+	alu_or = 5'b00011
+	alu_ori = 5'b01000
+	alu_sll = 5'b10000
+	alu_slt = 5'b10011
+	alu_sltu = 5'b10100
+	alu_sra = 5'b10010
+	alu_srl = 5'b10001
+	alu_sub = 5'b00101
+	alu_xor = 5'b00010
+	alu_xori = 5'b00111
+WARNING:Xst:883 - "../SRC/Decode.v" line 235: Ignored duplicate item in case statement. 
+Module <Decode> is correct for synthesis.
+ 
+Analyzing module <Registers> in library <work>.
+Module <Registers> is correct for synthesis.
+ 
+Analyzing module <dffre.2> in library <work>.
+	WIDTH = 32'sb00000000000000000000000000000010
+Module <dffre.2> is correct for synthesis.
+ 
+Analyzing module <dffre.3> in library <work>.
+	WIDTH = 32'sb00000000000000000000000000000111
+Module <dffre.3> is correct for synthesis.
+ 
+Analyzing module <dffre.4> in library <work>.
+	WIDTH = 32'sb00000000000000000000000010000000
+Module <dffre.4> is correct for synthesis.
+ 
+Analyzing module <dffre.5> in library <work>.
+	WIDTH = 32'sb00000000000000000000000000001111
+Module <dffre.5> is correct for synthesis.
+ 
+Analyzing module <EX> in library <work>.
+Module <EX> is correct for synthesis.
+ 
+Analyzing module <ALU> in library <work>.
+	alu_add = 5'b00000
+	alu_and = 5'b00001
+	alu_andi = 5'b00110
+	alu_beq = 5'b01010
+	alu_bgez = 5'b01100
+	alu_bgtz = 5'b01101
+	alu_blez = 5'b01110
+	alu_bltz = 5'b01111
+	alu_bne = 5'b01011
+	alu_jr = 5'b01001
+	alu_nor = 5'b00100
+	alu_or = 5'b00011
+	alu_ori = 5'b01000
+	alu_sll = 5'b10000
+	alu_slt = 5'b10011
+	alu_sltu = 5'b10100
+	alu_sra = 5'b10010
+	alu_srl = 5'b10001
+	alu_sub = 5'b00101
+	alu_xor = 5'b00010
+	alu_xori = 5'b00111
+Module <ALU> is correct for synthesis.
+ 
+Analyzing module <dffre.6> in library <work>.
+	WIDTH = 32'sb00000000000000000000000000000001
+Module <dffre.6> is correct for synthesis.
+ 
+Analyzing module <dffre.7> in library <work>.
+	WIDTH = 32'sb00000000000000000000000001000101
+Module <dffre.7> is correct for synthesis.
+ 
+Analyzing module <dffre.8> in library <work>.
+	WIDTH = 32'sb00000000000000000000000000100000
+Module <dffre.8> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <dffre_1>.
+    Related source file is "../SRC/ff_lib.v".
+    Found 64-bit register for signal <q>.
+    Summary:
+	inferred  64 D-type flip-flop(s).
+Unit <dffre_1> synthesized.
+
+
+Synthesizing Unit <dffre_2>.
+    Related source file is "../SRC/ff_lib.v".
+    Found 2-bit register for signal <q>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <dffre_2> synthesized.
+
+
+Synthesizing Unit <dffre_3>.
+    Related source file is "../SRC/ff_lib.v".
+    Found 7-bit register for signal <q>.
+    Summary:
+	inferred   7 D-type flip-flop(s).
+Unit <dffre_3> synthesized.
+
+
+Synthesizing Unit <dffre_4>.
+    Related source file is "../SRC/ff_lib.v".
+    Found 128-bit register for signal <q>.
+    Summary:
+	inferred 128 D-type flip-flop(s).
+Unit <dffre_4> synthesized.
+
+
+Synthesizing Unit <dffre_5>.
+    Related source file is "../SRC/ff_lib.v".
+    Found 15-bit register for signal <q>.
+    Summary:
+	inferred  15 D-type flip-flop(s).
+Unit <dffre_5> synthesized.
+
+
+Synthesizing Unit <dffre_6>.
+    Related source file is "../SRC/ff_lib.v".
+    Found 1-bit register for signal <q<0>>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <dffre_6> synthesized.
+
+
+Synthesizing Unit <dffre_7>.
+    Related source file is "../SRC/ff_lib.v".
+    Found 69-bit register for signal <q>.
+    Summary:
+	inferred  69 D-type flip-flop(s).
+Unit <dffre_7> synthesized.
+
+
+Synthesizing Unit <dffre_8>.
+    Related source file is "../SRC/ff_lib.v".
+    Found 32-bit register for signal <q>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <dffre_8> synthesized.
+
+
+Synthesizing Unit <InstructionROM>.
+    Related source file is "../SRC/InstructionROM.v".
+    Found 16x32-bit ROM for signal <dout$mux0000>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <InstructionROM> synthesized.
+
+
+Synthesizing Unit <adder_4bits>.
+    Related source file is "../SRC/adder_4bits.v".
+    Found 4-bit xor2 for signal <s>.
+Unit <adder_4bits> synthesized.
+
+
+Synthesizing Unit <mux_2_to_1>.
+    Related source file is "../SRC/mux_2_to_1.v".
+Unit <mux_2_to_1> synthesized.
+
+
+Synthesizing Unit <Decode>.
+    Related source file is "../SRC/Decode.v".
+WARNING:Xst:646 - Signal <Branch> is assigned but never used.
+Unit <Decode> synthesized.
+
+
+Synthesizing Unit <Registers>.
+    Related source file is "../SRC/Registers.v".
+    Found 32x32-bit dual-port RAM <Mram_regs> for signal <regs>.
+    Found 32x32-bit dual-port RAM <Mram_regs_ren> for signal <regs>.
+    Summary:
+	inferred   2 RAM(s).
+Unit <Registers> synthesized.
+
+
+Synthesizing Unit <adder_32bits>.
+    Related source file is "../SRC/adder_32bits.v".
+Unit <adder_32bits> synthesized.
+
+
+Synthesizing Unit <IF>.
+    Related source file is "../SRC/IF.v".
+    Found 32-bit register for signal <PC>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <IF> synthesized.
+
+
+Synthesizing Unit <ID>.
+    Related source file is "../SRC/ID.v".
+    Found 5-bit comparator equal for signal <RsSel$cmp_eq0001> created at line 134.
+    Found 5-bit comparator equal for signal <RtSel$cmp_eq0000> created at line 135.
+    Found 5-bit comparator equal for signal <Stall$cmp_eq0000> created at line 95.
+    Found 5-bit comparator equal for signal <Stall$cmp_eq0001> created at line 95.
+    Found 1-bit xor2 for signal <Z$xor0000>.
+    Found 1-bit xor2 for signal <Z$xor0001>.
+    Found 1-bit xor2 for signal <Z$xor0002>.
+    Found 1-bit xor2 for signal <Z$xor0003>.
+    Found 1-bit xor2 for signal <Z$xor0004>.
+    Found 1-bit xor2 for signal <Z$xor0005>.
+    Found 1-bit xor2 for signal <Z$xor0006>.
+    Found 1-bit xor2 for signal <Z$xor0007>.
+    Found 1-bit xor2 for signal <Z$xor0008>.
+    Found 1-bit xor2 for signal <Z$xor0009>.
+    Found 1-bit xor2 for signal <Z$xor0010>.
+    Found 1-bit xor2 for signal <Z$xor0011>.
+    Found 1-bit xor2 for signal <Z$xor0012>.
+    Found 1-bit xor2 for signal <Z$xor0013>.
+    Found 1-bit xor2 for signal <Z$xor0014>.
+    Found 1-bit xor2 for signal <Z$xor0015>.
+    Found 1-bit xor2 for signal <Z$xor0016>.
+    Found 1-bit xor2 for signal <Z$xor0017>.
+    Found 1-bit xor2 for signal <Z$xor0018>.
+    Found 1-bit xor2 for signal <Z$xor0019>.
+    Found 1-bit xor2 for signal <Z$xor0020>.
+    Found 1-bit xor2 for signal <Z$xor0021>.
+    Found 1-bit xor2 for signal <Z$xor0022>.
+    Found 1-bit xor2 for signal <Z$xor0023>.
+    Found 1-bit xor2 for signal <Z$xor0024>.
+    Found 1-bit xor2 for signal <Z$xor0025>.
+    Found 1-bit xor2 for signal <Z$xor0026>.
+    Found 1-bit xor2 for signal <Z$xor0027>.
+    Found 1-bit xor2 for signal <Z$xor0028>.
+    Found 1-bit xor2 for signal <Z$xor0029>.
+    Found 1-bit xor2 for signal <Z$xor0030>.
+    Found 1-bit xor2 for signal <Z$xor0031>.
+    Summary:
+	inferred   4 Comparator(s).
+Unit <ID> synthesized.
+
+
+Synthesizing Unit <ALU>.
+    Related source file is "../SRC/ALU.v".
+WARNING:Xst:646 - Signal <co> is assigned but never used.
+    Found 32-bit xor2 for signal <$xor0000> created at line 77.
+    Found 1-bit xor2 for signal <overflow$xor0000>.
+    Found 1-bit xor2 for signal <overflow$xor0001> created at line 120.
+    Found 32-bit shifter logical left for signal <result_final$shift0003> created at line 112.
+    Found 32-bit shifter logical right for signal <result_final$shift0004> created at line 113.
+    Found 32-bit shifter arithmetic right for signal <result_final$shift0005> created at line 114.
+    Found 32-bit xor2 for signal <result_final$xor0000> created at line 104.
+    Summary:
+	inferred   3 Combinational logic shifter(s).
+Unit <ALU> synthesized.
+
+
+Synthesizing Unit <EX>.
+    Related source file is "../SRC/EX.v".
+WARNING:Xst:1305 - Output <MemWriteData_ex> is never assigned. Tied to value 00000000000000000000000000000000.
+    Found 32-bit 4-to-1 multiplexer for signal <A_temp>.
+    Found 32-bit 4-to-1 multiplexer for signal <B_temp>.
+    Found 5-bit comparator equal for signal <ForwardA_0$cmp_eq0000> created at line 49.
+    Found 5-bit comparator not equal for signal <ForwardA_0$cmp_ne0001> created at line 49.
+    Found 5-bit comparator equal for signal <ForwardA_1$cmp_eq0000> created at line 50.
+    Found 5-bit comparator equal for signal <ForwardB_1$cmp_eq0000> created at line 52.
+    Summary:
+	inferred   4 Comparator(s).
+	inferred  64 Multiplexer(s).
+Unit <EX> synthesized.
+
+
+Synthesizing Unit <MipsPipelineCPU>.
+    Related source file is "../SRC/MipsPipelineCPU.v".
+WARNING:Xst:653 - Signal <RegWriteAddr_wb> is used but never assigned. Tied to value 00000.
+WARNING:Xst:646 - Signal <ALUCode_id<4>> is assigned but never used.
+WARNING:Xst:1780 - Signal <stall_rnm0> is never used or assigned.
+Unit <MipsPipelineCPU> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 32x32-bit dual-port RAM                               : 2
+# ROMs                                                 : 1
+ 16x32-bit ROM                                         : 1
+# Registers                                            : 12
+ 1-bit register                                        : 1
+ 128-bit register                                      : 1
+ 15-bit register                                       : 1
+ 2-bit register                                        : 4
+ 32-bit register                                       : 2
+ 64-bit register                                       : 1
+ 69-bit register                                       : 1
+ 7-bit register                                        : 1
+# Comparators                                          : 8
+ 5-bit comparator equal                                : 7
+ 5-bit comparator not equal                            : 1
+# Multiplexers                                         : 2
+ 32-bit 4-to-1 multiplexer                             : 2
+# Logic shifters                                       : 3
+ 32-bit shifter arithmetic right                       : 1
+ 32-bit shifter logical left                           : 1
+ 32-bit shifter logical right                          : 1
+# Xors                                                 : 81
+ 1-bit xor2                                            : 34
+ 32-bit xor2                                           : 2
+ 4-bit xor2                                            : 45
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Loading device for application Rf_Device from file '2vp30.nph' in environment C:\Xilinx92i.
+Reading core <DataRAM.ngc>.
+Loading core <DataRAM> for timing and area information for instance <DataRAM>.
+INFO:Xst:2664 - HDL ADVISOR - Unit <Registers> : The RAM <Mram_regs> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <RegWrite>      | high     |
+    |     addrA          | connected to signal <WriteAddr>     |          |
+    |     diA            | connected to signal <WriteData>     |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     addrB          | connected to signal <RsAddr>        |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:2664 - HDL ADVISOR - Unit <Registers> : The RAM <Mram_regs_ren> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <RegWrite>      | high     |
+    |     addrA          | connected to signal <WriteAddr>     |          |
+    |     diA            | connected to signal <WriteData>     |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     addrB          | connected to signal <RtAddr>        |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+WARNING:Xst:1710 - FF/Latch  <q_20> (without init value) has a constant value of 0 in block <Data_ex_mem>.
+WARNING:Xst:1710 - FF/Latch  <q_21> (without init value) has a constant value of 0 in block <Data_ex_mem>.
+WARNING:Xst:1710 - FF/Latch  <q_22> (without init value) has a constant value of 0 in block <Data_ex_mem>.
+WARNING:Xst:1710 - FF/Latch  <q_23> (without init value) has a constant value of 0 in block <Data_ex_mem>.
+WARNING:Xst:1710 - FF/Latch  <q_24> (without init value) has a constant value of 0 in block <Data_ex_mem>.
+WARNING:Xst:1710 - FF/Latch  <q_25> (without init value) has a constant value of 0 in block <Data_ex_mem>.
+WARNING:Xst:1710 - FF/Latch  <q_26> (without init value) has a constant value of 0 in block <Data_ex_mem>.
+WARNING:Xst:1710 - FF/Latch  <q_27> (without init value) has a constant value of 0 in block <Data_ex_mem>.
+WARNING:Xst:1710 - FF/Latch  <q_28> (without init value) has a constant value of 0 in block <Data_ex_mem>.
+WARNING:Xst:1710 - FF/Latch  <q_29> (without init value) has a constant value of 0 in block <Data_ex_mem>.
+WARNING:Xst:1710 - FF/Latch  <q_30> (without init value) has a constant value of 0 in block <Data_ex_mem>.
+WARNING:Xst:1710 - FF/Latch  <q_31> (without init value) has a constant value of 0 in block <Data_ex_mem>.
+WARNING:Xst:1710 - FF/Latch  <q_32> (without init value) has a constant value of 0 in block <Data_ex_mem>.
+WARNING:Xst:1710 - FF/Latch  <q_33> (without init value) has a constant value of 0 in block <Data_ex_mem>.
+WARNING:Xst:1710 - FF/Latch  <q_34> (without init value) has a constant value of 0 in block <Data_ex_mem>.
+WARNING:Xst:1710 - FF/Latch  <q_35> (without init value) has a constant value of 0 in block <Data_ex_mem>.
+WARNING:Xst:1710 - FF/Latch  <q_36> (without init value) has a constant value of 0 in block <Data_ex_mem>.
+WARNING:Xst:1710 - FF/Latch  <q_0> (without init value) has a constant value of 0 in block <Data_mem_wb>.
+WARNING:Xst:1710 - FF/Latch  <q_1> (without init value) has a constant value of 0 in block <Data_ex_mem>.
+WARNING:Xst:1710 - FF/Latch  <q_2> (without init value) has a constant value of 0 in block <Data_ex_mem>.
+WARNING:Xst:1710 - FF/Latch  <q_3> (without init value) has a constant value of 0 in block <Data_ex_mem>.
+WARNING:Xst:1710 - FF/Latch  <q_4> (without init value) has a constant value of 0 in block <Data_ex_mem>.
+WARNING:Xst:1710 - FF/Latch  <q_5> (without init value) has a constant value of 0 in block <Data_ex_mem>.
+WARNING:Xst:1710 - FF/Latch  <q_6> (without init value) has a constant value of 0 in block <Data_ex_mem>.
+WARNING:Xst:1710 - FF/Latch  <q_7> (without init value) has a constant value of 0 in block <Data_ex_mem>.
+WARNING:Xst:1710 - FF/Latch  <q_8> (without init value) has a constant value of 0 in block <Data_ex_mem>.
+WARNING:Xst:1710 - FF/Latch  <q_9> (without init value) has a constant value of 0 in block <Data_ex_mem>.
+WARNING:Xst:1710 - FF/Latch  <q_10> (without init value) has a constant value of 0 in block <Data_ex_mem>.
+WARNING:Xst:1710 - FF/Latch  <q_11> (without init value) has a constant value of 0 in block <Data_ex_mem>.
+WARNING:Xst:1710 - FF/Latch  <q_12> (without init value) has a constant value of 0 in block <Data_ex_mem>.
+WARNING:Xst:1710 - FF/Latch  <q_13> (without init value) has a constant value of 0 in block <Data_ex_mem>.
+WARNING:Xst:1710 - FF/Latch  <q_14> (without init value) has a constant value of 0 in block <Data_ex_mem>.
+WARNING:Xst:1710 - FF/Latch  <q_15> (without init value) has a constant value of 0 in block <Data_ex_mem>.
+WARNING:Xst:1710 - FF/Latch  <q_16> (without init value) has a constant value of 0 in block <Data_ex_mem>.
+WARNING:Xst:1710 - FF/Latch  <q_17> (without init value) has a constant value of 0 in block <Data_ex_mem>.
+WARNING:Xst:1710 - FF/Latch  <q_18> (without init value) has a constant value of 0 in block <Data_ex_mem>.
+WARNING:Xst:1710 - FF/Latch  <q_19> (without init value) has a constant value of 0 in block <Data_ex_mem>.
+WARNING:Xst:2677 - Node <q_33> of sequential type is unconnected in block <if_id>.
+WARNING:Xst:2677 - Node <q_34> of sequential type is unconnected in block <if_id>.
+WARNING:Xst:2677 - Node <q_35> of sequential type is unconnected in block <if_id>.
+WARNING:Xst:2677 - Node <q_36> of sequential type is unconnected in block <if_id>.
+WARNING:Xst:2677 - Node <q_37> of sequential type is unconnected in block <if_id>.
+WARNING:Xst:2677 - Node <q_38> of sequential type is unconnected in block <if_id>.
+WARNING:Xst:2677 - Node <q_39> of sequential type is unconnected in block <if_id>.
+WARNING:Xst:2677 - Node <q_40> of sequential type is unconnected in block <if_id>.
+WARNING:Xst:2677 - Node <q_41> of sequential type is unconnected in block <if_id>.
+WARNING:Xst:2677 - Node <q_42> of sequential type is unconnected in block <if_id>.
+WARNING:Xst:2677 - Node <q_43> of sequential type is unconnected in block <if_id>.
+WARNING:Xst:2677 - Node <q_44> of sequential type is unconnected in block <if_id>.
+WARNING:Xst:2677 - Node <q_45> of sequential type is unconnected in block <if_id>.
+WARNING:Xst:2677 - Node <q_46> of sequential type is unconnected in block <if_id>.
+WARNING:Xst:2677 - Node <q_47> of sequential type is unconnected in block <if_id>.
+WARNING:Xst:2677 - Node <q_48> of sequential type is unconnected in block <if_id>.
+WARNING:Xst:2677 - Node <q_49> of sequential type is unconnected in block <if_id>.
+WARNING:Xst:2677 - Node <q_50> of sequential type is unconnected in block <if_id>.
+WARNING:Xst:2677 - Node <q_51> of sequential type is unconnected in block <if_id>.
+WARNING:Xst:2677 - Node <q_52> of sequential type is unconnected in block <if_id>.
+WARNING:Xst:2677 - Node <q_53> of sequential type is unconnected in block <if_id>.
+WARNING:Xst:2677 - Node <q_54> of sequential type is unconnected in block <if_id>.
+WARNING:Xst:2677 - Node <q_55> of sequential type is unconnected in block <if_id>.
+WARNING:Xst:2677 - Node <q_56> of sequential type is unconnected in block <if_id>.
+WARNING:Xst:2677 - Node <q_57> of sequential type is unconnected in block <if_id>.
+WARNING:Xst:2677 - Node <q_58> of sequential type is unconnected in block <if_id>.
+WARNING:Xst:2677 - Node <q_59> of sequential type is unconnected in block <if_id>.
+WARNING:Xst:2677 - Node <q_60> of sequential type is unconnected in block <if_id>.
+WARNING:Xst:2677 - Node <q_61> of sequential type is unconnected in block <if_id>.
+WARNING:Xst:2677 - Node <q_62> of sequential type is unconnected in block <if_id>.
+WARNING:Xst:2677 - Node <q_63> of sequential type is unconnected in block <if_id>.
+WARNING:Xst:2677 - Node <q_4> of sequential type is unconnected in block <EX_id_ex>.
+WARNING:Xst:2677 - Node <q_5> of sequential type is unconnected in block <EX_id_ex>.
+WARNING:Xst:2677 - Node <q_6> of sequential type is unconnected in block <EX_id_ex>.
+WARNING:Xst:2677 - Node <q_4> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_5> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_6> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_7> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_8> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_9> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_10> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_11> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_12> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_13> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_14> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_15> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_16> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_17> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_18> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_19> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_20> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_21> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_22> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_23> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_24> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_25> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_26> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_27> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_28> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_29> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_30> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_31> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_32> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_33> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_34> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_35> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_36> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_37> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_38> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_39> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_40> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_41> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_42> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_43> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_44> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_45> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_46> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_47> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_48> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_49> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_50> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_51> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_52> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_53> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_54> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_55> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_56> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_57> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_58> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_59> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_60> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_61> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_62> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_63> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_64> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_65> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_66> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_67> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_68> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_69> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_70> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_71> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_72> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_73> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_74> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_75> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_76> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_77> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_78> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_79> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_80> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_81> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_82> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_83> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_84> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_85> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_86> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_87> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_88> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_89> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_90> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_91> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_92> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_93> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_94> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_95> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_96> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_97> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_98> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_99> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_100> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_101> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_102> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_103> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_104> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_105> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_106> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_107> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_108> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_109> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_110> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_111> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_112> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_113> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_114> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_115> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_116> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_117> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_118> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_119> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_120> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_121> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_122> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_123> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_124> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_125> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_126> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_127> of sequential type is unconnected in block <Data_id_ex>.
+WARNING:Xst:2677 - Node <q_3> of sequential type is unconnected in block <Addr_id_ex>.
+WARNING:Xst:2677 - Node <q_4> of sequential type is unconnected in block <Addr_id_ex>.
+WARNING:Xst:2677 - Node <q_5> of sequential type is unconnected in block <Addr_id_ex>.
+WARNING:Xst:2677 - Node <q_6> of sequential type is unconnected in block <Addr_id_ex>.
+WARNING:Xst:2677 - Node <q_7> of sequential type is unconnected in block <Addr_id_ex>.
+WARNING:Xst:2677 - Node <q_8> of sequential type is unconnected in block <Addr_id_ex>.
+WARNING:Xst:2677 - Node <q_9> of sequential type is unconnected in block <Addr_id_ex>.
+WARNING:Xst:2677 - Node <q_10> of sequential type is unconnected in block <Addr_id_ex>.
+WARNING:Xst:2677 - Node <q_11> of sequential type is unconnected in block <Addr_id_ex>.
+WARNING:Xst:2677 - Node <q_12> of sequential type is unconnected in block <Addr_id_ex>.
+WARNING:Xst:2677 - Node <q_13> of sequential type is unconnected in block <Addr_id_ex>.
+WARNING:Xst:2677 - Node <q_14> of sequential type is unconnected in block <Addr_id_ex>.
+WARNING:Xst:2677 - Node <q_38> of sequential type is unconnected in block <Data_ex_mem>.
+WARNING:Xst:2677 - Node <q_39> of sequential type is unconnected in block <Data_ex_mem>.
+WARNING:Xst:2677 - Node <q_40> of sequential type is unconnected in block <Data_ex_mem>.
+WARNING:Xst:2677 - Node <q_41> of sequential type is unconnected in block <Data_ex_mem>.
+WARNING:Xst:2677 - Node <q_42> of sequential type is unconnected in block <Data_ex_mem>.
+WARNING:Xst:2677 - Node <q_43> of sequential type is unconnected in block <Data_ex_mem>.
+WARNING:Xst:2677 - Node <q_44> of sequential type is unconnected in block <Data_ex_mem>.
+WARNING:Xst:2677 - Node <q_45> of sequential type is unconnected in block <Data_ex_mem>.
+WARNING:Xst:2677 - Node <q_46> of sequential type is unconnected in block <Data_ex_mem>.
+WARNING:Xst:2677 - Node <q_47> of sequential type is unconnected in block <Data_ex_mem>.
+WARNING:Xst:2677 - Node <q_48> of sequential type is unconnected in block <Data_ex_mem>.
+WARNING:Xst:2677 - Node <q_49> of sequential type is unconnected in block <Data_ex_mem>.
+WARNING:Xst:2677 - Node <q_50> of sequential type is unconnected in block <Data_ex_mem>.
+WARNING:Xst:2677 - Node <q_51> of sequential type is unconnected in block <Data_ex_mem>.
+WARNING:Xst:2677 - Node <q_52> of sequential type is unconnected in block <Data_ex_mem>.
+WARNING:Xst:2677 - Node <q_53> of sequential type is unconnected in block <Data_ex_mem>.
+WARNING:Xst:2677 - Node <q_54> of sequential type is unconnected in block <Data_ex_mem>.
+WARNING:Xst:2677 - Node <q_55> of sequential type is unconnected in block <Data_ex_mem>.
+WARNING:Xst:2677 - Node <q_56> of sequential type is unconnected in block <Data_ex_mem>.
+WARNING:Xst:2677 - Node <q_57> of sequential type is unconnected in block <Data_ex_mem>.
+WARNING:Xst:2677 - Node <q_58> of sequential type is unconnected in block <Data_ex_mem>.
+WARNING:Xst:2677 - Node <q_59> of sequential type is unconnected in block <Data_ex_mem>.
+WARNING:Xst:2677 - Node <q_60> of sequential type is unconnected in block <Data_ex_mem>.
+WARNING:Xst:2677 - Node <q_61> of sequential type is unconnected in block <Data_ex_mem>.
+WARNING:Xst:2677 - Node <q_62> of sequential type is unconnected in block <Data_ex_mem>.
+WARNING:Xst:2677 - Node <q_63> of sequential type is unconnected in block <Data_ex_mem>.
+WARNING:Xst:2677 - Node <q_64> of sequential type is unconnected in block <Data_ex_mem>.
+WARNING:Xst:2677 - Node <q_65> of sequential type is unconnected in block <Data_ex_mem>.
+WARNING:Xst:2677 - Node <q_66> of sequential type is unconnected in block <Data_ex_mem>.
+WARNING:Xst:2677 - Node <q_67> of sequential type is unconnected in block <Data_ex_mem>.
+WARNING:Xst:2677 - Node <q_68> of sequential type is unconnected in block <Data_ex_mem>.
+WARNING:Xst:2677 - Node <q_1> of sequential type is unconnected in block <Data_mem_wb>.
+WARNING:Xst:2677 - Node <q_2> of sequential type is unconnected in block <Data_mem_wb>.
+WARNING:Xst:2677 - Node <q_3> of sequential type is unconnected in block <Data_mem_wb>.
+WARNING:Xst:2677 - Node <q_4> of sequential type is unconnected in block <Data_mem_wb>.
+WARNING:Xst:2677 - Node <q_5> of sequential type is unconnected in block <Data_mem_wb>.
+WARNING:Xst:2677 - Node <q_6> of sequential type is unconnected in block <Data_mem_wb>.
+WARNING:Xst:2677 - Node <q_7> of sequential type is unconnected in block <Data_mem_wb>.
+WARNING:Xst:2677 - Node <q_8> of sequential type is unconnected in block <Data_mem_wb>.
+WARNING:Xst:2677 - Node <q_9> of sequential type is unconnected in block <Data_mem_wb>.
+WARNING:Xst:2677 - Node <q_10> of sequential type is unconnected in block <Data_mem_wb>.
+WARNING:Xst:2677 - Node <q_11> of sequential type is unconnected in block <Data_mem_wb>.
+WARNING:Xst:2677 - Node <q_12> of sequential type is unconnected in block <Data_mem_wb>.
+WARNING:Xst:2677 - Node <q_13> of sequential type is unconnected in block <Data_mem_wb>.
+WARNING:Xst:2677 - Node <q_14> of sequential type is unconnected in block <Data_mem_wb>.
+WARNING:Xst:2677 - Node <q_15> of sequential type is unconnected in block <Data_mem_wb>.
+WARNING:Xst:2677 - Node <q_16> of sequential type is unconnected in block <Data_mem_wb>.
+WARNING:Xst:2677 - Node <q_17> of sequential type is unconnected in block <Data_mem_wb>.
+WARNING:Xst:2677 - Node <q_18> of sequential type is unconnected in block <Data_mem_wb>.
+WARNING:Xst:2677 - Node <q_19> of sequential type is unconnected in block <Data_mem_wb>.
+WARNING:Xst:2677 - Node <q_20> of sequential type is unconnected in block <Data_mem_wb>.
+WARNING:Xst:2677 - Node <q_21> of sequential type is unconnected in block <Data_mem_wb>.
+WARNING:Xst:2677 - Node <q_22> of sequential type is unconnected in block <Data_mem_wb>.
+WARNING:Xst:2677 - Node <q_23> of sequential type is unconnected in block <Data_mem_wb>.
+WARNING:Xst:2677 - Node <q_24> of sequential type is unconnected in block <Data_mem_wb>.
+WARNING:Xst:2677 - Node <q_25> of sequential type is unconnected in block <Data_mem_wb>.
+WARNING:Xst:2677 - Node <q_26> of sequential type is unconnected in block <Data_mem_wb>.
+WARNING:Xst:2677 - Node <q_27> of sequential type is unconnected in block <Data_mem_wb>.
+WARNING:Xst:2677 - Node <q_28> of sequential type is unconnected in block <Data_mem_wb>.
+WARNING:Xst:2677 - Node <q_29> of sequential type is unconnected in block <Data_mem_wb>.
+WARNING:Xst:2677 - Node <q_30> of sequential type is unconnected in block <Data_mem_wb>.
+WARNING:Xst:2677 - Node <q_31> of sequential type is unconnected in block <Data_mem_wb>.
+WARNING:Xst:1290 - Hierarchical block <Data_mem_wb> is unconnected in block <MipsPipelineCPU>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <adder_11> is unconnected in block <addOffset>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <adder_21> is unconnected in block <addOffset>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <adder_31> is unconnected in block <addOffset>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <adder_41> is unconnected in block <addOffset>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <adder_51> is unconnected in block <addOffset>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <adder_61> is unconnected in block <addOffset>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <adder_71> is unconnected in block <addOffset>.
+   It will be removed from the design.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 32x32-bit dual-port distributed RAM                   : 2
+# ROMs                                                 : 1
+ 16x32-bit ROM                                         : 1
+# Registers                                            : 356
+ Flip-Flops                                            : 356
+# Comparators                                          : 8
+ 5-bit comparator equal                                : 7
+ 5-bit comparator not equal                            : 1
+# Multiplexers                                         : 2
+ 32-bit 4-to-1 multiplexer                             : 2
+# Logic shifters                                       : 3
+ 32-bit shifter arithmetic right                       : 1
+ 32-bit shifter logical left                           : 1
+ 32-bit shifter logical right                          : 1
+# Xors                                                 : 81
+ 1-bit xor2                                            : 34
+ 32-bit xor2                                           : 2
+ 4-bit xor2                                            : 45
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2677 - Node <EX_id_ex/q_6> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <EX_id_ex/q_5> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <EX_id_ex/q_4> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Addr_id_ex/q_14> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Addr_id_ex/q_13> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Addr_id_ex/q_12> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Addr_id_ex/q_11> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Addr_id_ex/q_10> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Addr_id_ex/q_9> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Addr_id_ex/q_8> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Addr_id_ex/q_7> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Addr_id_ex/q_6> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Addr_id_ex/q_5> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Addr_id_ex/q_4> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Addr_id_ex/q_3> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2170 - Unit ALU : the following signal(s) form a combinatorial loop: result_final_shift0002<31>.
+
+Optimizing unit <MipsPipelineCPU> ...
+
+Optimizing unit <dffre_1> ...
+
+Optimizing unit <dffre_4> ...
+
+Optimizing unit <dffre_7> ...
+
+Optimizing unit <dffre_8> ...
+
+Optimizing unit <Registers> ...
+
+Optimizing unit <adder_32bits> ...
+
+Optimizing unit <IF> ...
+
+Optimizing unit <ID> ...
+
+Optimizing unit <ALU> ...
+
+Optimizing unit <EX> ...
+WARNING:Xst:1710 - FF/Latch  <Data_ex_mem/q_20> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_ex_mem/q_19> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_ex_mem/q_18> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_ex_mem/q_17> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_ex_mem/q_16> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_ex_mem/q_15> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_ex_mem/q_14> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_ex_mem/q_13> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_ex_mem/q_12> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_ex_mem/q_11> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_ex_mem/q_10> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_ex_mem/q_9> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_ex_mem/q_8> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_ex_mem/q_7> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_ex_mem/q_6> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_ex_mem/q_5> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_ex_mem/q_4> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_ex_mem/q_3> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_ex_mem/q_2> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_ex_mem/q_1> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <if_id/q_30> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <if_id/q_25> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <if_id/q_23> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <if_id/q_20> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_ex_mem/q_36> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_ex_mem/q_35> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_ex_mem/q_34> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_ex_mem/q_33> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_ex_mem/q_32> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_ex_mem/q_31> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_ex_mem/q_30> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_ex_mem/q_29> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_ex_mem/q_28> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_ex_mem/q_27> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_ex_mem/q_26> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_ex_mem/q_25> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_ex_mem/q_24> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_ex_mem/q_23> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_ex_mem/q_22> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_ex_mem/q_21> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_mem_wb/q_0> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <if_id/q_63> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <if_id/q_62> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <if_id/q_61> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <if_id/q_60> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <if_id/q_59> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <if_id/q_58> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <if_id/q_57> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <if_id/q_56> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <if_id/q_55> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <if_id/q_54> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <if_id/q_53> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <if_id/q_52> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <if_id/q_51> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <if_id/q_50> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <if_id/q_49> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <if_id/q_48> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <if_id/q_47> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <if_id/q_46> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <if_id/q_45> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <if_id/q_44> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <if_id/q_43> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <if_id/q_42> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <if_id/q_41> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <if_id/q_40> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <if_id/q_39> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <if_id/q_38> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <if_id/q_37> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <if_id/q_36> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <if_id/q_35> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <if_id/q_34> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <if_id/q_33> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_127> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_126> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_125> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_124> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_123> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_122> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_121> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_120> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_119> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_118> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_117> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_116> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_115> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_114> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_113> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_112> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_111> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_110> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_109> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_108> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_107> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_106> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_105> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_104> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_103> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_102> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_101> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_100> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_99> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_98> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_97> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_96> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_95> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_94> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_93> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_92> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_91> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_90> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_89> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_88> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_87> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_86> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_85> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_84> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_83> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_82> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_81> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_80> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_79> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_78> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_77> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_76> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_75> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_74> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_73> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_72> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_71> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_70> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_69> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_68> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_67> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_66> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_65> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_64> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_63> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_62> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_61> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_60> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_59> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_58> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_57> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_56> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_55> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_54> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_53> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_52> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_51> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_50> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_49> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_48> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_47> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_46> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_45> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_44> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_43> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_42> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_41> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_40> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_39> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_38> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_37> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_36> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_35> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_34> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_33> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_32> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_31> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_30> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_29> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_28> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_27> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_26> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_25> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_24> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_23> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_22> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_21> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_20> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_19> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_18> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_17> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_16> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_15> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_14> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_13> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_12> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_11> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_10> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_9> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_8> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_7> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_6> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_5> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_id_ex/q_4> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_ex_mem/q_68> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_ex_mem/q_67> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_ex_mem/q_66> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_ex_mem/q_65> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_ex_mem/q_64> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_ex_mem/q_63> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_ex_mem/q_62> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_ex_mem/q_61> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_ex_mem/q_60> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_ex_mem/q_59> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_ex_mem/q_58> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_ex_mem/q_57> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_ex_mem/q_56> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_ex_mem/q_55> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_ex_mem/q_54> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_ex_mem/q_53> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_ex_mem/q_52> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_ex_mem/q_51> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_ex_mem/q_50> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_ex_mem/q_49> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_ex_mem/q_48> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_ex_mem/q_47> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_ex_mem/q_46> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_ex_mem/q_45> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_ex_mem/q_44> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_ex_mem/q_43> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_ex_mem/q_42> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_ex_mem/q_41> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_ex_mem/q_40> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_ex_mem/q_39> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_ex_mem/q_38> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_mem_wb/q_31> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_mem_wb/q_30> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_mem_wb/q_29> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_mem_wb/q_28> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_mem_wb/q_27> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_mem_wb/q_26> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_mem_wb/q_25> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_mem_wb/q_24> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_mem_wb/q_23> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_mem_wb/q_22> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_mem_wb/q_21> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_mem_wb/q_20> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_mem_wb/q_19> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_mem_wb/q_18> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_mem_wb/q_17> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_mem_wb/q_16> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_mem_wb/q_15> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_mem_wb/q_14> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_mem_wb/q_13> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_mem_wb/q_12> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_mem_wb/q_11> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_mem_wb/q_10> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_mem_wb/q_9> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_mem_wb/q_8> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_mem_wb/q_7> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_mem_wb/q_6> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_mem_wb/q_5> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_mem_wb/q_4> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_mem_wb/q_3> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_mem_wb/q_2> of sequential type is unconnected in block <MipsPipelineCPU>.
+WARNING:Xst:2677 - Node <Data_mem_wb/q_1> of sequential type is unconnected in block <MipsPipelineCPU>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+INFO:Xst:2261 - The FF/Latch <if_id/q_15> in Unit <MipsPipelineCPU> is equivalent to the following 5 FFs/Latches, which will be removed : <if_id/q_13> <if_id/q_10> <if_id/q_9> <if_id/q_8> <if_id/q_4> 
+INFO:Xst:2261 - The FF/Latch <MM_id_ex/q_0> in Unit <MipsPipelineCPU> is equivalent to the following FF/Latch, which will be removed : <WB_id_ex/q_1> 
+INFO:Xst:2261 - The FF/Latch <if_id/q_12> in Unit <MipsPipelineCPU> is equivalent to the following FF/Latch, which will be removed : <if_id/q_5> 
+Found area constraint ratio of 100 (+ 5) on block MipsPipelineCPU, actual ratio is 2.
+FlipFlop IF/PC_2 has been replicated 1 time(s)
+FlipFlop IF/PC_5 has been replicated 1 time(s)
+FlipFlop IF/PC_6 has been replicated 1 time(s)
+FlipFlop if_id/q_16 has been replicated 3 time(s)
+FlipFlop if_id/q_17 has been replicated 3 time(s)
+FlipFlop if_id/q_18 has been replicated 3 time(s)
+FlipFlop if_id/q_19 has been replicated 3 time(s)
+FlipFlop if_id/q_21 has been replicated 3 time(s)
+FlipFlop if_id/q_22 has been replicated 3 time(s)
+FlipFlop if_id/q_24 has been replicated 3 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 100
+ Flip-Flops                                            : 100
+
+=========================================================================
+
+=========================================================================
+*                          Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : MipsPipelineCPU.ngr
+Top Level Output File Name         : MipsPipelineCPU
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 198
+
+Cell Usage :
+# BELS                             : 447
+#      GND                         : 2
+#      LUT2                        : 61
+#      LUT2_D                      : 3
+#      LUT3                        : 54
+#      LUT3_D                      : 5
+#      LUT3_L                      : 8
+#      LUT4                        : 220
+#      LUT4_D                      : 39
+#      LUT4_L                      : 27
+#      MUXF5                       : 26
+#      VCC                         : 2
+# FlipFlops/Latches                : 100
+#      FD                          : 3
+#      FDR                         : 9
+#      FDRE                        : 86
+#      FDRS                        : 2
+# RAMS                             : 65
+#      RAM32X1D                    : 64
+#      RAMB16_S36                  : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 197
+#      IBUF                        : 1
+#      OBUF                        : 196
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 2vp30ff896-7 
+
+ Number of Slices:                     358  out of  13696     2%  
+ Number of Slice Flip Flops:           100  out of  27392     0%  
+ Number of 4 input LUTs:               673  out of  27392     2%  
+    Number used as logic:              417
+    Number used as RAMs:               256
+ Number of IOs:                        198
+ Number of bonded IOBs:                198  out of    556    35%  
+ Number of BRAMs:                        1  out of    136     0%  
+ Number of GCLKs:                        1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 164   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -7
+
+   Minimum period: 7.992ns (Maximum Frequency: 125.120MHz)
+   Minimum input arrival time before clock: 2.090ns
+   Maximum output required time after clock: 9.318ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 7.992ns (frequency: 125.120MHz)
+  Total number of paths / destination ports: 230518 / 591
+-------------------------------------------------------------------------
+Delay:               7.992ns (Levels of Logic = 9)
+  Source:            if_id/q_21_3 (FF)
+  Destination:       IF/PC_31 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: if_id/q_21_3 to IF/PC_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            33   0.370   0.673  if_id/q_21_3 (if_id/q_21_3)
+     RAM32X1D:DPRA0->DPO    2   0.997   0.396  ID/MultiRegisters/inst_Mram_mem8 (ID/MultiRegisters/_varindex0000<8>)
+     LUT4:I2->O            2   0.275   0.416  ID/Mxor_Z_xor0023_Result1 (ID/Z_xor0023)
+     LUT4:I3->O            1   0.275   0.430  ID/Z55 (ID/Z_map21)
+     LUT4:I1->O            1   0.275   0.369  ID/Z82 (ID/Z_map30)
+     LUT4:I3->O            1   0.275   0.369  ID/Z118 (ID/Z_map35)
+     LUT4:I3->O            3   0.275   0.435  ID/Z553_SW0 (N1879)
+     LUT4_D:I3->O         11   0.275   0.539  ID/Z821_1 (ID/Z821)
+     LUT3_D:I2->O         14   0.275   0.590  IF/PC_in_or00001 (IF/PC_in_or0000)
+     LUT4:I3->O            1   0.275   0.000  IF/PC_in<30> (IF/PC_in<30>)
+     FDRE:D                    0.208          IF/PC_30
+    ----------------------------------------
+    Total                      7.992ns (3.775ns logic, 4.217ns route)
+                                       (47.2% logic, 52.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 35 / 35
+-------------------------------------------------------------------------
+Offset:              2.090ns (Levels of Logic = 1)
+  Source:            reset (PAD)
+  Destination:       IF/PC_31 (FF)
+  Destination Clock: clk rising
+
+  Data Path: reset to IF/PC_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            35   0.878   0.676  reset_IBUF (reset_IBUF)
+     FDRE:R                    0.536          IF/PC_0
+    ----------------------------------------
+    Total                      2.090ns (1.414ns logic, 0.676ns route)
+                                       (67.7% logic, 32.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 2213 / 71
+-------------------------------------------------------------------------
+Offset:              9.318ns (Levels of Logic = 8)
+  Source:            if_id/q_21_3 (FF)
+  Destination:       JumpFlag<0> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: if_id/q_21_3 to JumpFlag<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            33   0.370   0.673  if_id/q_21_3 (if_id/q_21_3)
+     RAM32X1D:DPRA0->DPO    2   0.997   0.396  ID/MultiRegisters/inst_Mram_mem8 (ID/MultiRegisters/_varindex0000<8>)
+     LUT4:I2->O            2   0.275   0.416  ID/Mxor_Z_xor0023_Result1 (ID/Z_xor0023)
+     LUT4:I3->O            1   0.275   0.430  ID/Z55 (ID/Z_map21)
+     LUT4:I1->O            1   0.275   0.370  ID/Z82 (ID/Z_map30)
+     LUT4:I3->O            1   0.275   0.370  ID/Z118 (ID/Z_map35)
+     LUT4:I3->O            3   0.275   0.435  ID/Z553_SW0 (N1879)
+     LUT4:I3->O           22   0.275   0.621  ID/Z821 (Z)
+     OBUF:I->O                 2.592          JumpFlag_0_OBUF (JumpFlag<0>)
+    ----------------------------------------
+    Total                      9.318ns (5.609ns logic, 3.709ns route)
+                                       (60.2% logic, 39.8% route)
+
+=========================================================================
+CPU : 16.08 / 16.42 s | Elapsed : 16.00 / 16.00 s
+ 
+--> 
+
+Total memory usage is 214680 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  577 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
+
