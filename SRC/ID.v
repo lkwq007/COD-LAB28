@@ -117,7 +117,7 @@ module ID(clk,Instruction_id, NextPC_id, RegWrite_wb, RegWriteAddr_wb, RegWriteD
 	//MultiRegisters inst
 	wire [31:0] RsData_temp,RtData_temp;
 	
-	MultiRegisters   MultiRegisters(
+	Registers   MultiRegisters(
 	//Outputs
 	.RsData(RsData_temp), 
 	.RtData(RtData_temp), 
