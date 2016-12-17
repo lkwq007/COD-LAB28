@@ -58,6 +58,7 @@ module EX(RegDst_ex,ALUCode_ex,ALUSrcA_ex,ALUSrcB_ex,Imm_ex,Sa_ex,RsAddr_ex,RtAd
 		1:A_temp<=RegWriteData_wb;
 		2:A_temp<=ALUResult_mem;
 		default:A_temp<=RsData_ex;
+		endcase
 	end
 
 	//MUX for B
@@ -66,6 +67,7 @@ module EX(RegDst_ex,ALUCode_ex,ALUSrcA_ex,ALUSrcB_ex,Imm_ex,Sa_ex,RsAddr_ex,RtAd
 		1:B_temp<=RegWriteData_wb;
 		2:B_temp<=ALUResult_mem;
 		default:B_temp<=RtData_ex;
+		endcase
 	end
 
 	//MUX for ALU_A
