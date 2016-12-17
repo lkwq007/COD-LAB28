@@ -75,6 +75,7 @@ module EX(RegDst_ex,ALUCode_ex,ALUSrcA_ex,ALUSrcB_ex,Imm_ex,Sa_ex,RsAddr_ex,RtAd
 
 	//MUX for ALU_B
 	assign ALU_B=ALUSrcB_ex==0?B_temp:Imm_ex;
+	assign MemWriteData_ex=B_temp;
 
 	//ALU inst
 	ALU  ALU (

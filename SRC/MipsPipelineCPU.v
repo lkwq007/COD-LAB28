@@ -102,12 +102,12 @@ module MipsPipelineCPU(clk,reset,JumpFlag,Instruction_id,ALU_A,
 		.RsAddr_id(RsAddr_id));
 
 	//ID->EX Register
-	wire MemtoReg_ex,RegWrite_ex,MemWrite_ex,ALUSrcA_ex,ALUSrcB_ex;
+	wire MemtoReg_ex,RegWrite_ex,MemWrite_ex,ALUSrcA_ex,ALUSrcB_ex,RegDst_ex;
 	wire[31:0] Sa_ex,Imm_ex,RsData_ex,RtData_ex;
 	wire[4:0] RsAddr_ex,RtAddr_ex,RdAddr_ex,ALUCode_ex;
 	dffre #(.WIDTH(2)) WB_id_ex(.clk(clk),.en(1'b1),.r(Stall),.d({MemtoReg_id,RegWrite_id}),.q({MemtoReg_ex,RegWrite_ex}));
 	dffre #(.WIDTH(2)) MM_id_ex(.clk(clk),.en(1'b1),.r(Stall),.d({MemWrite_id,MemRead_id}),.q({MemWrite_ex,MemRead_ex}));
-	dffre #(.WIDTH(7)) EX_id_ex(.clk(clk),.en(1'b1),.r(Stall),.d({ALUCode_id,ALUSrcA_id,ALUSrcB_id,RegDst_id}),.q({ALUCode_ex,ALUSrcA_ex,ALUSrcB_ex,RegDst_ex}));
+	dffre #(.WIDTH(8)) EX_id_ex(.clk(clk),.en(1'b1),.r(Stall),.d({ALUCode_id,ALUSrcA_id,ALUSrcB_id,RegDst_id}),.q({ALUCode_ex,ALUSrcA_ex,ALUSrcB_ex,RegDst_ex}));
 	dffre #(.WIDTH(128)) Data_id_ex(.clk(clk),.en(1'b1),.r(Stall),.d({Sa_id,Imm_id,RsData_id,RtData_id}),.q({Sa_ex,Imm_ex,RsData_ex,RtData_ex}));
 	dffre #(.WIDTH(15)) Addr_id_ex(.clk(clk),.en(1'b1),.r(Stall),.d({RsAddr_id,RtAddr_id,RdAddr_id}),.q({RsAddr_ex,RtAddr_ex,RdAddr_ex}));
 
@@ -159,7 +159,7 @@ module MipsPipelineCPU(clk,reset,JumpFlag,Instruction_id,ALU_A,
 	//MEM->WB
 	wire MemToReg_wb;
 	wire[31:0] ALUResult_wb;
-	dffre #(.WIDTH(2)) MM_mem_wb(.clk(clk),.en(1'b1),.r(1'b0),.d({MemtoReg_mem,RegWrite_mem}),.q({MemToReg_wb,RegWrite_wb}));
+	dffre #(.WIDTH(7)) MM_mem_wb(.clk(clk),.en(1'b1),.r(1'b0),.d({MemtoReg_mem,RegWrite_mem,RegWriteAddr_mem}),.q({MemToReg_wb,RegWrite_wb,RegWriteAddr_wb}));
 	dffre #(.WIDTH(32)) Data_mem_wb(.clk(clk),.en(1'b1),.r(1'b0),.d(ALUResult_mem),.q(ALUResult_wb));
 
 	//WB
