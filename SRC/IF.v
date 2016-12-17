@@ -31,7 +31,7 @@ module IF(clk,reset,Z,J,JR,PC_IFWrite,JumpAddr,
 	input [31:0] BranchAddr;
 	output [31:0] Instruction_if;
 	output [31:0] PC,NextPC_if;
-	reg PC;
+	reg[31:0] PC=0;
 
 	// MUX for PC
 	reg[31:0] PC_in;
@@ -46,7 +46,10 @@ module IF(clk,reset,Z,J,JR,PC_IFWrite,JumpAddr,
 
 	//PC REG
 	always @(posedge clk) begin
-		if(PC_IFWrite) begin
+		if(reset) begin
+			PC=0;
+		end
+		else if(PC_IFWrite) begin
 			PC=PC_in;
 		end
 	end
