@@ -59,8 +59,9 @@ module MipsPipelineCPU(clk,reset,JumpFlag,Instruction_id,ALU_A,
 		.NextPC_if(NextPC_if));
  
 	//IF->ID Register
-	dffre #(.WIDTH(64)) if_id(.clk(clk),.en(PC_IFWrite),.r(IF_flush),.d({NextPC_if,Instruction_if}),.q({NextPC_id,Instruction_id}));	 
 	wire[31:0] NextPC_id;
+	dffre #(.WIDTH(64)) if_id(.clk(clk),.en(PC_IFWrite),.r(IF_flush),.d({NextPC_if,Instruction_if}),.q({NextPC_id,Instruction_id}));	 
+	
 	//ID Module	
 	wire[4:0] RtAddr_id,RdAddr_id,RsAddr_id;
 	wire RegWrite_wb,MemRead_ex,MemtoReg_id,RegWrite_id,MemWrite_id;
@@ -139,7 +140,8 @@ module MipsPipelineCPU(clk,reset,JumpFlag,Instruction_id,ALU_A,
 	assign ALUResult=ALUResult_ex;
 
 	//EX->MEM
-	wire MemtoReg_mem;
+	wire MemtoReg_mem,MemWrite_mem;
+	wire[31:0] MemWriteData_mem;
 	dffre #(.WIDTH(2)) WB_ex_mem(.clk(clk),.en(1'b1),.r(1'b0),.d({MemtoReg_ex,RegWrite_ex}),.q({MemtoReg_mem,RegWrite_mem}));
 	dffre #(.WIDTH(1)) MM_ex_mem(.clk(clk),.en(1'b1),.r(1'b0),.d(MemWrite_ex),.q(MemWrite_mem));
 	dffre #(.WIDTH(69)) Data_ex_mem(.clk(clk),.en(1'b1),.r(1'b0),.d({ALUResult_ex,MemWriteData_ex,RegWriteAddr_ex}),.q({ALUResult_mem,MemWriteData_mem,RegWriteAddr_mem}));
@@ -153,6 +155,7 @@ module MipsPipelineCPU(clk,reset,JumpFlag,Instruction_id,ALU_A,
 		.we(MemWrite_mem));
 
 	//MEM->WB
+	wire MemToReg_wb;
 	dffre #(.WIDTH(2)) MM_mem_wb(.clk(clk),.en(1'b1),.r(1'b0),.d({MemtoReg_mem,RegWrite_mem}),.q({MemToReg_wb,RegWrite_wb}));
 	dffre #(.WIDTH(32)) Data_mem_wb(.clk(clk),.en(1'b1),.r(1'b0),.d(ALUResult_mem),.q(ALUResult_wb));
 
