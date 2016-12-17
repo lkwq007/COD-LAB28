@@ -1,0 +1,116 @@
+m255
+K3
+13
+cModel Technology
+dD:\Course\Computer-Organization\Homework\lab28\PipelineCPU\SIM\Decode
+vadder_32bits
+VH3MfAaUBUHMniOHlZdcI;0
+r1
+31
+I<KTcoC2z_ia?[Z<@]nF671
+Z0 dD:\Course\Computer-Organization\Homework\lab28\PipelineCPU\SIM\IF
+w1477535173
+8D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/adder_32bits.v
+FD:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/adder_32bits.v
+L0 14
+Z1 OL;L;10.1c;51
+Z2 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!s85 0
+!s100 UDZ@=[VzP2K0Z<;W?DR?T3
+!s108 1481942224.032000
+!s107 D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/adder_32bits.v|
+!s90 -reportprogress|300|-work|work|-vopt|D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/adder_32bits.v|
+!i10b 1
+vadder_4bits
+VRIOd4YzBVIKIHabCV7aQM3
+r1
+31
+I>kcm^ZOPMTb13>8m?NI>V0
+Z3 dD:\Course\Computer-Organization\Homework\lab28\PipelineCPU\SIM\IF
+w1477109818
+8D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/adder_4bits.v
+FD:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/adder_4bits.v
+L0 14
+R1
+R2
+!s85 0
+!s100 U>LXIM=Cnf;m7lO>dW;<^3
+!s108 1481942223.820000
+!s107 D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/adder_4bits.v|
+!s90 -reportprogress|300|-work|work|-vopt|D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/adder_4bits.v|
+!i10b 1
+vIF
+V09l=010ji^o>c6joDMjlR1
+r1
+31
+IKQ=GaQ9=4]Y6PGan28oER1
+R3
+w1481942017
+8D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/IF.v
+FD:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/IF.v
+L0 21
+R1
+R2
+n@i@f
+!s85 0
+!s100 bF;?mN51JCndo]lW@gFQl0
+!s90 -reportprogress|300|-work|work|-vopt|D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/IF.v|
+!s108 1481942223.431000
+!s107 D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/IF.v|
+!i10b 1
+vIF_tb_v
+VG;OM=oK9kU8AFe@k2@1GT0
+r1
+31
+I@eKI=WT`7::BO7aF`e]l33
+R3
+w1473489804
+8D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SIM/IF/IF_tb.v
+FD:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SIM/IF/IF_tb.v
+L0 25
+R1
+R2
+n@i@f_tb_v
+!s85 0
+!s100 fRdS<;mdPR6I<hAlJ^keP3
+!s90 -reportprogress|300|-work|work|-vopt|D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SIM/IF/IF_tb.v|
+!s108 1481942223.124000
+!s107 D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SIM/IF/IF_tb.v|
+!i10b 1
+vInstructionROM
+Vo`C5oIU4Q39o^5hU;3[bg1
+r1
+!s85 0
+31
+Im[lamiW?LSY3:7K;UNMjm2
+R3
+w1473489806
+8D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/InstructionROM.v
+FD:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/InstructionROM.v
+L0 2
+R1
+R2
+n@instruction@r@o@m
+!s100 _d3TVh0TlN4Mn=k]RcIdb0
+!s90 -reportprogress|300|-work|work|-vopt|D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/InstructionROM.v|
+!s108 1481942223.624000
+!s107 D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/InstructionROM.v|
+!i10b 1
+vmux_2_to_1
+VfghA^>C4^[^1aHmI<IOOL1
+r1
+31
+IGm=fe:oeGha5Ea7VHcf_O2
+R3
+w1477111528
+8D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/mux_2_to_1.v
+FD:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/mux_2_to_1.v
+L0 14
+R1
+R2
+!s85 0
+!i10b 1
+!s100 cL3><ln`lb`U9T<gUU45Y3
+!s108 1481942224.284000
+!s107 D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/mux_2_to_1.v|
+!s90 -reportprogress|300|-work|work|-vopt|D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/mux_2_to_1.v|
