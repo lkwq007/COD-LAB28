@@ -97,7 +97,7 @@ module ALU(
 	assign result_slt=(A[31]&&(~B[31]))||((A[31]~^B[31])&&result_add[31]);
 	assign result_sltu=((~A[31])&&B[31])||((A[31]~^B[31])&&result_add[31]);*/
 
-	always @(A,B,ALUCode) begin
+	always @(A,B,ALUCode,result_sum,B_reg) begin
 		case(ALUCode)
 		alu_add:result_final=result_sum;
 		alu_and:result_final=A&B;

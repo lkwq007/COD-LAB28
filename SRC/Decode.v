@@ -206,44 +206,44 @@ Instruction
 	reg[4:0] ALUfunct;
 	always @(funct) begin
 		case(funct)
-		ADD_funct:ALUfunct<=alu_add;
-		ADDU_funct:ALUfunct<=alu_add;
-		AND_funct:ALUfunct<=alu_and;
-		XOR_funct:ALUfunct<=alu_xor;
-		OR_funct:ALUfunct<=alu_or;
-		NOR_funct:ALUfunct<=alu_nor;
-		SUB_funct:ALUfunct<=alu_sub;
-		SUBU_funct:ALUfunct<=alu_sub;
-		SLT_funct:ALUfunct<=alu_slt;
-		SLTU_funct:ALUfunct<=alu_sltu;
-		SLL_funct:ALUfunct<=alu_sll;
-		SLLV_funct:ALUfunct<=alu_sll;
-		SRL_funct:ALUfunct<=alu_srl;
-		SRLV_funct:ALUfunct<=alu_srl;
-		SRA_funct:ALUfunct<=alu_sra;
-		SRAV_funct:ALUfunct<=alu_sra;
-		default:ALUfunct<=5'bx;
+		ADD_funct:ALUfunct=alu_add;
+		ADDU_funct:ALUfunct=alu_add;
+		AND_funct:ALUfunct=alu_and;
+		XOR_funct:ALUfunct=alu_xor;
+		OR_funct:ALUfunct=alu_or;
+		NOR_funct:ALUfunct=alu_nor;
+		SUB_funct:ALUfunct=alu_sub;
+		SUBU_funct:ALUfunct=alu_sub;
+		SLT_funct:ALUfunct=alu_slt;
+		SLTU_funct:ALUfunct=alu_sltu;
+		SLL_funct:ALUfunct=alu_sll;
+		SLLV_funct:ALUfunct=alu_sll;
+		SRL_funct:ALUfunct=alu_srl;
+		SRLV_funct:ALUfunct=alu_srl;
+		SRA_funct:ALUfunct=alu_sra;
+		SRAV_funct:ALUfunct=alu_sra;
+		default:ALUfunct=5'bx;
 		endcase
 	end
 	always @(*) begin
 		case(op)
-		BEQ_op:ALUtemp<=alu_beq;
-		BNE_op:ALUtemp<=alu_bne;
-		BGEZ_op:ALUtemp<=alu_bgez;
-		BGTZ_op:ALUtemp<=alu_bgtz;
-		BLEZ_op:ALUtemp<=alu_blez;
-		BLTZ_op:ALUtemp<=alu_bltz;
+		BEQ_op:ALUtemp=alu_beq;
+		BNE_op:ALUtemp=alu_bne;
+		BGEZ_op:ALUtemp=alu_bgez;
+		BGTZ_op:ALUtemp=alu_bgtz;
+		BLEZ_op:ALUtemp=alu_blez;
+		BLTZ_op:ALUtemp=alu_bltz;
 		R_type_op:ALUtemp=ALUfunct;
-		ADDI_op:ALUtemp<=alu_add;
-		ADDIU_op:ALUtemp<=alu_add;
-		ANDI_op:ALUtemp<=alu_andi;
-		XORI_op:ALUtemp<=alu_xori;
-		ORI_op:ALUtemp<=alu_ori;
-		SLTI_op:ALUtemp<=alu_slt;
-		SLTIU_op:ALUtemp<=alu_sltu;
-		SW_op:ALUtemp<=alu_add;
-		LW_op:ALUtemp<=alu_add;
-		default:ALUtemp<=5'bx;
+		ADDI_op:ALUtemp=alu_add;
+		ADDIU_op:ALUtemp=alu_add;
+		ANDI_op:ALUtemp=alu_andi;
+		XORI_op:ALUtemp=alu_xori;
+		ORI_op:ALUtemp=alu_ori;
+		SLTI_op:ALUtemp=alu_slt;
+		SLTIU_op:ALUtemp=alu_sltu;
+		SW_op:ALUtemp=alu_add;
+		LW_op:ALUtemp=alu_add;
+		default:ALUtemp=5'bx;
 		endcase
 	end
 	assign ALUCode=ALUtemp;

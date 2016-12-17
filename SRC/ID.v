@@ -65,7 +65,7 @@ module ID(clk,Instruction_id, NextPC_id, RegWrite_wb, RegWriteAddr_wb, RegWriteD
 	assign JumpAddr={NextPC_id[31:28],Instruction_id[25:0],2'b00};
 
 	//BranchAddrress
-	adder_32bits addOffset(.a(NextPC_id),.b({Imm_id[29:0],2'b0}),.ci(0),.s(BranchAddr),.co());
+	adder_32bits addOffset(.a(NextPC_id),.b({Imm_id[29:0],2'b0}),.ci(32'b0),.s(BranchAddr),.co());
 
 	//JrAddress
 	assign JrAddr=RsData_id;
