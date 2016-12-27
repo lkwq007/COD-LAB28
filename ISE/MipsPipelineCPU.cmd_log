@@ -8,3 +8,5 @@ xst -ise "C:/cod/COD-LAB28/ISE/MipsPipelineCPU.ise" -intstyle ise -ifn MipsPipel
 xst -ise "C:/cod/COD-LAB28/ISE/MipsPipelineCPU.ise" -intstyle ise -ifn MipsPipelineCPU.xst -ofn MipsPipelineCPU.syr
 xst -ise "C:/cod/COD-LAB28/ISE/MipsPipelineCPU.ise" -intstyle ise -ifn MipsPipelineCPU.xst -ofn MipsPipelineCPU.syr
 xst -ise "C:/cod/COD-LAB28/ISE/MipsPipelineCPU.ise" -intstyle ise -ifn MipsPipelineCPU.xst -ofn MipsPipelineCPU.syr
+xst -ise "C:/cod/COD-LAB28/ISE/MipsPipelineCPU.ise" -intstyle ise -ifn MipsPipelineCPU.xst -ofn MipsPipelineCPU.syr
+xst -ise "C:/cod/COD-LAB28/ISE/MipsPipelineCPU.ise" -intstyle ise -ifn MipsPipelineCPU.xst -ofn MipsPipelineCPU.syr

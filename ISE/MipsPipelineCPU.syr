@@ -1,10 +1,10 @@
 Release 9.2i - xst J.36
 Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to ./xst/projnav.tmp
-CPU : 0.00 / 0.84 s | Elapsed : 0.00 / 1.00 s
+CPU : 0.00 / 0.30 s | Elapsed : 0.00 / 0.00 s
  
 --> Parameter xsthdpdir set to ./xst
-CPU : 0.00 / 0.84 s | Elapsed : 0.00 / 1.00 s
+CPU : 0.00 / 0.30 s | Elapsed : 0.00 / 0.00 s
  
 --> Reading design: MipsPipelineCPU.prj
 
@@ -282,7 +282,6 @@ Analyzing hierarchy for module <mux_2_to_1> in library <work> with parameters.
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing top module <MipsPipelineCPU>.
-WARNING:Xst:863 - "../SRC/MipsPipelineCPU.v" line 34: Name conflict (<stall> and <Stall>, renaming stall as stall_rnm0).
 Module <MipsPipelineCPU> is correct for synthesis.
  
 Analyzing module <IF> in library <work>.
@@ -638,7 +637,6 @@ Unit <EX> synthesized.
 
 Synthesizing Unit <MipsPipelineCPU>.
     Related source file is "../SRC/MipsPipelineCPU.v".
-WARNING:Xst:1780 - Signal <stall_rnm0> is never used or assigned.
 Unit <MipsPipelineCPU> synthesized.
 
 
@@ -715,33 +713,33 @@ INFO:Xst:2664 - HDL ADVISOR - Unit <Registers> : The RAM <Mram_regs_ren> will be
     |     addrB          | connected to signal <RtAddr>        |          |
     |     doB            | connected to internal node          |          |
     -----------------------------------------------------------------------
-WARNING:Xst:1710 - FF/Latch  <q_127> (without init value) has a constant value of 0 in block <Data_id_ex>.
-WARNING:Xst:1710 - FF/Latch  <q_126> (without init value) has a constant value of 0 in block <Data_id_ex>.
-WARNING:Xst:1710 - FF/Latch  <q_125> (without init value) has a constant value of 0 in block <Data_id_ex>.
-WARNING:Xst:1710 - FF/Latch  <q_124> (without init value) has a constant value of 0 in block <Data_id_ex>.
-WARNING:Xst:1710 - FF/Latch  <q_123> (without init value) has a constant value of 0 in block <Data_id_ex>.
-WARNING:Xst:1710 - FF/Latch  <q_122> (without init value) has a constant value of 0 in block <Data_id_ex>.
-WARNING:Xst:1710 - FF/Latch  <q_121> (without init value) has a constant value of 0 in block <Data_id_ex>.
-WARNING:Xst:1710 - FF/Latch  <q_120> (without init value) has a constant value of 0 in block <Data_id_ex>.
-WARNING:Xst:1710 - FF/Latch  <q_119> (without init value) has a constant value of 0 in block <Data_id_ex>.
-WARNING:Xst:1710 - FF/Latch  <q_118> (without init value) has a constant value of 0 in block <Data_id_ex>.
-WARNING:Xst:1710 - FF/Latch  <q_117> (without init value) has a constant value of 0 in block <Data_id_ex>.
-WARNING:Xst:1710 - FF/Latch  <q_116> (without init value) has a constant value of 0 in block <Data_id_ex>.
-WARNING:Xst:1710 - FF/Latch  <q_115> (without init value) has a constant value of 0 in block <Data_id_ex>.
-WARNING:Xst:1710 - FF/Latch  <q_114> (without init value) has a constant value of 0 in block <Data_id_ex>.
-WARNING:Xst:1710 - FF/Latch  <q_113> (without init value) has a constant value of 0 in block <Data_id_ex>.
-WARNING:Xst:1710 - FF/Latch  <q_112> (without init value) has a constant value of 0 in block <Data_id_ex>.
-WARNING:Xst:1710 - FF/Latch  <q_111> (without init value) has a constant value of 0 in block <Data_id_ex>.
-WARNING:Xst:1710 - FF/Latch  <q_110> (without init value) has a constant value of 0 in block <Data_id_ex>.
-WARNING:Xst:1710 - FF/Latch  <q_109> (without init value) has a constant value of 0 in block <Data_id_ex>.
-WARNING:Xst:1710 - FF/Latch  <q_108> (without init value) has a constant value of 0 in block <Data_id_ex>.
-WARNING:Xst:1710 - FF/Latch  <q_107> (without init value) has a constant value of 0 in block <Data_id_ex>.
-WARNING:Xst:1710 - FF/Latch  <q_106> (without init value) has a constant value of 0 in block <Data_id_ex>.
-WARNING:Xst:1710 - FF/Latch  <q_105> (without init value) has a constant value of 0 in block <Data_id_ex>.
-WARNING:Xst:1710 - FF/Latch  <q_104> (without init value) has a constant value of 0 in block <Data_id_ex>.
-WARNING:Xst:1710 - FF/Latch  <q_103> (without init value) has a constant value of 0 in block <Data_id_ex>.
-WARNING:Xst:1710 - FF/Latch  <q_102> (without init value) has a constant value of 0 in block <Data_id_ex>.
-WARNING:Xst:1710 - FF/Latch  <q_101> (without init value) has a constant value of 0 in block <Data_id_ex>.
+WARNING:Xst:1293 - FF/Latch  <q_127> has a constant value of 0 in block <Data_id_ex>.
+WARNING:Xst:1293 - FF/Latch  <q_126> has a constant value of 0 in block <Data_id_ex>.
+WARNING:Xst:1293 - FF/Latch  <q_125> has a constant value of 0 in block <Data_id_ex>.
+WARNING:Xst:1293 - FF/Latch  <q_124> has a constant value of 0 in block <Data_id_ex>.
+WARNING:Xst:1293 - FF/Latch  <q_123> has a constant value of 0 in block <Data_id_ex>.
+WARNING:Xst:1293 - FF/Latch  <q_122> has a constant value of 0 in block <Data_id_ex>.
+WARNING:Xst:1293 - FF/Latch  <q_121> has a constant value of 0 in block <Data_id_ex>.
+WARNING:Xst:1293 - FF/Latch  <q_120> has a constant value of 0 in block <Data_id_ex>.
+WARNING:Xst:1293 - FF/Latch  <q_119> has a constant value of 0 in block <Data_id_ex>.
+WARNING:Xst:1293 - FF/Latch  <q_118> has a constant value of 0 in block <Data_id_ex>.
+WARNING:Xst:1293 - FF/Latch  <q_117> has a constant value of 0 in block <Data_id_ex>.
+WARNING:Xst:1293 - FF/Latch  <q_116> has a constant value of 0 in block <Data_id_ex>.
+WARNING:Xst:1293 - FF/Latch  <q_115> has a constant value of 0 in block <Data_id_ex>.
+WARNING:Xst:1293 - FF/Latch  <q_114> has a constant value of 0 in block <Data_id_ex>.
+WARNING:Xst:1293 - FF/Latch  <q_113> has a constant value of 0 in block <Data_id_ex>.
+WARNING:Xst:1293 - FF/Latch  <q_112> has a constant value of 0 in block <Data_id_ex>.
+WARNING:Xst:1293 - FF/Latch  <q_111> has a constant value of 0 in block <Data_id_ex>.
+WARNING:Xst:1293 - FF/Latch  <q_110> has a constant value of 0 in block <Data_id_ex>.
+WARNING:Xst:1293 - FF/Latch  <q_109> has a constant value of 0 in block <Data_id_ex>.
+WARNING:Xst:1293 - FF/Latch  <q_108> has a constant value of 0 in block <Data_id_ex>.
+WARNING:Xst:1293 - FF/Latch  <q_107> has a constant value of 0 in block <Data_id_ex>.
+WARNING:Xst:1293 - FF/Latch  <q_106> has a constant value of 0 in block <Data_id_ex>.
+WARNING:Xst:1293 - FF/Latch  <q_105> has a constant value of 0 in block <Data_id_ex>.
+WARNING:Xst:1293 - FF/Latch  <q_104> has a constant value of 0 in block <Data_id_ex>.
+WARNING:Xst:1293 - FF/Latch  <q_103> has a constant value of 0 in block <Data_id_ex>.
+WARNING:Xst:1293 - FF/Latch  <q_102> has a constant value of 0 in block <Data_id_ex>.
+WARNING:Xst:1293 - FF/Latch  <q_101> has a constant value of 0 in block <Data_id_ex>.
 
 =========================================================================
 Advanced HDL Synthesis Report
@@ -795,56 +793,56 @@ Optimizing unit <ID> ...
 Optimizing unit <ALU> ...
 
 Optimizing unit <EX> ...
-WARNING:Xst:1710 - FF/Latch  <Data_id_ex/q_117> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_id_ex/q_116> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_id_ex/q_115> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_id_ex/q_114> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_id_ex/q_113> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_id_ex/q_112> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_id_ex/q_111> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_id_ex/q_110> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_id_ex/q_109> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_id_ex/q_108> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_id_ex/q_107> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_id_ex/q_106> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_id_ex/q_105> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_id_ex/q_104> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_id_ex/q_103> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_id_ex/q_102> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_id_ex/q_101> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <if_id/q_30> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <if_id/q_25> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <if_id/q_23> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <if_id/q_20> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_id_ex/q_127> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_id_ex/q_126> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_id_ex/q_125> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_id_ex/q_124> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_id_ex/q_123> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_id_ex/q_122> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_id_ex/q_121> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_id_ex/q_120> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_id_ex/q_119> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Data_id_ex/q_118> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Addr_id_ex/q_9> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Addr_id_ex/q_12> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <Addr_id_ex/q_14> (without init value) has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1293 - FF/Latch  <Data_id_ex/q_117> has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <Data_id_ex/q_116> has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <Data_id_ex/q_115> has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <Data_id_ex/q_114> has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <Data_id_ex/q_113> has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <Data_id_ex/q_112> has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <Data_id_ex/q_111> has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <Data_id_ex/q_110> has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <Data_id_ex/q_109> has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <Data_id_ex/q_108> has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <Data_id_ex/q_107> has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <Data_id_ex/q_106> has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <Data_id_ex/q_105> has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <Data_id_ex/q_104> has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <Data_id_ex/q_103> has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <Data_id_ex/q_102> has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <Data_id_ex/q_101> has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <if_id/q_30> has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <if_id/q_25> has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <if_id/q_23> has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <if_id/q_20> has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <Data_id_ex/q_127> has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <Data_id_ex/q_126> has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <Data_id_ex/q_125> has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <Data_id_ex/q_124> has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <Data_id_ex/q_123> has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <Data_id_ex/q_122> has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <Data_id_ex/q_121> has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <Data_id_ex/q_120> has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <Data_id_ex/q_119> has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <Data_id_ex/q_118> has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <Addr_id_ex/q_9> has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <Addr_id_ex/q_12> has a constant value of 0 in block <MipsPipelineCPU>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <Addr_id_ex/q_14> has a constant value of 0 in block <MipsPipelineCPU>.
 
 Mapping all equations...
 Building and optimizing final netlist ...
-INFO:Xst:2261 - The FF/Latch <Addr_id_ex/q_4> in Unit <MipsPipelineCPU> is equivalent to the following 17 FFs/Latches, which will be removed : <Data_id_ex/q_95> <Data_id_ex/q_94> <Data_id_ex/q_93> <Data_id_ex/q_92> <Data_id_ex/q_91> <Data_id_ex/q_90> <Data_id_ex/q_89> <Data_id_ex/q_88> <Data_id_ex/q_87> <Data_id_ex/q_86> <Data_id_ex/q_85> <Data_id_ex/q_84> <Data_id_ex/q_83> <Data_id_ex/q_82> <Data_id_ex/q_81> <Data_id_ex/q_80> <Data_id_ex/q_79> 
-INFO:Xst:2261 - The FF/Latch <Data_id_ex/q_100> in Unit <MipsPipelineCPU> is equivalent to the following FF/Latch, which will be removed : <Data_id_ex/q_74> 
-INFO:Xst:2261 - The FF/Latch <if_id/q_12> in Unit <MipsPipelineCPU> is equivalent to the following FF/Latch, which will be removed : <if_id/q_5> 
-INFO:Xst:2261 - The FF/Latch <Addr_id_ex/q_0> in Unit <MipsPipelineCPU> is equivalent to the following FF/Latch, which will be removed : <Data_id_ex/q_75> 
-INFO:Xst:2261 - The FF/Latch <Data_id_ex/q_96> in Unit <MipsPipelineCPU> is equivalent to the following FF/Latch, which will be removed : <Data_id_ex/q_70> 
-INFO:Xst:2261 - The FF/Latch <Addr_id_ex/q_1> in Unit <MipsPipelineCPU> is equivalent to the following FF/Latch, which will be removed : <Data_id_ex/q_76> 
-INFO:Xst:2261 - The FF/Latch <Data_id_ex/q_97> in Unit <MipsPipelineCPU> is equivalent to the following FF/Latch, which will be removed : <Data_id_ex/q_71> 
-INFO:Xst:2261 - The FF/Latch <if_id/q_15> in Unit <MipsPipelineCPU> is equivalent to the following 5 FFs/Latches, which will be removed : <if_id/q_13> <if_id/q_10> <if_id/q_9> <if_id/q_8> <if_id/q_4> 
-INFO:Xst:2261 - The FF/Latch <Addr_id_ex/q_2> in Unit <MipsPipelineCPU> is equivalent to the following FF/Latch, which will be removed : <Data_id_ex/q_77> 
-INFO:Xst:2261 - The FF/Latch <Data_id_ex/q_98> in Unit <MipsPipelineCPU> is equivalent to the following FF/Latch, which will be removed : <Data_id_ex/q_72> 
-INFO:Xst:2261 - The FF/Latch <MM_id_ex/q_0> in Unit <MipsPipelineCPU> is equivalent to the following FF/Latch, which will be removed : <WB_id_ex/q_1> 
-INFO:Xst:2261 - The FF/Latch <Addr_id_ex/q_3> in Unit <MipsPipelineCPU> is equivalent to the following FF/Latch, which will be removed : <Data_id_ex/q_78> 
 INFO:Xst:2261 - The FF/Latch <Data_id_ex/q_99> in Unit <MipsPipelineCPU> is equivalent to the following FF/Latch, which will be removed : <Data_id_ex/q_73> 
+INFO:Xst:2261 - The FF/Latch <if_id/q_15> in Unit <MipsPipelineCPU> is equivalent to the following 5 FFs/Latches, which will be removed : <if_id/q_13> <if_id/q_10> <if_id/q_9> <if_id/q_8> <if_id/q_4> 
+INFO:Xst:2261 - The FF/Latch <Addr_id_ex/q_1> in Unit <MipsPipelineCPU> is equivalent to the following FF/Latch, which will be removed : <Data_id_ex/q_76> 
+INFO:Xst:2261 - The FF/Latch <Addr_id_ex/q_2> in Unit <MipsPipelineCPU> is equivalent to the following FF/Latch, which will be removed : <Data_id_ex/q_77> 
+INFO:Xst:2261 - The FF/Latch <Data_id_ex/q_100> in Unit <MipsPipelineCPU> is equivalent to the following FF/Latch, which will be removed : <Data_id_ex/q_74> 
+INFO:Xst:2261 - The FF/Latch <Data_id_ex/q_96> in Unit <MipsPipelineCPU> is equivalent to the following FF/Latch, which will be removed : <Data_id_ex/q_70> 
+INFO:Xst:2261 - The FF/Latch <Addr_id_ex/q_0> in Unit <MipsPipelineCPU> is equivalent to the following FF/Latch, which will be removed : <Data_id_ex/q_75> 
+INFO:Xst:2261 - The FF/Latch <Data_id_ex/q_97> in Unit <MipsPipelineCPU> is equivalent to the following FF/Latch, which will be removed : <Data_id_ex/q_71> 
+INFO:Xst:2261 - The FF/Latch <Addr_id_ex/q_3> in Unit <MipsPipelineCPU> is equivalent to the following FF/Latch, which will be removed : <Data_id_ex/q_78> 
+INFO:Xst:2261 - The FF/Latch <if_id/q_12> in Unit <MipsPipelineCPU> is equivalent to the following FF/Latch, which will be removed : <if_id/q_5> 
+INFO:Xst:2261 - The FF/Latch <MM_id_ex/q_0> in Unit <MipsPipelineCPU> is equivalent to the following FF/Latch, which will be removed : <WB_id_ex/q_1> 
+INFO:Xst:2261 - The FF/Latch <Data_id_ex/q_98> in Unit <MipsPipelineCPU> is equivalent to the following FF/Latch, which will be removed : <Data_id_ex/q_72> 
+INFO:Xst:2261 - The FF/Latch <Addr_id_ex/q_4> in Unit <MipsPipelineCPU> is equivalent to the following 17 FFs/Latches, which will be removed : <Data_id_ex/q_95> <Data_id_ex/q_94> <Data_id_ex/q_93> <Data_id_ex/q_92> <Data_id_ex/q_91> <Data_id_ex/q_90> <Data_id_ex/q_89> <Data_id_ex/q_88> <Data_id_ex/q_87> <Data_id_ex/q_86> <Data_id_ex/q_85> <Data_id_ex/q_84> <Data_id_ex/q_83> <Data_id_ex/q_82> <Data_id_ex/q_81> <Data_id_ex/q_80> <Data_id_ex/q_79> 
 INFO:Xst:2261 - The FF/Latch <Addr_id_ex/q_4> in Unit <MipsPipelineCPU> is equivalent to the following 4 FFs/Latches, which will be removed : <Addr_id_ex/q_2> <Data_id_ex/q_100> <Data_id_ex/q_99> <Data_id_ex/q_98> 
 INFO:Xst:2261 - The FF/Latch <Addr_id_ex/q_1> in Unit <MipsPipelineCPU> is equivalent to the following FF/Latch, which will be removed : <Data_id_ex/q_69> 
 INFO:Xst:2261 - The FF/Latch <Addr_id_ex/q_4> in Unit <MipsPipelineCPU> is equivalent to the following FF/Latch, which will be removed : <Data_id_ex/q_68> 
@@ -1210,13 +1208,13 @@ Offset:              11.901ns (Levels of Logic = 16)
                                        (55.4% logic, 44.6% route)
 
 =========================================================================
-CPU : 44.02 / 45.05 s | Elapsed : 45.00 / 46.00 s
+CPU : 34.80 / 35.13 s | Elapsed : 35.00 / 35.00 s
  
 --> 
 
 Total memory usage is 243480 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  204 (   0 filtered)
+Number of warnings :  202 (   0 filtered)
 Number of infos    :   18 (   0 filtered)
 
