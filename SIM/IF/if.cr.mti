@@ -5,17 +5,17 @@ Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
 Top level modules:
 	InstructionROM
 
-} {} {}} D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/IF.v {0 {vlog -work work -vopt D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/IF.v
-Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
--- Compiling module IF
-** Error: D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/IF.v(59): Illegal part-select expression for variable "PC"
-** Error: D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/IF.v(59): Illegal part-select expression for variable "PC"
-
-} {4.0 6.0} {}} D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SIM/IF/IF_tb.v {1 {vlog -work work -vopt D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SIM/IF/IF_tb.v
+} {} {}} D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SIM/IF/IF_tb.v {1 {vlog -work work -vopt D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SIM/IF/IF_tb.v
 Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
 -- Compiling module IF_tb_v
 
 Top level modules:
 	IF_tb_v
 
-} {} {}}
+} {} {}} D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/IF.v {0 {vlog -work work -vopt D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/IF.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module IF
+** Error: D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/IF.v(59): Illegal part-select expression for variable "PC"
+** Error: D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/IF.v(59): Illegal part-select expression for variable "PC"
+
+} {4.0 6.0} {}}
