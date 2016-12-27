@@ -5,17 +5,39 @@ Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
 Top level modules:
 	InstructionROM
 
-} {} {}} D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/IF.v {0 {vlog -work work -vopt D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/IF.v
+} {} {}} D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/mux_2_to_1.v {1 {vlog -work work -vopt D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/mux_2_to_1.v
 Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
--- Compiling module IF
-** Error: D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/IF.v(59): Illegal part-select expression for variable "PC"
-** Error: D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/IF.v(59): Illegal part-select expression for variable "PC"
+-- Compiling module mux_2_to_1
 
-} {4.0 6.0} {}} D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SIM/IF/IF_tb.v {1 {vlog -work work -vopt D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SIM/IF/IF_tb.v
+Top level modules:
+	mux_2_to_1
+
+} {} {}} D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/adder_4bits.v {1 {vlog -work work -vopt D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/adder_4bits.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module adder_4bits
+
+Top level modules:
+	adder_4bits
+
+} {} {}} D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/adder_32bits.v {1 {vlog -work work -vopt D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/adder_32bits.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module adder_32bits
+
+Top level modules:
+	adder_32bits
+
+} {} {}} D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SIM/IF/IF_tb.v {1 {vlog -work work -vopt D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SIM/IF/IF_tb.v
 Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
 -- Compiling module IF_tb_v
 
 Top level modules:
 	IF_tb_v
+
+} {} {}} D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/IF.v {1 {vlog -work work -vopt D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/IF.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module IF
+
+Top level modules:
+	IF
 
 } {} {}}
