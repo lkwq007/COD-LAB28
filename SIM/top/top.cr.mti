@@ -1,0 +1,85 @@
+C:/cod/COD-LAB28/SRC/ALU.v {1 {vlog -work work -vopt -nocovercells C:/cod/COD-LAB28/SRC/ALU.v
+Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}} C:/cod/COD-LAB28/SIM/top/top_tb.v {1 {vlog -work work -vopt -nocovercells C:/cod/COD-LAB28/SIM/top/top_tb.v
+Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+-- Compiling module top_tb_v
+
+Top level modules:
+	top_tb_v
+
+} {} {}} C:/cod/COD-LAB28/ISE/DataRAM.v {1 {vlog -work work -vopt -nocovercells C:/cod/COD-LAB28/ISE/DataRAM.v
+Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+-- Compiling module DataRAM
+
+Top level modules:
+	DataRAM
+
+} {} {}} C:/cod/COD-LAB28/SRC/Decode.v {1 {vlog -work work -vopt -nocovercells C:/cod/COD-LAB28/SRC/Decode.v
+Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+-- Compiling module Decode
+
+Top level modules:
+	Decode
+
+} {} {}} C:/cod/COD-LAB28/SRC/adder_4bits.v {1 {vlog -work work -vopt -nocovercells C:/cod/COD-LAB28/SRC/adder_4bits.v
+Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+-- Compiling module adder_4bits
+
+Top level modules:
+	adder_4bits
+
+} {} {}} C:/cod/COD-LAB28/SRC/mux_2_to_1.v {1 {vlog -work work -vopt -nocovercells C:/cod/COD-LAB28/SRC/mux_2_to_1.v
+Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+-- Compiling module mux_2_to_1
+
+Top level modules:
+	mux_2_to_1
+
+} {} {}} C:/cod/COD-LAB28/SRC/Registers.v {1 {vlog -work work -vopt -nocovercells C:/cod/COD-LAB28/SRC/Registers.v
+Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+-- Compiling module Registers
+
+Top level modules:
+	Registers
+
+} {} {}} C:/cod/COD-LAB28/SRC/ID.v {1 {vlog -work work -vopt -nocovercells C:/cod/COD-LAB28/SRC/ID.v
+Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+-- Compiling module ID
+
+Top level modules:
+	ID
+
+} {} {}} C:/cod/COD-LAB28/SRC/EX.v {1 {vlog -work work -vopt -nocovercells C:/cod/COD-LAB28/SRC/EX.v
+Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+-- Compiling module EX
+
+Top level modules:
+	EX
+
+} {} {}} C:/cod/COD-LAB28/SRC/adder_32bits.v {1 {vlog -work work -vopt -nocovercells C:/cod/COD-LAB28/SRC/adder_32bits.v
+Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+-- Compiling module adder_32bits
+
+Top level modules:
+	adder_32bits
+
+} {} {}} C:/cod/COD-LAB28/SRC/IF.v {1 {vlog -work work -vopt -nocovercells C:/cod/COD-LAB28/SRC/IF.v
+Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+-- Compiling module IF
+
+Top level modules:
+	IF
+
+} {} {}} C:/cod/COD-LAB28/SRC/InstructionROM.v {1 {vlog -work work -vopt -nocovercells C:/cod/COD-LAB28/SRC/InstructionROM.v
+Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
+-- Compiling module InstructionROM
+
+Top level modules:
+	InstructionROM
+
+} {} {}}
