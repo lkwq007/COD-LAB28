@@ -40,30 +40,12 @@ Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
 Top level modules:
 	mux_2_to_1
 
-} {} {}} C:/cod/COD-LAB28/SRC/MipsPipelineCPU.v {1 {vlog -work work -vopt -nocovercells C:/cod/COD-LAB28/SRC/MipsPipelineCPU.v
-Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
--- Compiling module MipsPipelineCPU
-
-Top level modules:
-	MipsPipelineCPU
-
 } {} {}} C:/cod/COD-LAB28/SRC/Registers.v {1 {vlog -work work -vopt -nocovercells C:/cod/COD-LAB28/SRC/Registers.v
 Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
 -- Compiling module Registers
 
 Top level modules:
 	Registers
-
-} {} {}} C:/cod/COD-LAB28/SRC/ff_lib.v {1 {vlog -work work -vopt -nocovercells C:/cod/COD-LAB28/SRC/ff_lib.v
-Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009
--- Compiling module dff
--- Compiling module dffr
--- Compiling module dffre
-
-Top level modules:
-	dff
-	dffr
-	dffre
 
 } {} {}} C:/cod/COD-LAB28/SRC/ID.v {1 {vlog -work work -vopt -nocovercells C:/cod/COD-LAB28/SRC/ID.v
 Model Technology ModelSim SE vlog 6.5 Compiler 2009.01 Jan 22 2009

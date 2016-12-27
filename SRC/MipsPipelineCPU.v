@@ -65,7 +65,7 @@ module MipsPipelineCPU(clk,reset,JumpFlag,Instruction_id,ALU_A,
 	//ID Module	
 	wire[4:0] RtAddr_id,RdAddr_id,RsAddr_id;
 	wire RegWrite_wb,MemRead_ex,MemtoReg_id,RegWrite_id,MemWrite_id;
-	wire MemRead_id,ALUSrcA_id,ALUSrcB_id,RegDst_id,stall;
+	wire MemRead_id,ALUSrcA_id,ALUSrcB_id,RegDst_id;//stall;
 	wire[4:0] RegWriteAddr_wb,RegWriteAddr_ex,ALUCode_id;
 	wire[31:0] RegWriteData_wb,Imm_id,Sa_id,RsData_id,RtData_id;
 	ID  ID(
