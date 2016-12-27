@@ -5,257 +5,257 @@ cModel Technology
 Z0 dC:\cod\COD-LAB28\SIM\IF
 T_opt
 V7Q^z40o=ajRU7BPeK7eZ:1
-Z1 04 8 4 work top_tb_v fast 0
-Z2 =2-000c29a3f4b0-5854ebfc-f5-b50
-Z3 o-quiet -auto_acc_if_foreign -work work -L C:/modeltech_6.5/Xilinx_lib/xilinxcorelib_ver -L C:/modeltech_6.5/Xilinx_lib/unisims_ver -L C:/modeltech_6.5/Xilinx_lib/simprims_ver +acc
-Z4 n@_opt
-Z5 OE;O;6.5;42
+04 8 4 work top_tb_v fast 0
+=2-000c29a3f4b0-5854ebfc-f5-b50
+o-quiet -auto_acc_if_foreign -work work -L C:/modeltech_6.5/Xilinx_lib/xilinxcorelib_ver -L C:/modeltech_6.5/Xilinx_lib/unisims_ver -L C:/modeltech_6.5/Xilinx_lib/simprims_ver +acc
+n@_opt
+OE;O;6.5;42
 vadder_32bits
-Z6 IgfUNMVS<HIO<:=JV0=>Ci1
-Z7 VH3MfAaUBUHMniOHlZdcI;0
-Z8 dC:\cod\COD-LAB28\SIM\top
-Z9 w1481773620
-Z10 8C:/cod/COD-LAB28/SRC/adder_32bits.v
-Z11 FC:/cod/COD-LAB28/SRC/adder_32bits.v
+IgfUNMVS<HIO<:=JV0=>Ci1
+VH3MfAaUBUHMniOHlZdcI;0
+Z1 dC:\cod\COD-LAB28\SIM\top
+Z2 w1481773620
+8C:/cod/COD-LAB28/SRC/adder_32bits.v
+FC:/cod/COD-LAB28/SRC/adder_32bits.v
 L0 14
-Z12 OE;L;6.5;42
+Z3 OE;L;6.5;42
 r1
 31
-Z13 !s102 -nocovercells
-Z14 o-work work -nocovercells -L mtiAvm -L mtiOvm -L mtiUPF
-Z15 !s100 HQ[EJc^^EXzPhV3jOZi@J0
+Z4 !s102 -nocovercells
+Z5 o-work work -nocovercells -L mtiAvm -L mtiOvm -L mtiUPF
+!s100 HQ[EJc^^EXzPhV3jOZi@J0
 !s85 0
 vadder_4bits
-Z16 IjIQA=06RYc_N=J9_5klB<2
-Z17 VRIOd4YzBVIKIHabCV7aQM3
-R8
-R9
-Z18 8C:/cod/COD-LAB28/SRC/adder_4bits.v
-Z19 FC:/cod/COD-LAB28/SRC/adder_4bits.v
+IjIQA=06RYc_N=J9_5klB<2
+VRIOd4YzBVIKIHabCV7aQM3
+R1
+R2
+8C:/cod/COD-LAB28/SRC/adder_4bits.v
+FC:/cod/COD-LAB28/SRC/adder_4bits.v
 L0 14
-R12
+R3
 r1
 31
-R13
-R14
-Z20 !s100 0PSEIlBB5374W`]65XWlZ2
+R4
+R5
+!s100 0PSEIlBB5374W`]65XWlZ2
 !s85 0
 vALU
-Z21 I67BaWcP87DO_]do5k:<_61
-Z22 VaV^i_k8i[S<RQoIRA9CmA3
-R8
-Z23 w1481945639
-Z24 8C:/cod/COD-LAB28/SRC/ALU.v
-Z25 FC:/cod/COD-LAB28/SRC/ALU.v
+I67BaWcP87DO_]do5k:<_61
+VaV^i_k8i[S<RQoIRA9CmA3
+R1
+w1481945639
+8C:/cod/COD-LAB28/SRC/ALU.v
+FC:/cod/COD-LAB28/SRC/ALU.v
 L0 15
-R12
+R3
 r1
 31
-R13
-R14
-Z26 n@a@l@u
-Z27 !s100 VVE3WdzG1I:G?Ol>[K27a2
+R4
+R5
+n@a@l@u
+!s100 VVE3WdzG1I:G?Ol>[K27a2
 !s85 0
 vDataRAM
-Z28 I40R`D6hQNzbN>>hD53YBT2
-Z29 VKYoF^0NHFE_zJ6PA58`]C1
-R8
-Z30 w1481773691
-Z31 8C:/cod/COD-LAB28/ISE/DataRAM.v
-Z32 FC:/cod/COD-LAB28/ISE/DataRAM.v
+I40R`D6hQNzbN>>hD53YBT2
+VKYoF^0NHFE_zJ6PA58`]C1
+R1
+w1481773691
+8C:/cod/COD-LAB28/ISE/DataRAM.v
+FC:/cod/COD-LAB28/ISE/DataRAM.v
 L0 40
-R12
+R3
 r1
 31
-R13
-R14
-Z33 n@data@r@a@m
-Z34 !s100 VKS9kJ`0CNd0P]0D>2>ok3
+R4
+R5
+n@data@r@a@m
+!s100 VKS9kJ`0CNd0P]0D>2>ok3
 !s85 0
 vDecode
-Z35 I7YI9]Ji_VRX[UlMo:VFkA1
-Z36 VZljK8RR7o2iTDaBIhX7e03
-R8
-Z37 w1481946448
-Z38 8C:/cod/COD-LAB28/SRC/Decode.v
-Z39 FC:/cod/COD-LAB28/SRC/Decode.v
+I7YI9]Ji_VRX[UlMo:VFkA1
+VZljK8RR7o2iTDaBIhX7e03
+R1
+Z6 w1481946448
+8C:/cod/COD-LAB28/SRC/Decode.v
+FC:/cod/COD-LAB28/SRC/Decode.v
 L0 13
-R12
+R3
 r1
 31
-R13
-R14
-Z40 n@decode
-Z41 !s100 ?hfa@>``QQc^^TOm92B3E0
+R4
+R5
+n@decode
+!s100 ?hfa@>``QQc^^TOm92B3E0
 !s85 0
 vdff
-Z42 Igjo9fNkVUE3>^E_=F`KFK2
-Z43 VQJf=onUaMX6VY4JoHzE;B2
-R8
-Z44 w1481960428
-Z45 8C:/cod/COD-LAB28/SRC/ff_lib.v
-Z46 FC:/cod/COD-LAB28/SRC/ff_lib.v
+Igjo9fNkVUE3>^E_=F`KFK2
+VQJf=onUaMX6VY4JoHzE;B2
+R1
+Z7 w1481960428
+Z8 8C:/cod/COD-LAB28/SRC/ff_lib.v
+Z9 FC:/cod/COD-LAB28/SRC/ff_lib.v
 L0 4
-R12
+R3
 r1
 31
-R13
-R14
-Z47 !s100 koEE;ckCmc3LzGUY1CjMi0
+R4
+R5
+!s100 koEE;ckCmc3LzGUY1CjMi0
 !s85 0
 vdffr
-Z48 IGN]:;mI8Ha_J;3@T9VMCV2
-Z49 VTJ0dVO56HCY3EBFS?gH0;3
+IGN]:;mI8Ha_J;3@T9VMCV2
+VTJ0dVO56HCY3EBFS?gH0;3
+R1
+R7
 R8
-R44
-R45
-R46
+R9
 L0 20
-R12
+R3
 r1
 31
-R13
-R14
-Z50 !s100 @3U0IBG?:zDzmzQ1[`Qi40
+R4
+R5
+!s100 @3U0IBG?:zDzmzQ1[`Qi40
 !s85 0
 vdffre
-Z51 I2>V4hNUXkcShS:5ndF]ob3
-Z52 V7ZQ^8ZXQf6:_SW]:fGY<B2
+I2>V4hNUXkcShS:5ndF]ob3
+V7ZQ^8ZXQf6:_SW]:fGY<B2
+R1
+R7
 R8
-R44
-R45
-R46
+R9
 L0 42
-R12
+R3
 r1
 31
-R13
-R14
-Z53 !s100 4n>@7Ibl7V7FZjH[X9Hnz0
+R4
+R5
+!s100 4n>@7Ibl7V7FZjH[X9Hnz0
 !s85 0
 vEX
-Z54 I?ekfWa>>V@`Ig2ZRN<H?53
-Z55 V0A0nRSRQ=2kL8]LV_8?W]2
-R8
-Z56 w1481948725
-Z57 8C:/cod/COD-LAB28/SRC/EX.v
-Z58 FC:/cod/COD-LAB28/SRC/EX.v
+I?ekfWa>>V@`Ig2ZRN<H?53
+V0A0nRSRQ=2kL8]LV_8?W]2
+R1
+w1481948725
+8C:/cod/COD-LAB28/SRC/EX.v
+FC:/cod/COD-LAB28/SRC/EX.v
 L0 21
-R12
+R3
 r1
 31
-R13
-R14
+R4
+R5
 n@e@x
-Z59 !s100 L]gMa46RFe_:X=Ie=PaUo0
+!s100 L]gMa46RFe_:X=Ie=PaUo0
 !s85 0
 vID
-Z60 Ina5lR0f:DHWEUIeLb9ITX1
-Z61 V9XZOY637e@EL?E`dGcfTD2
-R8
-R37
-Z62 8C:/cod/COD-LAB28/SRC/ID.v
-Z63 FC:/cod/COD-LAB28/SRC/ID.v
+Ina5lR0f:DHWEUIeLb9ITX1
+V9XZOY637e@EL?E`dGcfTD2
+R1
+R6
+8C:/cod/COD-LAB28/SRC/ID.v
+FC:/cod/COD-LAB28/SRC/ID.v
 L0 21
-R12
+R3
 r1
 31
-R13
-R14
+R4
+R5
 n@i@d
-Z64 !s100 18[ECO0Kb]903IgcA3FKK2
+!s100 18[ECO0Kb]903IgcA3FKK2
 !s85 0
 vIF
-Z65 I[=eKfIUOSPkj5deKa1a8m1
-Z66 V09l=010ji^o>c6joDMjlR1
-R8
-Z67 w1481942985
-Z68 8C:/cod/COD-LAB28/SRC/IF.v
-Z69 FC:/cod/COD-LAB28/SRC/IF.v
+I[=eKfIUOSPkj5deKa1a8m1
+V09l=010ji^o>c6joDMjlR1
+R1
+w1481942985
+8C:/cod/COD-LAB28/SRC/IF.v
+FC:/cod/COD-LAB28/SRC/IF.v
 L0 21
-R12
+R3
 r1
 31
-R13
-R14
+R4
+R5
 n@i@f
-Z70 !s100 ]6<S[d^Zgg]bnAzTDXe=b1
+!s100 ]6<S[d^Zgg]bnAzTDXe=b1
 !s85 0
 vInstructionROM
-Z71 I`:hi6fGgGU9U5YXV:Xo]G1
-Z72 Vo`C5oIU4Q39o^5hU;3[bg1
-R8
-R9
-Z73 8C:/cod/COD-LAB28/SRC/InstructionROM.v
-Z74 FC:/cod/COD-LAB28/SRC/InstructionROM.v
+I`:hi6fGgGU9U5YXV:Xo]G1
+Vo`C5oIU4Q39o^5hU;3[bg1
+R1
+R2
+8C:/cod/COD-LAB28/SRC/InstructionROM.v
+FC:/cod/COD-LAB28/SRC/InstructionROM.v
 L0 2
-R12
+R3
 r1
 31
-R13
-R14
-Z75 n@instruction@r@o@m
-Z76 !s100 G@_O[VR5PmA0VPW7`WHkc0
+R4
+R5
+n@instruction@r@o@m
+!s100 G@_O[VR5PmA0VPW7`WHkc0
 !s85 0
 vMipsPipelineCPU
-Z77 II>jMFPK4g65HF9hGk4=JA0
-Z78 VMkJZ6G:<VU`:5Lh1Lflc;3
-R8
-Z79 w1481960421
-Z80 8C:/cod/COD-LAB28/SRC/MipsPipelineCPU.v
-Z81 FC:/cod/COD-LAB28/SRC/MipsPipelineCPU.v
+II>jMFPK4g65HF9hGk4=JA0
+VMkJZ6G:<VU`:5Lh1Lflc;3
+R1
+w1481960421
+8C:/cod/COD-LAB28/SRC/MipsPipelineCPU.v
+FC:/cod/COD-LAB28/SRC/MipsPipelineCPU.v
 L0 21
-R12
+R3
 r1
 31
-R13
-R14
-Z82 n@mips@pipeline@c@p@u
-Z83 !s100 <i7RBX;nfQlAa?N4C05[H2
+R4
+R5
+n@mips@pipeline@c@p@u
+!s100 <i7RBX;nfQlAa?N4C05[H2
 !s85 0
 vmux_2_to_1
-Z84 IU8YLeJOU:1jAZ=FX094fl0
-Z85 VSZ288=i`M2`GDF9]IKBb`1
-R8
-R9
-Z86 8C:/cod/COD-LAB28/SRC/mux_2_to_1.v
-Z87 FC:/cod/COD-LAB28/SRC/mux_2_to_1.v
+IU8YLeJOU:1jAZ=FX094fl0
+VSZ288=i`M2`GDF9]IKBb`1
+R1
+R2
+8C:/cod/COD-LAB28/SRC/mux_2_to_1.v
+FC:/cod/COD-LAB28/SRC/mux_2_to_1.v
 L0 14
-R12
+R3
 r1
 31
-R13
-R14
-Z88 !s100 3fQW`l3D`7B5?RIRZ=mgS0
+R4
+R5
+!s100 3fQW`l3D`7B5?RIRZ=mgS0
 !s85 0
 vRegisters
-Z89 IgkA2Mc8QKG@dLP8[;F]=h1
-Z90 VX_4h:Z>7mIP7EB7dHNCAj2
-R8
-R9
-Z91 8C:/cod/COD-LAB28/SRC/Registers.v
-Z92 FC:/cod/COD-LAB28/SRC/Registers.v
+IgkA2Mc8QKG@dLP8[;F]=h1
+VX_4h:Z>7mIP7EB7dHNCAj2
+R1
+R2
+8C:/cod/COD-LAB28/SRC/Registers.v
+FC:/cod/COD-LAB28/SRC/Registers.v
 L0 4
-R12
+R3
 r1
 31
-R13
-R14
-Z93 n@registers
-Z94 !s100 S@7fgdIgU56@_]K:H8?Eh3
+R4
+R5
+n@registers
+!s100 S@7fgdIgU56@_]K:H8?Eh3
 !s85 0
 vtop_tb_v
-Z95 IcL<j>Q5A=EN]4]Va:78zz0
-Z96 Vb`ho<^?2]17_>iDcjNoLk1
-R8
-R9
-Z97 8C:/cod/COD-LAB28/SIM/top/top_tb.v
-Z98 FC:/cod/COD-LAB28/SIM/top/top_tb.v
+!s100 mfo_hSE;6obEc7nM_M6GN0
+IcL<j>Q5A=EN]4]Va:78zz0
+Vb`ho<^?2]17_>iDcjNoLk1
+R1
+R2
+8C:/cod/COD-LAB28/SIM/top/top_tb.v
+FC:/cod/COD-LAB28/SIM/top/top_tb.v
 L0 25
-R12
+R3
 r1
-31
-R13
-R14
-Z99 !s100 mfo_hSE;6obEc7nM_M6GN0
 !s85 0
+31
+R4
+R5
