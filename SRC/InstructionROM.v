@@ -4,6 +4,21 @@ module InstructionROM(addr,dout);
 	output [31 : 0] dout;
 	//
 	reg [31 : 0] dout;
+	/*
+	J 0x000000B
+	ADDI $t0 $zero 0x0042
+	ADDI $t1 $zero 0x0004
+	SUB $t2 $t0 $t1
+	OR $t3 $t2 $t0
+	SW $t3 0x000C $zero
+	LW $t4 0x0008 $t1
+	SLL $t0 $t4 0x02
+	LW $t3 0x0008 $t1
+	SLTU $t3 $t1 $t2
+	J 0x000000A
+	BNE $zero $zero 0x0001
+	BEQ $zero $zero 0xFFF4
+	 */
 	always @(*)
 		case (addr)
 			6'd0:   dout=32'h0800000b ;
