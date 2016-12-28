@@ -4,9 +4,9 @@ K3
 cModel Technology
 Z0 dC:\cod\COD-LAB28\SIM\IF
 T_opt
-Z1 V7Q^z40o=ajRU7BPeK7eZ:1
+Z1 V@K9LB4@WV_bE;6On1TE1A2
 Z2 04 8 4 work top_tb_v fast 0
-Z3 =2-000c29a3f4b0-5854ebfc-f5-b50
+Z3 =7-000c29a3f4b0-5863ba8f-2f-d34
 Z4 o-quiet -auto_acc_if_foreign -work work -L C:/modeltech_6.5/Xilinx_lib/xilinxcorelib_ver -L C:/modeltech_6.5/Xilinx_lib/unisims_ver -L C:/modeltech_6.5/Xilinx_lib/simprims_ver +acc
 Z5 n@_opt
 Z6 OE;O;6.5;42
@@ -92,7 +92,7 @@ vdff
 Z43 Igjo9fNkVUE3>^E_=F`KFK2
 Z44 VQJf=onUaMX6VY4JoHzE;B2
 R9
-Z45 w1481960428
+Z45 w1482829649
 Z46 8C:/cod/COD-LAB28/SRC/ff_lib.v
 Z47 FC:/cod/COD-LAB28/SRC/ff_lib.v
 L0 4
@@ -119,7 +119,7 @@ R15
 Z51 !s100 @3U0IBG?:zDzmzQ1[`Qi40
 !s85 0
 vdffre
-Z52 I2>V4hNUXkcShS:5ndF]ob3
+Z52 IX8NgB?l`9NC5^`Wm9[F8O2
 Z53 V7ZQ^8ZXQf6:_SW]:fGY<B2
 R9
 R45
@@ -131,13 +131,13 @@ r1
 31
 R14
 R15
-Z54 !s100 4n>@7Ibl7V7FZjH[X9Hnz0
+Z54 !s100 QJUmkmGB:fCDUU1Zof[dl0
 !s85 0
 vEX
-Z55 I?ekfWa>>V@`Ig2ZRN<H?53
+Z55 I1HbZPSf_TEW^oO?[J9`O`0
 Z56 V0A0nRSRQ=2kL8]LV_8?W]2
 R9
-Z57 w1481948725
+Z57 w1482930788
 Z58 8C:/cod/COD-LAB28/SRC/EX.v
 Z59 FC:/cod/COD-LAB28/SRC/EX.v
 L0 21
@@ -147,7 +147,7 @@ r1
 R14
 R15
 n@e@x
-Z60 !s100 L]gMa46RFe_:X=Ie=PaUo0
+Z60 !s100 0BHWQcDU79dN^VO3Tla;32
 !s85 0
 vID
 Z61 Ina5lR0f:DHWEUIeLb9ITX1
@@ -182,80 +182,80 @@ n@i@f
 Z71 !s100 ]6<S[d^Zgg]bnAzTDXe=b1
 !s85 0
 vInstructionROM
-Z72 I`:hi6fGgGU9U5YXV:Xo]G1
+Z72 Io<6GRo3AT0GLazXJWKY1=0
 Z73 Vo`C5oIU4Q39o^5hU;3[bg1
 R9
-R10
-Z74 8C:/cod/COD-LAB28/SRC/InstructionROM.v
-Z75 FC:/cod/COD-LAB28/SRC/InstructionROM.v
+Z74 w1482827339
+Z75 8C:/cod/COD-LAB28/SRC/InstructionROM.v
+Z76 FC:/cod/COD-LAB28/SRC/InstructionROM.v
 L0 2
 R13
 r1
 31
 R14
 R15
-Z76 n@instruction@r@o@m
-Z77 !s100 G@_O[VR5PmA0VPW7`WHkc0
+Z77 n@instruction@r@o@m
+Z78 !s100 >zAIZ=8Vn2e36=XOgNR6C0
 !s85 0
 vMipsPipelineCPU
-Z78 II>jMFPK4g65HF9hGk4=JA0
-Z79 VMkJZ6G:<VU`:5Lh1Lflc;3
+Z79 I=jiz4k0^<XAUAoimgKoG53
+Z80 VMkJZ6G:<VU`:5Lh1Lflc;3
 R9
-Z80 w1481960421
-Z81 8C:/cod/COD-LAB28/SRC/MipsPipelineCPU.v
-Z82 FC:/cod/COD-LAB28/SRC/MipsPipelineCPU.v
+Z81 w1482829703
+Z82 8C:/cod/COD-LAB28/SRC/MipsPipelineCPU.v
+Z83 FC:/cod/COD-LAB28/SRC/MipsPipelineCPU.v
 L0 21
 R13
 r1
 31
 R14
 R15
-Z83 n@mips@pipeline@c@p@u
-Z84 !s100 <i7RBX;nfQlAa?N4C05[H2
+Z84 n@mips@pipeline@c@p@u
+Z85 !s100 L>^a?2`TPH7gW89GJ:IOO3
 !s85 0
 vmux_2_to_1
-Z85 IU8YLeJOU:1jAZ=FX094fl0
-Z86 VSZ288=i`M2`GDF9]IKBb`1
+Z86 IU8YLeJOU:1jAZ=FX094fl0
+Z87 VSZ288=i`M2`GDF9]IKBb`1
 R9
 R10
-Z87 8C:/cod/COD-LAB28/SRC/mux_2_to_1.v
-Z88 FC:/cod/COD-LAB28/SRC/mux_2_to_1.v
+Z88 8C:/cod/COD-LAB28/SRC/mux_2_to_1.v
+Z89 FC:/cod/COD-LAB28/SRC/mux_2_to_1.v
 L0 14
 R13
 r1
 31
 R14
 R15
-Z89 !s100 3fQW`l3D`7B5?RIRZ=mgS0
+Z90 !s100 3fQW`l3D`7B5?RIRZ=mgS0
 !s85 0
 vRegisters
-Z90 IgkA2Mc8QKG@dLP8[;F]=h1
-Z91 VX_4h:Z>7mIP7EB7dHNCAj2
+Z91 IgkA2Mc8QKG@dLP8[;F]=h1
+Z92 VX_4h:Z>7mIP7EB7dHNCAj2
 R9
 R10
-Z92 8C:/cod/COD-LAB28/SRC/Registers.v
-Z93 FC:/cod/COD-LAB28/SRC/Registers.v
+Z93 8C:/cod/COD-LAB28/SRC/Registers.v
+Z94 FC:/cod/COD-LAB28/SRC/Registers.v
 L0 4
 R13
 r1
 31
 R14
 R15
-Z94 n@registers
-Z95 !s100 S@7fgdIgU56@_]K:H8?Eh3
+Z95 n@registers
+Z96 !s100 S@7fgdIgU56@_]K:H8?Eh3
 !s85 0
 vtop_tb_v
-Z96 IcL<j>Q5A=EN]4]Va:78zz0
-Z97 Vb`ho<^?2]17_>iDcjNoLk1
+Z97 IcL<j>Q5A=EN]4]Va:78zz0
+Z98 Vb`ho<^?2]17_>iDcjNoLk1
 R9
 R10
-Z98 8C:/cod/COD-LAB28/SIM/top/top_tb.v
-Z99 FC:/cod/COD-LAB28/SIM/top/top_tb.v
+Z99 8C:/cod/COD-LAB28/SIM/top/top_tb.v
+Z100 FC:/cod/COD-LAB28/SIM/top/top_tb.v
 L0 25
 R13
 r1
 31
 R14
 R15
-Z100 !s100 mfo_hSE;6obEc7nM_M6GN0
+Z101 !s100 mfo_hSE;6obEc7nM_M6GN0
 !s85 0

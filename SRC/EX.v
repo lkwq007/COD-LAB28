@@ -48,7 +48,7 @@ module EX(RegDst_ex,ALUCode_ex,ALUSrcA_ex,ALUSrcB_ex,Imm_ex,Sa_ex,RsAddr_ex,RtAd
 	wire[1:0] ForwardA,ForwardB;
 	assign ForwardA[0]=RegWrite_wb&&(RegWriteAddr_wb!=0)&&(RegWriteAddr_mem!=RsAddr_ex)&&(RegWriteAddr_wb==RsAddr_ex);
 	assign ForwardA[1]=RegWrite_mem&&(RegWriteAddr_mem!=0)&&(RegWriteAddr_mem==RsAddr_ex);
-	assign ForwardB[0]=RegWrite_wb&&(RegWriteAddr_wb!=0)&&(RegWriteAddr_mem!=RtAddr_ex)&&(RegWriteAddr_mem==RtAddr_ex);
+	assign ForwardB[0]=RegWrite_wb&&(RegWriteAddr_wb!=0)&&(RegWriteAddr_mem!=RtAddr_ex)&&(RegWriteAddr_wb==RtAddr_ex);
 	assign ForwardB[1]=RegWrite_mem&&(RegWriteAddr_mem!=0)&&(RegWriteAddr_mem==RtAddr_ex);
 
 	//MUX for A
