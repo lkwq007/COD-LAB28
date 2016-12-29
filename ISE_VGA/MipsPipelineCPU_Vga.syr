@@ -1,10 +1,10 @@
 Release 9.2i - xst J.36
 Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to ./xst/projnav.tmp
-CPU : 0.00 / 0.31 s | Elapsed : 0.00 / 0.00 s
+CPU : 0.00 / 0.31 s | Elapsed : 0.00 / 1.00 s
  
 --> Parameter xsthdpdir set to ./xst
-CPU : 0.00 / 0.31 s | Elapsed : 0.00 / 0.00 s
+CPU : 0.00 / 0.31 s | Elapsed : 0.00 / 1.00 s
  
 --> Reading design: MipsPipelineCPU_Vga.prj
 
@@ -138,7 +138,7 @@ Compiling verilog file "button_press_unit.v" in library work
 Module <EX> compiled
 Compiling verilog file "./DisplayROM.v" in library work
 Module <button_press_unit> compiled
-Compiling verilog file "DataRAM.v" in library work
+Compiling verilog file "./DataRAM.v" in library work
 Module <DisplayROM> compiled
 Compiling verilog file "../SRC/MipsPipelineCPU.v" in library work
 Module <DataRAM> compiled
@@ -867,9 +867,11 @@ Synthesizing Unit <EX>.
     Found 5-bit comparator equal for signal <ForwardA_0$cmp_eq0000> created at line 49.
     Found 5-bit comparator not equal for signal <ForwardA_0$cmp_ne0001> created at line 49.
     Found 5-bit comparator equal for signal <ForwardA_1$cmp_eq0000> created at line 50.
+    Found 5-bit comparator equal for signal <ForwardB_0$cmp_eq0000> created at line 51.
+    Found 5-bit comparator not equal for signal <ForwardB_0$cmp_ne0000> created at line 51.
     Found 5-bit comparator equal for signal <ForwardB_1$cmp_eq0000> created at line 52.
     Summary:
-	inferred   4 Comparator(s).
+	inferred   6 Comparator(s).
 	inferred  64 Multiplexer(s).
 Unit <EX> synthesized.
 
@@ -917,13 +919,13 @@ Macro Statistics
  69-bit register                                       : 1
  7-bit register                                        : 1
  8-bit register                                        : 1
-# Comparators                                          : 14
+# Comparators                                          : 16
  10-bit comparator greatequal                          : 2
  10-bit comparator less                                : 1
  11-bit comparator greatequal                          : 2
  11-bit comparator less                                : 1
- 5-bit comparator equal                                : 7
- 5-bit comparator not equal                            : 1
+ 5-bit comparator equal                                : 8
+ 5-bit comparator not equal                            : 2
 # Multiplexers                                         : 4
  1-bit 8-to-1 multiplexer                              : 1
  2-bit 4-to-1 multiplexer                              : 1
@@ -1148,13 +1150,13 @@ Macro Statistics
  3-bit up counter                                      : 1
 # Registers                                            : 373
  Flip-Flops                                            : 373
-# Comparators                                          : 14
+# Comparators                                          : 16
  10-bit comparator greatequal                          : 2
  10-bit comparator less                                : 1
  11-bit comparator greatequal                          : 2
  11-bit comparator less                                : 1
- 5-bit comparator equal                                : 7
- 5-bit comparator not equal                            : 1
+ 5-bit comparator equal                                : 8
+ 5-bit comparator not equal                            : 2
 # Multiplexers                                         : 4
  1-bit 8-to-1 multiplexer                              : 1
  2-bit 4-to-1 multiplexer                              : 1
@@ -1288,66 +1290,25 @@ WARNING:Xst:1293 - FF/Latch  <cpu_inst/Addr_id_ex/q_12> has a constant value of 
 
 Mapping all equations...
 Building and optimizing final netlist ...
-INFO:Xst:2261 - The FF/Latch <cpu_inst/Data_id_ex/q_71> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/Data_id_ex/q_97> 
-INFO:Xst:2261 - The FF/Latch <cpu_inst/Data_id_ex/q_77> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/Addr_id_ex/q_2> 
-INFO:Xst:2261 - The FF/Latch <cpu_inst/Data_id_ex/q_75> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/Addr_id_ex/q_0> 
-INFO:Xst:2261 - The FF/Latch <cpu_inst/WB_id_ex/q_1> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/MM_id_ex/q_0> 
-INFO:Xst:2261 - The FF/Latch <cpu_inst/Data_id_ex/q_72> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/Data_id_ex/q_98> 
-INFO:Xst:2261 - The FF/Latch <cpu_inst/if_id/q_5> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/if_id/q_12> 
-INFO:Xst:2261 - The FF/Latch <cpu_inst/Data_id_ex/q_73> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/Data_id_ex/q_99> 
-INFO:Xst:2261 - The FF/Latch <cpu_inst/Data_id_ex/q_78> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/Addr_id_ex/q_3> 
 INFO:Xst:2261 - The FF/Latch <cpu_inst/if_id/q_4> in Unit <MipsPipelineCPU_Vga> is equivalent to the following 5 FFs/Latches, which will be removed : <cpu_inst/if_id/q_8> <cpu_inst/if_id/q_9> <cpu_inst/if_id/q_10> <cpu_inst/if_id/q_13> <cpu_inst/if_id/q_15> 
+INFO:Xst:2261 - The FF/Latch <cpu_inst/Data_id_ex/q_71> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/Data_id_ex/q_97> 
+INFO:Xst:2261 - The FF/Latch <cpu_inst/WB_id_ex/q_1> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/MM_id_ex/q_0> 
 INFO:Xst:2261 - The FF/Latch <cpu_inst/Data_id_ex/q_79> in Unit <MipsPipelineCPU_Vga> is equivalent to the following 17 FFs/Latches, which will be removed : <cpu_inst/Data_id_ex/q_80> <cpu_inst/Data_id_ex/q_81> <cpu_inst/Data_id_ex/q_82> <cpu_inst/Data_id_ex/q_83> <cpu_inst/Data_id_ex/q_84> <cpu_inst/Data_id_ex/q_85> <cpu_inst/Data_id_ex/q_86> <cpu_inst/Data_id_ex/q_87> <cpu_inst/Data_id_ex/q_88> <cpu_inst/Data_id_ex/q_89> <cpu_inst/Data_id_ex/q_90> <cpu_inst/Data_id_ex/q_91> <cpu_inst/Data_id_ex/q_92> <cpu_inst/Data_id_ex/q_93> <cpu_inst/Data_id_ex/q_94> <cpu_inst/Data_id_ex/q_95> <cpu_inst/Addr_id_ex/q_4> 
-INFO:Xst:2261 - The FF/Latch <cpu_inst/Data_id_ex/q_70> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/Data_id_ex/q_96> 
-INFO:Xst:2261 - The FF/Latch <cpu_inst/Data_id_ex/q_76> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/Addr_id_ex/q_1> 
 INFO:Xst:2261 - The FF/Latch <cpu_inst/Data_id_ex/q_74> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/Data_id_ex/q_100> 
+INFO:Xst:2261 - The FF/Latch <cpu_inst/if_id/q_5> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/if_id/q_12> 
+INFO:Xst:2261 - The FF/Latch <cpu_inst/Data_id_ex/q_75> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/Addr_id_ex/q_0> 
+INFO:Xst:2261 - The FF/Latch <cpu_inst/Data_id_ex/q_76> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/Addr_id_ex/q_1> 
+INFO:Xst:2261 - The FF/Latch <cpu_inst/Data_id_ex/q_72> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/Data_id_ex/q_98> 
+INFO:Xst:2261 - The FF/Latch <cpu_inst/Data_id_ex/q_77> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/Addr_id_ex/q_2> 
+INFO:Xst:2261 - The FF/Latch <cpu_inst/Data_id_ex/q_73> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/Data_id_ex/q_99> 
+INFO:Xst:2261 - The FF/Latch <cpu_inst/Data_id_ex/q_70> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/Data_id_ex/q_96> 
+INFO:Xst:2261 - The FF/Latch <cpu_inst/Data_id_ex/q_78> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/Addr_id_ex/q_3> 
 INFO:Xst:2261 - The FF/Latch <cpu_inst/Data_id_ex/q_72> in Unit <MipsPipelineCPU_Vga> is equivalent to the following 4 FFs/Latches, which will be removed : <cpu_inst/Data_id_ex/q_73> <cpu_inst/Data_id_ex/q_74> <cpu_inst/Data_id_ex/q_77> <cpu_inst/Data_id_ex/q_79> 
-INFO:Xst:2261 - The FF/Latch <cpu_inst/Data_id_ex/q_68> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/Data_id_ex/q_72> 
 INFO:Xst:2261 - The FF/Latch <cpu_inst/Data_id_ex/q_69> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/Data_id_ex/q_76> 
+INFO:Xst:2261 - The FF/Latch <cpu_inst/Data_id_ex/q_68> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/Data_id_ex/q_72> 
 Found area constraint ratio of 100 (+ 5) on block MipsPipelineCPU_Vga, actual ratio is 7.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_2_2> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_2_3> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_2_4> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_2_5> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_2_6> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_2_7> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_2_8> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_2_9> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_2_10> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_2_11> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_2_12> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_2_13> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_2_14> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_2_15> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_2_16> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_3_2> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_3_3> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_3_4> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_3_5> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_3_6> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_3_7> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_3_8> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_3_9> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_3_10> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_3_11> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_3_12> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_3_13> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_3_14> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_3_15> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_3_16> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_1_4> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_1_5> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_1_6> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_1_7> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_1_8> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_1_9> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_1_10> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_1_11> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_1_12> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_1_13> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_1_14> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_1_15> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_1_16> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_0_2> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_0_3> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
 WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_0_4> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
 WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_0_5> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
 WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_0_6> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
@@ -1361,6 +1322,41 @@ WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_0_13> of sequential type is unconn
 WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_0_14> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
 WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_0_15> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
 WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_0_16> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_1_3> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_1_4> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_1_5> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_1_6> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_1_7> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_1_8> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_1_9> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_1_10> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_1_11> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_1_12> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_1_13> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_1_14> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_1_15> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_1_16> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_2_5> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_2_6> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_2_7> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_2_8> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_2_9> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_2_10> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_2_11> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_2_12> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_2_13> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_2_14> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_2_15> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_3_6> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_3_7> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_3_8> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_3_9> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_3_10> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_3_11> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_3_12> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_3_13> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_3_14> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
+WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_3_15> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
 WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_1_19> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
 WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_1_20> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
 WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_1_21> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
@@ -1375,27 +1371,6 @@ WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_1_29> of sequential type is unconn
 WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_1_30> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
 WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_1_31> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
 WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_1_32> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_3_22> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_3_23> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_3_24> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_3_25> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_3_26> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_3_27> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_3_28> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_3_29> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_3_30> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_3_31> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_2_22> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_2_23> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_2_24> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_2_25> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_2_26> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_2_27> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_2_28> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_2_29> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_2_30> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_2_31> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_0_19> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
 WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_0_20> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
 WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_0_21> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
 WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_0_22> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
@@ -1409,16 +1384,16 @@ WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_0_29> of sequential type is unconn
 WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_0_30> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
 WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_0_31> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
 WARNING:Xst:2677 - Node <cpu_inst/MM_mem_wb/q_0_32> of sequential type is unconnected in block <MipsPipelineCPU_Vga>.
-FlipFlop cpu_inst/Data_ex_mem/q_0 has been replicated 2 time(s)
-FlipFlop cpu_inst/Data_ex_mem/q_1 has been replicated 2 time(s)
-FlipFlop cpu_inst/Data_ex_mem/q_2 has been replicated 2 time(s)
-FlipFlop cpu_inst/Data_ex_mem/q_3 has been replicated 2 time(s)
+FlipFlop cpu_inst/Data_ex_mem/q_0 has been replicated 1 time(s)
+FlipFlop cpu_inst/Data_ex_mem/q_1 has been replicated 1 time(s)
+FlipFlop cpu_inst/Data_ex_mem/q_3 has been replicated 1 time(s)
 FlipFlop cpu_inst/MM_mem_wb/q_0 has been replicated 32 time(s)
 FlipFlop cpu_inst/MM_mem_wb/q_1 has been replicated 32 time(s)
-FlipFlop cpu_inst/MM_mem_wb/q_2 has been replicated 31 time(s)
-FlipFlop cpu_inst/MM_mem_wb/q_3 has been replicated 31 time(s)
+FlipFlop cpu_inst/MM_mem_wb/q_2 has been replicated 15 time(s)
+FlipFlop cpu_inst/MM_mem_wb/q_3 has been replicated 15 time(s)
 FlipFlop cpu_inst/MM_mem_wb/q_4 has been replicated 1 time(s)
-FlipFlop cpu_inst/MM_mem_wb/q_5 has been replicated 2 time(s)
+FlipFlop cpu_inst/MM_mem_wb/q_5 has been replicated 1 time(s)
+FlipFlop cpu_inst/if_id/q_24 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -1430,8 +1405,8 @@ Unit <MipsPipelineCPU_Vga> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 324
- Flip-Flops                                            : 324
+# Registers                                            : 314
+ Flip-Flops                                            : 314
 # Shift Registers                                      : 1
  2-bit shift register                                  : 1
 
@@ -1462,28 +1437,28 @@ Design Statistics
 # IOs                              : 35
 
 Cell Usage :
-# BELS                             : 1963
+# BELS                             : 1965
 #      GND                         : 3
 #      INV                         : 8
 #      LUT1                        : 36
-#      LUT2                        : 79
+#      LUT2                        : 72
 #      LUT2_D                      : 17
-#      LUT2_L                      : 12
-#      LUT3                        : 333
-#      LUT3_D                      : 71
-#      LUT3_L                      : 22
-#      LUT4                        : 936
-#      LUT4_D                      : 65
-#      LUT4_L                      : 163
+#      LUT2_L                      : 14
+#      LUT3                        : 369
+#      LUT3_D                      : 54
+#      LUT3_L                      : 12
+#      LUT4                        : 881
+#      LUT4_D                      : 75
+#      LUT4_L                      : 154
 #      MUXCY                       : 48
-#      MUXF5                       : 130
+#      MUXF5                       : 182
 #      MUXF6                       : 1
 #      VCC                         : 3
 #      XORCY                       : 36
-# FlipFlops/Latches                : 325
+# FlipFlops/Latches                : 315
 #      FD                          : 23
-#      FDR                         : 242
-#      FDRE                        : 56
+#      FDR                         : 231
+#      FDRE                        : 57
 #      FDRS                        : 2
 #      FDS                         : 2
 # RAMS                             : 66
@@ -1505,10 +1480,10 @@ Device utilization summary:
 
 Selected Device : 2vp30ff896-7 
 
- Number of Slices:                    1041  out of  13696     7%  
- Number of Slice Flip Flops:           325  out of  27392     1%  
- Number of 4 input LUTs:              1999  out of  27392     7%  
-    Number used as logic:             1742
+ Number of Slices:                    1012  out of  13696     7%  
+ Number of Slice Flip Flops:           315  out of  27392     1%  
+ Number of 4 input LUTs:              1949  out of  27392     7%  
+    Number used as logic:             1692
     Number used as Shift registers:      1
     Number used as RAMs:               256
  Number of IOs:                         35
@@ -1534,14 +1509,14 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+----------------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)            | Load  |
------------------------------------+----------------------------------+-------+
-CLKgen/counter_11                  | BUFG                             | 26    |
-clk                                | BUFGP                            | 2     |
-CLKgen/counter_01                  | BUFG                             | 24    |
-cpu_clk1(cpu_clk1:O)               | BUFG(*)(cpu_inst/Data_id_ex/q_10)| 338   |
------------------------------------+----------------------------------+-------+
+-----------------------------------+----------------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                              | Load  |
+-----------------------------------+----------------------------------------------------+-------+
+CLKgen/counter_11                  | BUFG                                               | 26    |
+clk                                | BUFGP                                              | 2     |
+CLKgen/counter_01                  | BUFG                                               | 24    |
+cpu_clk1(cpu_clk1:O)               | BUFG(*)(cpu_inst/ID/MultiRegisters/inst_Mram_mem57)| 328   |
+-----------------------------------+----------------------------------------------------+-------+
 (*) This 1 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
 Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
@@ -1554,7 +1529,7 @@ Timing Summary:
 ---------------
 Speed Grade: -7
 
-   Minimum period: 9.285ns (Maximum Frequency: 107.706MHz)
+   Minimum period: 9.571ns (Maximum Frequency: 104.485MHz)
    Minimum input arrival time before clock: 3.209ns
    Maximum output required time after clock: 9.218ns
    Maximum combinational path delay: No path found
@@ -1651,41 +1626,41 @@ Delay:               4.369ns (Levels of Logic = 4)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'cpu_clk1'
-  Clock period: 9.285ns (frequency: 107.706MHz)
-  Total number of paths / destination ports: 905468 / 1108
+  Clock period: 9.571ns (frequency: 104.485MHz)
+  Total number of paths / destination ports: 1234244 / 1100
 -------------------------------------------------------------------------
-Delay:               9.285ns (Levels of Logic = 17)
-  Source:            cpu_inst/Data_ex_mem/q_4 (FF)
-  Destination:       cpu_inst/Data_ex_mem/q_61 (FF)
+Delay:               9.571ns (Levels of Logic = 17)
+  Source:            cpu_inst/Addr_id_ex/q_10 (FF)
+  Destination:       cpu_inst/Data_ex_mem/q_67 (FF)
   Source Clock:      cpu_clk1 rising
   Destination Clock: cpu_clk1 rising
 
-  Data Path: cpu_inst/Data_ex_mem/q_4 to cpu_inst/Data_ex_mem/q_61
+  Data Path: cpu_inst/Addr_id_ex/q_10 to cpu_inst/Data_ex_mem/q_67
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              5   0.370   0.564  cpu_inst/Data_ex_mem/q_4 (cpu_inst/Data_ex_mem/q_4)
-     LUT2_D:I0->O          1   0.275   0.370  cpu_inst/EX/ForwardA_1_and0000_SW0 (N8187)
-     LUT4_D:I3->O          4   0.275   0.431  cpu_inst/EX/ForwardA_1_and0000_1 (cpu_inst/EX/ForwardA_1_and00001)
-     LUT4:I2->O           28   0.275   0.764  cpu_inst/EX/ForwardA_1_and00011_2 (cpu_inst/EX/ForwardA_1_and000111)
-     LUT4:I1->O            1   0.275   0.000  cpu_inst/EX/ALU_A<24>_F (N9995)
-     MUXF5:I0->O          10   0.303   0.609  cpu_inst/EX/ALU_A<24> (ALU_A<24>)
-     LUT3:I1->O            1   0.275   0.000  cpu_inst/EX/ALU/result_final_or0002_wg_lut<0> (N7)
-     MUXCY:S->O            1   0.334   0.000  cpu_inst/EX/ALU/result_final_or0002_wg_cy<0> (cpu_inst/EX/ALU/result_final_or0002_wg_cy<0>)
-     MUXCY:CI->O           1   0.036   0.000  cpu_inst/EX/ALU/result_final_or0002_wg_cy<1> (cpu_inst/EX/ALU/result_final_or0002_wg_cy<1>)
+     FDR:C->Q              2   0.370   0.514  cpu_inst/Addr_id_ex/q_10 (cpu_inst/Addr_id_ex/q_10)
+     LUT4:I0->O            2   0.275   0.476  cpu_inst/EX/ForwardA_0_cmp_ne000151 (cpu_inst/EX/ForwardA_0_cmp_ne0001_map17)
+     LUT2:I1->O            5   0.275   0.446  cpu_inst/EX/ForwardA_0_cmp_ne000152 (cpu_inst/EX/ForwardA_0_cmp_ne0001)
+     LUT4_D:I2->O         56   0.275   0.803  cpu_inst/EX/ForwardA_0_and000178 (cpu_inst/EX/ForwardA<0>)
+     LUT4:I1->O            1   0.275   0.000  cpu_inst/EX/ALU_A<20>_F (N10746)
+     MUXF5:I0->O          11   0.303   0.657  cpu_inst/EX/ALU_A<20> (ALU_A<20>)
+     LUT4:I0->O            1   0.275   0.000  cpu_inst/EX/ALU/result_final_or0002_wg_lut<1> (N8)
+     MUXCY:S->O            1   0.334   0.000  cpu_inst/EX/ALU/result_final_or0002_wg_cy<1> (cpu_inst/EX/ALU/result_final_or0002_wg_cy<1>)
      MUXCY:CI->O           1   0.036   0.000  cpu_inst/EX/ALU/result_final_or0002_wg_cy<2> (cpu_inst/EX/ALU/result_final_or0002_wg_cy<2>)
      MUXCY:CI->O           1   0.036   0.000  cpu_inst/EX/ALU/result_final_or0002_wg_cy<3> (cpu_inst/EX/ALU/result_final_or0002_wg_cy<3>)
      MUXCY:CI->O           1   0.036   0.000  cpu_inst/EX/ALU/result_final_or0002_wg_cy<4> (cpu_inst/EX/ALU/result_final_or0002_wg_cy<4>)
-     MUXCY:CI->O           1   0.037   0.000  cpu_inst/EX/ALU/result_final_or0002_wg_cy<5> (cpu_inst/EX/ALU/result_final_or0002_wg_cy<5>)
-     MUXCY:CI->O          10   0.415   0.647  cpu_inst/EX/ALU/result_final_or0002_wg_cy<6> (cpu_inst/EX/ALU/result_final_or0002)
-     LUT3_D:I0->O          3   0.275   0.435  cpu_inst/EX/ALU/result_final_shift0002<31>1 (cpu_inst/EX/ALU/result_final_shift0002<31>)
-     LUT4_D:I3->O         33   0.275   0.711  cpu_inst/EX/ALU/result_final<0>4 (cpu_inst/EX/ALU/N52)
-     LUT4:I3->O            1   0.275   0.468  cpu_inst/EX/ALU/result_final<23>39 (cpu_inst/EX/ALU/result_final<23>_map10)
-     LUT4:I0->O            2   0.275   0.000  cpu_inst/EX/ALU/result_final<23>223 (ALUResult<23>)
-     FDR:D                     0.208          cpu_inst/Data_ex_mem/q_60
+     MUXCY:CI->O           1   0.036   0.000  cpu_inst/EX/ALU/result_final_or0002_wg_cy<5> (cpu_inst/EX/ALU/result_final_or0002_wg_cy<5>)
+     MUXCY:CI->O          12   0.416   0.539  cpu_inst/EX/ALU/result_final_or0002_wg_cy<6> (cpu_inst/EX/ALU/result_final_or0002)
+     LUT4_D:I2->O         29   0.275   0.685  cpu_inst/EX/ALU/result_final<0>81 (cpu_inst/EX/ALU/N72)
+     LUT4_L:I2->LO         1   0.275   0.138  cpu_inst/EX/ALU/result_final<30>65 (cpu_inst/EX/ALU/result_final<30>_map18)
+     LUT4:I3->O            2   0.275   0.416  cpu_inst/EX/ALU/result_final<30>104 (cpu_inst/EX/ALU/result_final<30>_map25)
+     LUT4:I3->O            1   0.275   0.369  cpu_inst/EX/ALU/result_final<30>258_SW1 (N9982)
+     LUT4:I3->O            2   0.275   0.000  cpu_inst/EX/ALU/result_final<30>275 (ALUResult<30>)
+     FDR:D                     0.208          cpu_inst/Data_ex_mem/q_67
     ----------------------------------------
-    Total                      9.285ns (4.288ns logic, 4.997ns route)
-                                       (46.2% logic, 53.8% route)
+    Total                      9.571ns (4.527ns logic, 5.044ns route)
+                                       (47.3% logic, 52.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLKgen/counter_01'
@@ -1710,7 +1685,7 @@ Offset:              3.209ns (Levels of Logic = 3)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'cpu_clk1'
-  Total number of paths / destination ports: 274 / 274
+  Total number of paths / destination ports: 264 / 264
 -------------------------------------------------------------------------
 Offset:              2.978ns (Levels of Logic = 2)
   Source:            reset_n (PAD)
@@ -1762,9 +1737,9 @@ Offset:              9.218ns (Levels of Logic = 9)
     ----------------------------------------  ------------
      FDRE:C->Q             8   0.370   0.614  vga_ctrl/line_cnt_reg_1 (vga_ctrl/line_cnt_reg_1)
      LUT3:I0->O            4   0.275   0.511  vga_ctrl/Msub_y_pos_xor<9>111 (vga_ctrl/N11)
-     LUT4:I1->O            1   0.275   0.000  vga_ctrl/Msub_y_pos_xor<6>12 (N10132)
+     LUT4:I1->O            1   0.275   0.000  vga_ctrl/Msub_y_pos_xor<6>12 (N10967)
      MUXF5:I1->O           9   0.303   0.635  vga_ctrl/Msub_y_pos_xor<6>1_f5 (y_pos<6>)
-     LUT4:I0->O            1   0.275   0.350  disp/vga_pixel105_SW0 (N9985)
+     LUT4:I0->O            1   0.275   0.350  disp/vga_pixel105_SW0 (N10731)
      LUT4:I2->O            1   0.275   0.430  disp/vga_pixel105 (disp/vga_pixel_map38)
      LUT4:I1->O            1   0.275   0.430  disp/vga_pixel129 (disp/vga_pixel_map40)
      LUT4:I1->O            1   0.275   0.430  disp/vga_pixel159 (disp/vga_pixel_map42)
@@ -1794,13 +1769,13 @@ Offset:              3.375ns (Levels of Logic = 1)
                                        (87.8% logic, 12.2% route)
 
 =========================================================================
-CPU : 36.69 / 37.02 s | Elapsed : 37.00 / 37.00 s
+CPU : 35.53 / 35.97 s | Elapsed : 35.00 / 36.00 s
  
 --> 
 
-Total memory usage is 246296 kilobytes
+Total memory usage is 247640 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  311 (   0 filtered)
+Number of warnings :  284 (   0 filtered)
 Number of infos    :   18 (   0 filtered)
 

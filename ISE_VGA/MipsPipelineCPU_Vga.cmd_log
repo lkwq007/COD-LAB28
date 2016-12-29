@@ -1,1 +1,2 @@
 xst -ise "C:/cod/COD-LAB28/ISE_VGA/PipelineCPU.ise" -intstyle ise -ifn MipsPipelineCPU_Vga.xst -ofn MipsPipelineCPU_Vga.syr
+xst -ise "C:/cod/COD-LAB28/ISE_VGA/PipelineCPU.ise" -intstyle ise -ifn MipsPipelineCPU_Vga.xst -ofn MipsPipelineCPU_Vga.syr
