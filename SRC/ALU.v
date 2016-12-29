@@ -105,9 +105,9 @@ module ALU(
 		alu_or:result_final=A|B;
 		alu_nor:result_final=~(A|B);
 		alu_sub:result_final=result_sum;
-		alu_andi:result_final=A&B;
-		alu_xori:result_final=A^B;
-		alu_ori:result_final=A^B;
+		alu_andi:result_final=A&{16'b0,B[15:0]};
+		alu_xori:result_final=A^{16'b0,B[15:0]};
+		alu_ori:result_final=A^{16'b0,B[15:0]};
 		alu_jr:result_final=A;
 		alu_sll:result_final=B<<A;
 		alu_srl:result_final=B>>A;
