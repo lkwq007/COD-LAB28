@@ -1,10 +1,10 @@
 Release 9.2i - xst J.36
 Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to ./xst/projnav.tmp
-CPU : 0.00 / 0.31 s | Elapsed : 0.00 / 1.00 s
+CPU : 0.00 / 0.28 s | Elapsed : 0.00 / 1.00 s
  
 --> Parameter xsthdpdir set to ./xst
-CPU : 0.00 / 0.31 s | Elapsed : 0.00 / 1.00 s
+CPU : 0.00 / 0.28 s | Elapsed : 0.00 / 1.00 s
  
 --> Reading design: MipsPipelineCPU_Vga.prj
 
@@ -846,7 +846,23 @@ WARNING:Xst:646 - Signal <co> is assigned but never used.
     Found 32-bit shifter logical left for signal <result_final$shift0003> created at line 112.
     Found 32-bit shifter logical right for signal <result_final$shift0004> created at line 113.
     Found 32-bit shifter arithmetic right for signal <result_final$shift0005> created at line 114.
-    Found 32-bit xor2 for signal <result_final$xor0000> created at line 104.
+    Found 1-bit xor2 for signal <result_final$xor0000> created at line 109.
+    Found 1-bit xor2 for signal <result_final$xor0001> created at line 109.
+    Found 1-bit xor2 for signal <result_final$xor0002> created at line 109.
+    Found 1-bit xor2 for signal <result_final$xor0003> created at line 109.
+    Found 1-bit xor2 for signal <result_final$xor0004> created at line 109.
+    Found 1-bit xor2 for signal <result_final$xor0005> created at line 109.
+    Found 1-bit xor2 for signal <result_final$xor0006> created at line 109.
+    Found 1-bit xor2 for signal <result_final$xor0007> created at line 109.
+    Found 1-bit xor2 for signal <result_final$xor0008> created at line 109.
+    Found 1-bit xor2 for signal <result_final$xor0009> created at line 109.
+    Found 1-bit xor2 for signal <result_final$xor0010> created at line 109.
+    Found 1-bit xor2 for signal <result_final$xor0011> created at line 109.
+    Found 1-bit xor2 for signal <result_final$xor0012> created at line 109.
+    Found 1-bit xor2 for signal <result_final$xor0013> created at line 109.
+    Found 1-bit xor2 for signal <result_final$xor0014> created at line 109.
+    Found 1-bit xor2 for signal <result_final$xor0015> created at line 109.
+    Found 32-bit xor2 for signal <result_final$xor0016> created at line 104.
     Summary:
 	inferred   3 Combinational logic shifter(s).
 Unit <ALU> synthesized.
@@ -934,8 +950,8 @@ Macro Statistics
  32-bit shifter arithmetic right                       : 1
  32-bit shifter logical left                           : 1
  32-bit shifter logical right                          : 1
-# Xors                                                 : 81
- 1-bit xor2                                            : 34
+# Xors                                                 : 97
+ 1-bit xor2                                            : 50
  32-bit xor2                                           : 2
  4-bit xor2                                            : 45
 
@@ -1165,8 +1181,8 @@ Macro Statistics
  32-bit shifter arithmetic right                       : 1
  32-bit shifter logical left                           : 1
  32-bit shifter logical right                          : 1
-# Xors                                                 : 81
- 1-bit xor2                                            : 34
+# Xors                                                 : 97
+ 1-bit xor2                                            : 50
  32-bit xor2                                           : 2
  4-bit xor2                                            : 45
 
@@ -1290,19 +1306,19 @@ WARNING:Xst:1293 - FF/Latch  <cpu_inst/Addr_id_ex/q_12> has a constant value of 
 
 Mapping all equations...
 Building and optimizing final netlist ...
+INFO:Xst:2261 - The FF/Latch <cpu_inst/Data_id_ex/q_77> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/Addr_id_ex/q_2> 
+INFO:Xst:2261 - The FF/Latch <cpu_inst/Data_id_ex/q_70> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/Data_id_ex/q_96> 
+INFO:Xst:2261 - The FF/Latch <cpu_inst/Data_id_ex/q_75> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/Addr_id_ex/q_0> 
+INFO:Xst:2261 - The FF/Latch <cpu_inst/Data_id_ex/q_73> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/Data_id_ex/q_99> 
 INFO:Xst:2261 - The FF/Latch <cpu_inst/if_id/q_4> in Unit <MipsPipelineCPU_Vga> is equivalent to the following 5 FFs/Latches, which will be removed : <cpu_inst/if_id/q_8> <cpu_inst/if_id/q_9> <cpu_inst/if_id/q_10> <cpu_inst/if_id/q_13> <cpu_inst/if_id/q_15> 
+INFO:Xst:2261 - The FF/Latch <cpu_inst/Data_id_ex/q_78> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/Addr_id_ex/q_3> 
 INFO:Xst:2261 - The FF/Latch <cpu_inst/Data_id_ex/q_71> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/Data_id_ex/q_97> 
+INFO:Xst:2261 - The FF/Latch <cpu_inst/Data_id_ex/q_76> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/Addr_id_ex/q_1> 
+INFO:Xst:2261 - The FF/Latch <cpu_inst/Data_id_ex/q_74> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/Data_id_ex/q_100> 
 INFO:Xst:2261 - The FF/Latch <cpu_inst/WB_id_ex/q_1> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/MM_id_ex/q_0> 
 INFO:Xst:2261 - The FF/Latch <cpu_inst/Data_id_ex/q_79> in Unit <MipsPipelineCPU_Vga> is equivalent to the following 17 FFs/Latches, which will be removed : <cpu_inst/Data_id_ex/q_80> <cpu_inst/Data_id_ex/q_81> <cpu_inst/Data_id_ex/q_82> <cpu_inst/Data_id_ex/q_83> <cpu_inst/Data_id_ex/q_84> <cpu_inst/Data_id_ex/q_85> <cpu_inst/Data_id_ex/q_86> <cpu_inst/Data_id_ex/q_87> <cpu_inst/Data_id_ex/q_88> <cpu_inst/Data_id_ex/q_89> <cpu_inst/Data_id_ex/q_90> <cpu_inst/Data_id_ex/q_91> <cpu_inst/Data_id_ex/q_92> <cpu_inst/Data_id_ex/q_93> <cpu_inst/Data_id_ex/q_94> <cpu_inst/Data_id_ex/q_95> <cpu_inst/Addr_id_ex/q_4> 
-INFO:Xst:2261 - The FF/Latch <cpu_inst/Data_id_ex/q_74> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/Data_id_ex/q_100> 
-INFO:Xst:2261 - The FF/Latch <cpu_inst/if_id/q_5> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/if_id/q_12> 
-INFO:Xst:2261 - The FF/Latch <cpu_inst/Data_id_ex/q_75> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/Addr_id_ex/q_0> 
-INFO:Xst:2261 - The FF/Latch <cpu_inst/Data_id_ex/q_76> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/Addr_id_ex/q_1> 
 INFO:Xst:2261 - The FF/Latch <cpu_inst/Data_id_ex/q_72> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/Data_id_ex/q_98> 
-INFO:Xst:2261 - The FF/Latch <cpu_inst/Data_id_ex/q_77> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/Addr_id_ex/q_2> 
-INFO:Xst:2261 - The FF/Latch <cpu_inst/Data_id_ex/q_73> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/Data_id_ex/q_99> 
-INFO:Xst:2261 - The FF/Latch <cpu_inst/Data_id_ex/q_70> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/Data_id_ex/q_96> 
-INFO:Xst:2261 - The FF/Latch <cpu_inst/Data_id_ex/q_78> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/Addr_id_ex/q_3> 
+INFO:Xst:2261 - The FF/Latch <cpu_inst/if_id/q_5> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/if_id/q_12> 
 INFO:Xst:2261 - The FF/Latch <cpu_inst/Data_id_ex/q_72> in Unit <MipsPipelineCPU_Vga> is equivalent to the following 4 FFs/Latches, which will be removed : <cpu_inst/Data_id_ex/q_73> <cpu_inst/Data_id_ex/q_74> <cpu_inst/Data_id_ex/q_77> <cpu_inst/Data_id_ex/q_79> 
 INFO:Xst:2261 - The FF/Latch <cpu_inst/Data_id_ex/q_69> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/Data_id_ex/q_76> 
 INFO:Xst:2261 - The FF/Latch <cpu_inst/Data_id_ex/q_68> in Unit <MipsPipelineCPU_Vga> is equivalent to the following FF/Latch, which will be removed : <cpu_inst/Data_id_ex/q_72> 
@@ -1393,7 +1409,6 @@ FlipFlop cpu_inst/MM_mem_wb/q_2 has been replicated 15 time(s)
 FlipFlop cpu_inst/MM_mem_wb/q_3 has been replicated 15 time(s)
 FlipFlop cpu_inst/MM_mem_wb/q_4 has been replicated 1 time(s)
 FlipFlop cpu_inst/MM_mem_wb/q_5 has been replicated 1 time(s)
-FlipFlop cpu_inst/if_id/q_24 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -1405,8 +1420,8 @@ Unit <MipsPipelineCPU_Vga> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 314
- Flip-Flops                                            : 314
+# Registers                                            : 313
+ Flip-Flops                                            : 313
 # Shift Registers                                      : 1
  2-bit shift register                                  : 1
 
@@ -1437,28 +1452,28 @@ Design Statistics
 # IOs                              : 35
 
 Cell Usage :
-# BELS                             : 1965
+# BELS                             : 1971
 #      GND                         : 3
 #      INV                         : 8
 #      LUT1                        : 36
 #      LUT2                        : 72
-#      LUT2_D                      : 17
-#      LUT2_L                      : 14
-#      LUT3                        : 369
-#      LUT3_D                      : 54
+#      LUT2_D                      : 16
+#      LUT2_L                      : 13
+#      LUT3                        : 376
+#      LUT3_D                      : 53
 #      LUT3_L                      : 12
-#      LUT4                        : 881
-#      LUT4_D                      : 75
-#      LUT4_L                      : 154
+#      LUT4                        : 878
+#      LUT4_D                      : 77
+#      LUT4_L                      : 155
 #      MUXCY                       : 48
-#      MUXF5                       : 182
+#      MUXF5                       : 184
 #      MUXF6                       : 1
 #      VCC                         : 3
 #      XORCY                       : 36
-# FlipFlops/Latches                : 315
+# FlipFlops/Latches                : 314
 #      FD                          : 23
 #      FDR                         : 231
-#      FDRE                        : 57
+#      FDRE                        : 56
 #      FDRS                        : 2
 #      FDS                         : 2
 # RAMS                             : 66
@@ -1480,10 +1495,10 @@ Device utilization summary:
 
 Selected Device : 2vp30ff896-7 
 
- Number of Slices:                    1012  out of  13696     7%  
- Number of Slice Flip Flops:           315  out of  27392     1%  
- Number of 4 input LUTs:              1949  out of  27392     7%  
-    Number used as logic:             1692
+ Number of Slices:                    1014  out of  13696     7%  
+ Number of Slice Flip Flops:           314  out of  27392     1%  
+ Number of 4 input LUTs:              1953  out of  27392     7%  
+    Number used as logic:             1696
     Number used as Shift registers:      1
     Number used as RAMs:               256
  Number of IOs:                         35
@@ -1515,7 +1530,7 @@ Clock Signal                       | Clock buffer(FF name)                      
 CLKgen/counter_11                  | BUFG                                               | 26    |
 clk                                | BUFGP                                              | 2     |
 CLKgen/counter_01                  | BUFG                                               | 24    |
-cpu_clk1(cpu_clk1:O)               | BUFG(*)(cpu_inst/ID/MultiRegisters/inst_Mram_mem57)| 328   |
+cpu_clk1(cpu_clk1:O)               | BUFG(*)(cpu_inst/ID/MultiRegisters/inst_Mram_mem15)| 327   |
 -----------------------------------+----------------------------------------------------+-------+
 (*) This 1 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
@@ -1529,9 +1544,9 @@ Timing Summary:
 ---------------
 Speed Grade: -7
 
-   Minimum period: 9.571ns (Maximum Frequency: 104.485MHz)
+   Minimum period: 9.576ns (Maximum Frequency: 104.429MHz)
    Minimum input arrival time before clock: 3.209ns
-   Maximum output required time after clock: 9.218ns
+   Maximum output required time after clock: 9.238ns
    Maximum combinational path delay: No path found
 
 Timing Detail:
@@ -1626,10 +1641,10 @@ Delay:               4.369ns (Levels of Logic = 4)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'cpu_clk1'
-  Clock period: 9.571ns (frequency: 104.485MHz)
-  Total number of paths / destination ports: 1234244 / 1100
+  Clock period: 9.576ns (frequency: 104.429MHz)
+  Total number of paths / destination ports: 1228164 / 1097
 -------------------------------------------------------------------------
-Delay:               9.571ns (Levels of Logic = 17)
+Delay:               9.576ns (Levels of Logic = 17)
   Source:            cpu_inst/Addr_id_ex/q_10 (FF)
   Destination:       cpu_inst/Data_ex_mem/q_67 (FF)
   Source Clock:      cpu_clk1 rising
@@ -1641,9 +1656,9 @@ Delay:               9.571ns (Levels of Logic = 17)
     ----------------------------------------  ------------
      FDR:C->Q              2   0.370   0.514  cpu_inst/Addr_id_ex/q_10 (cpu_inst/Addr_id_ex/q_10)
      LUT4:I0->O            2   0.275   0.476  cpu_inst/EX/ForwardA_0_cmp_ne000151 (cpu_inst/EX/ForwardA_0_cmp_ne0001_map17)
-     LUT2:I1->O            5   0.275   0.446  cpu_inst/EX/ForwardA_0_cmp_ne000152 (cpu_inst/EX/ForwardA_0_cmp_ne0001)
-     LUT4_D:I2->O         56   0.275   0.803  cpu_inst/EX/ForwardA_0_and000178 (cpu_inst/EX/ForwardA<0>)
-     LUT4:I1->O            1   0.275   0.000  cpu_inst/EX/ALU_A<20>_F (N10746)
+     LUT2:I1->O            6   0.275   0.483  cpu_inst/EX/ForwardA_0_cmp_ne000152 (cpu_inst/EX/ForwardA_0_cmp_ne0001)
+     LUT4_D:I3->O         33   0.275   0.771  cpu_inst/EX/ForwardA_0_and000178_2 (cpu_inst/EX/ForwardA_0_and0001781)
+     LUT4:I1->O            1   0.275   0.000  cpu_inst/EX/ALU_A<20>_F (N10740)
      MUXF5:I0->O          11   0.303   0.657  cpu_inst/EX/ALU_A<20> (ALU_A<20>)
      LUT4:I0->O            1   0.275   0.000  cpu_inst/EX/ALU/result_final_or0002_wg_lut<1> (N8)
      MUXCY:S->O            1   0.334   0.000  cpu_inst/EX/ALU/result_final_or0002_wg_cy<1> (cpu_inst/EX/ALU/result_final_or0002_wg_cy<1>)
@@ -1652,14 +1667,14 @@ Delay:               9.571ns (Levels of Logic = 17)
      MUXCY:CI->O           1   0.036   0.000  cpu_inst/EX/ALU/result_final_or0002_wg_cy<4> (cpu_inst/EX/ALU/result_final_or0002_wg_cy<4>)
      MUXCY:CI->O           1   0.036   0.000  cpu_inst/EX/ALU/result_final_or0002_wg_cy<5> (cpu_inst/EX/ALU/result_final_or0002_wg_cy<5>)
      MUXCY:CI->O          12   0.416   0.539  cpu_inst/EX/ALU/result_final_or0002_wg_cy<6> (cpu_inst/EX/ALU/result_final_or0002)
-     LUT4_D:I2->O         29   0.275   0.685  cpu_inst/EX/ALU/result_final<0>81 (cpu_inst/EX/ALU/N72)
+     LUT4_D:I2->O         29   0.275   0.685  cpu_inst/EX/ALU/result_final<0>81 (cpu_inst/EX/ALU/N88)
      LUT4_L:I2->LO         1   0.275   0.138  cpu_inst/EX/ALU/result_final<30>65 (cpu_inst/EX/ALU/result_final<30>_map18)
      LUT4:I3->O            2   0.275   0.416  cpu_inst/EX/ALU/result_final<30>104 (cpu_inst/EX/ALU/result_final<30>_map25)
-     LUT4:I3->O            1   0.275   0.369  cpu_inst/EX/ALU/result_final<30>258_SW1 (N9982)
+     LUT4:I3->O            1   0.275   0.369  cpu_inst/EX/ALU/result_final<30>258_SW1 (N9977)
      LUT4:I3->O            2   0.275   0.000  cpu_inst/EX/ALU/result_final<30>275 (ALUResult<30>)
      FDR:D                     0.208          cpu_inst/Data_ex_mem/q_67
     ----------------------------------------
-    Total                      9.571ns (4.527ns logic, 5.044ns route)
+    Total                      9.576ns (4.526ns logic, 5.049ns route)
                                        (47.3% logic, 52.7% route)
 
 =========================================================================
@@ -1685,7 +1700,7 @@ Offset:              3.209ns (Levels of Logic = 3)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'cpu_clk1'
-  Total number of paths / destination ports: 264 / 264
+  Total number of paths / destination ports: 263 / 263
 -------------------------------------------------------------------------
 Offset:              2.978ns (Levels of Logic = 2)
   Source:            reset_n (PAD)
@@ -1726,7 +1741,7 @@ Offset:              1.583ns (Levels of Logic = 1)
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLKgen/counter_01'
   Total number of paths / destination ports: 2596 / 20
 -------------------------------------------------------------------------
-Offset:              9.218ns (Levels of Logic = 9)
+Offset:              9.238ns (Levels of Logic = 9)
   Source:            vga_ctrl/line_cnt_reg_1 (FF)
   Destination:       green<7> (PAD)
   Source Clock:      CLKgen/counter_01 rising
@@ -1737,17 +1752,17 @@ Offset:              9.218ns (Levels of Logic = 9)
     ----------------------------------------  ------------
      FDRE:C->Q             8   0.370   0.614  vga_ctrl/line_cnt_reg_1 (vga_ctrl/line_cnt_reg_1)
      LUT3:I0->O            4   0.275   0.511  vga_ctrl/Msub_y_pos_xor<9>111 (vga_ctrl/N11)
-     LUT4:I1->O            1   0.275   0.000  vga_ctrl/Msub_y_pos_xor<6>12 (N10967)
+     LUT4:I1->O            1   0.275   0.000  vga_ctrl/Msub_y_pos_xor<6>12 (N10961)
      MUXF5:I1->O           9   0.303   0.635  vga_ctrl/Msub_y_pos_xor<6>1_f5 (y_pos<6>)
-     LUT4:I0->O            1   0.275   0.350  disp/vga_pixel105_SW0 (N10731)
-     LUT4:I2->O            1   0.275   0.430  disp/vga_pixel105 (disp/vga_pixel_map38)
+     LUT4:I0->O            1   0.275   0.370  disp/vga_pixel105_SW0 (N10727)
+     LUT4:I3->O            1   0.275   0.430  disp/vga_pixel105 (disp/vga_pixel_map38)
      LUT4:I1->O            1   0.275   0.430  disp/vga_pixel129 (disp/vga_pixel_map40)
      LUT4:I1->O            1   0.275   0.430  disp/vga_pixel159 (disp/vga_pixel_map42)
      LUT3:I1->O           16   0.275   0.630  disp/vga_pixel254 (green_0_OBUF)
      OBUF:I->O                 2.592          green_7_OBUF (green<7>)
     ----------------------------------------
-    Total                      9.218ns (5.190ns logic, 4.028ns route)
-                                       (56.3% logic, 43.7% route)
+    Total                      9.238ns (5.190ns logic, 4.048ns route)
+                                       (56.2% logic, 43.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
@@ -1769,7 +1784,7 @@ Offset:              3.375ns (Levels of Logic = 1)
                                        (87.8% logic, 12.2% route)
 
 =========================================================================
-CPU : 35.53 / 35.97 s | Elapsed : 35.00 / 36.00 s
+CPU : 33.05 / 33.34 s | Elapsed : 33.00 / 34.00 s
  
 --> 
 

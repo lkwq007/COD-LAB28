@@ -1,7 +1,7 @@
 Release 9.2i - xst J.36
 Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to ./xst/projnav.tmp
-CPU : 0.00 / 0.53 s | Elapsed : 0.00 / 0.00 s
+CPU : 0.00 / 0.30 s | Elapsed : 0.00 / 0.00 s
  
 --> 
 =========================================================================
@@ -58,7 +58,7 @@ Module <MipsPipelineCPU_Vga> compiled
 No errors in compilation
 Analysis of file <"MipsPipelineCPU_Vga.prj"> succeeded.
  
-CPU : 0.23 / 0.77 s | Elapsed : 1.00 / 1.00 s
+CPU : 0.08 / 0.37 s | Elapsed : 0.00 / 0.00 s
  
 --> 
 

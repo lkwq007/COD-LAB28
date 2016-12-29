@@ -667,10 +667,31 @@ It will be removed from the design.
 <msg type="warning" file="Xst" num="1293" delta="unknown" >FF/Latch  &lt;<arg fmt="%s" index="1">cpu_inst/Addr_id_ex/q_12</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">MipsPipelineCPU_Vga</arg>&gt;.
 </msg>
 
+<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">cpu_inst/Data_id_ex/q_77</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">MipsPipelineCPU_Vga</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;cpu_inst/Addr_id_ex/q_2&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">cpu_inst/Data_id_ex/q_70</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">MipsPipelineCPU_Vga</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;cpu_inst/Data_id_ex/q_96&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">cpu_inst/Data_id_ex/q_75</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">MipsPipelineCPU_Vga</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;cpu_inst/Addr_id_ex/q_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">cpu_inst/Data_id_ex/q_73</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">MipsPipelineCPU_Vga</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;cpu_inst/Data_id_ex/q_99&gt; </arg>
+</msg>
+
 <msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">cpu_inst/if_id/q_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">MipsPipelineCPU_Vga</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">5 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;cpu_inst/if_id/q_8&gt; &lt;cpu_inst/if_id/q_9&gt; &lt;cpu_inst/if_id/q_10&gt; &lt;cpu_inst/if_id/q_13&gt; &lt;cpu_inst/if_id/q_15&gt; </arg>
 </msg>
 
+<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">cpu_inst/Data_id_ex/q_78</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">MipsPipelineCPU_Vga</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;cpu_inst/Addr_id_ex/q_3&gt; </arg>
+</msg>
+
 <msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">cpu_inst/Data_id_ex/q_71</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">MipsPipelineCPU_Vga</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;cpu_inst/Data_id_ex/q_97&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">cpu_inst/Data_id_ex/q_76</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">MipsPipelineCPU_Vga</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;cpu_inst/Addr_id_ex/q_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">cpu_inst/Data_id_ex/q_74</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">MipsPipelineCPU_Vga</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;cpu_inst/Data_id_ex/q_100&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">cpu_inst/WB_id_ex/q_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">MipsPipelineCPU_Vga</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;cpu_inst/MM_id_ex/q_0&gt; </arg>
@@ -679,31 +700,10 @@ It will be removed from the design.
 <msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">cpu_inst/Data_id_ex/q_79</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">MipsPipelineCPU_Vga</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">17 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;cpu_inst/Data_id_ex/q_80&gt; &lt;cpu_inst/Data_id_ex/q_81&gt; &lt;cpu_inst/Data_id_ex/q_82&gt; &lt;cpu_inst/Data_id_ex/q_83&gt; &lt;cpu_inst/Data_id_ex/q_84&gt; &lt;cpu_inst/Data_id_ex/q_85&gt; &lt;cpu_inst/Data_id_ex/q_86&gt; &lt;cpu_inst/Data_id_ex/q_87&gt; &lt;cpu_inst/Data_id_ex/q_88&gt; &lt;cpu_inst/Data_id_ex/q_89&gt; &lt;cpu_inst/Data_id_ex/q_90&gt; &lt;cpu_inst/Data_id_ex/q_91&gt; &lt;cpu_inst/Data_id_ex/q_92&gt; &lt;cpu_inst/Data_id_ex/q_93&gt; &lt;cpu_inst/Data_id_ex/q_94&gt; &lt;cpu_inst/Data_id_ex/q_95&gt; &lt;cpu_inst/Addr_id_ex/q_4&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">cpu_inst/Data_id_ex/q_74</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">MipsPipelineCPU_Vga</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;cpu_inst/Data_id_ex/q_100&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">cpu_inst/if_id/q_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">MipsPipelineCPU_Vga</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;cpu_inst/if_id/q_12&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">cpu_inst/Data_id_ex/q_75</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">MipsPipelineCPU_Vga</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;cpu_inst/Addr_id_ex/q_0&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">cpu_inst/Data_id_ex/q_76</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">MipsPipelineCPU_Vga</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;cpu_inst/Addr_id_ex/q_1&gt; </arg>
-</msg>
-
 <msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">cpu_inst/Data_id_ex/q_72</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">MipsPipelineCPU_Vga</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;cpu_inst/Data_id_ex/q_98&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">cpu_inst/Data_id_ex/q_77</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">MipsPipelineCPU_Vga</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;cpu_inst/Addr_id_ex/q_2&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">cpu_inst/Data_id_ex/q_73</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">MipsPipelineCPU_Vga</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;cpu_inst/Data_id_ex/q_99&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">cpu_inst/Data_id_ex/q_70</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">MipsPipelineCPU_Vga</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;cpu_inst/Data_id_ex/q_96&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">cpu_inst/Data_id_ex/q_78</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">MipsPipelineCPU_Vga</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;cpu_inst/Addr_id_ex/q_3&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">cpu_inst/if_id/q_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">MipsPipelineCPU_Vga</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;cpu_inst/if_id/q_12&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">cpu_inst/Data_id_ex/q_72</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">MipsPipelineCPU_Vga</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">4 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;cpu_inst/Data_id_ex/q_73&gt; &lt;cpu_inst/Data_id_ex/q_74&gt; &lt;cpu_inst/Data_id_ex/q_77&gt; &lt;cpu_inst/Data_id_ex/q_79&gt; </arg>
