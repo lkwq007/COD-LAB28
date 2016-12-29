@@ -4,9 +4,9 @@ K3
 cModel Technology
 Z0 dC:\cod\COD-LAB28\SIM\IF
 T_opt
-Z1 V@K9LB4@WV_bE;6On1TE1A2
+Z1 V;D<0]R3;9R_`=WQ[bk7`h0
 Z2 04 8 4 work top_tb_v fast 0
-Z3 =7-000c29a3f4b0-5863ba8f-2f-d34
+Z3 =9-000c29a3f4b0-586474d7-22f-d34
 Z4 o-quiet -auto_acc_if_foreign -work work -L C:/modeltech_6.5/Xilinx_lib/xilinxcorelib_ver -L C:/modeltech_6.5/Xilinx_lib/unisims_ver -L C:/modeltech_6.5/Xilinx_lib/simprims_ver +acc
 Z5 n@_opt
 Z6 OE;O;6.5;42
@@ -41,10 +41,10 @@ R15
 Z21 !s100 0PSEIlBB5374W`]65XWlZ2
 !s85 0
 vALU
-Z22 I67BaWcP87DO_]do5k:<_61
+Z22 I`jDn_]emMU4QA50bWLVZn2
 Z23 VaV^i_k8i[S<RQoIRA9CmA3
 R9
-Z24 w1481945639
+Z24 w1482978372
 Z25 8C:/cod/COD-LAB28/SRC/ALU.v
 Z26 FC:/cod/COD-LAB28/SRC/ALU.v
 L0 15
@@ -54,7 +54,7 @@ r1
 R14
 R15
 Z27 n@a@l@u
-Z28 !s100 VVE3WdzG1I:G?Ol>[K27a2
+Z28 !s100 m:]T:92XXF:l3Q9g`FmbH1
 !s85 0
 vDataRAM
 Z29 I40R`D6hQNzbN>>hD53YBT2
