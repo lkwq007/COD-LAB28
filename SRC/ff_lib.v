@@ -53,7 +53,7 @@ input r;
 input clk;
 input [WIDTH-1:0] d;
 output [WIDTH-1:0] q;
-reg [WIDTH-1:0] q=0;
+reg [WIDTH-1:0] q=0;//set initial value
 always @ (posedge clk)
 if ( r )
 q <= {WIDTH{1'b0}};

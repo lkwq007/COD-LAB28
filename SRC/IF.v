@@ -47,10 +47,10 @@ module IF(clk,reset,Z,J,JR,PC_IFWrite,JumpAddr,
 	//PC REG
 	always @(posedge clk) begin
 		if(reset) begin
-			PC=0;
+			PC=0;//reset
 		end
 		else if(PC_IFWrite) begin
-			PC=PC_in;
+			PC=PC_in;//get new pc
 		end
 	end
 	 

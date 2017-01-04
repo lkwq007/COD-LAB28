@@ -58,6 +58,7 @@ module ID(clk,Instruction_id, NextPC_id, RegWrite_wb, RegWriteAddr_wb, RegWriteD
 	assign RdAddr_id=Instruction_id[15:11];
 	assign RsAddr_id=Instruction_id[25:21];
 
+	//zero extend and sign extend
 	assign Sa_id  = {27'b0,Instruction_id[10:6]};
 	assign Imm_id={{16{Instruction_id[15]}},Instruction_id[15:0]};
 	
