@@ -1,13 +1,13 @@
 //==================================================================================================
 //  Filename      : adder_4bits.v
 //  Created On    : 2016-10-15 17:02:18
-//  Last Modified : 2016-10-22 12:16:58
+//  Last Modified : 2017-01-04 19:45:16
 //  Revision      : 
 //  Author        : Lnyan
 //  Company       : College of Information Science and Electronic Engineering, Zhejiang University
 //  Email         : lkwq007 [at] gmail.com
 //
-//  Description   : 
+//  Description   : 4 bits carry-lookahead adder implemented in data stream
 //
 //
 //==================================================================================================

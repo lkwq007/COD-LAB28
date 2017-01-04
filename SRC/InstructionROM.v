@@ -5,6 +5,7 @@ module InstructionROM(addr,dout);
 	//
 	reg [31 : 0] dout;
 	/*
+	Instructions:
 	J 0x000000B
 	ADDI $t0 $zero 0x0042
 	ADDI $t1 $zero 0x0004

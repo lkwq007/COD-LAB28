@@ -77,6 +77,7 @@ module ALU(
 	adder_32bits adder(.a(A),.b({32{Binvert}}^B),.ci(Binvert),.co(co),.s(result_sum));
 	//adder_32bits adder(.a(A),.b({32{Binvert}}^B),.ci(Binvert),.co(),.s(result_add));
 
+	//I moved those operations to behavior part
 /*	assign result_and=A&B;
 	assign result_xor=A^B;
 	assign result_or=A|B;
@@ -114,9 +115,11 @@ module ALU(
 		alu_sra:result_final=B_reg>>>A;
 		alu_slt:result_final=(A[31]&&(~B[31]))||((A[31]~^B[31])&&result_sum[31]);
 		alu_sltu:result_final=((~A[31])&&B[31])||((A[31]~^B[31])&&result_sum[31]);
-		default:result_final=32'bx;
+		default:result_final=32'bx;//no corresponding operation, set x
 		endcase
 	end
+	
+	//overflow is unnecessary for this project
 	assign overflow=(ALUCode==alu_add?(A[31]~^B[31])&(A[31]^result_sum[31]):1'b0)|(ALUCode==alu_sub?(A[31]^B[31])&(A[31]^result_sum[31]):1'b0);
 	
 endmodule

@@ -204,6 +204,7 @@ Instruction
 
 	reg[4:0] ALUtemp;
 	reg[4:0] ALUfunct;
+	//function interpreter
 	always @(funct) begin
 		case(funct)
 		ADD_funct:ALUfunct=alu_add;
@@ -225,6 +226,7 @@ Instruction
 		default:ALUfunct=5'bx;
 		endcase
 	end
+	//ALU coder
 	always @(*) begin
 		case(op)
 		BEQ_op:ALUtemp=alu_beq;
