@@ -10,3 +10,13 @@ xst -ise "C:/cod/COD-LAB28/ISE/MipsPipelineCPU.ise" -intstyle ise -ifn MipsPipel
 xst -ise "C:/cod/COD-LAB28/ISE/MipsPipelineCPU.ise" -intstyle ise -ifn MipsPipelineCPU.xst -ofn MipsPipelineCPU.syr
 xst -ise "C:/cod/COD-LAB28/ISE/MipsPipelineCPU.ise" -intstyle ise -ifn MipsPipelineCPU.xst -ofn MipsPipelineCPU.syr
 xst -ise "C:/cod/COD-LAB28/ISE/MipsPipelineCPU.ise" -intstyle ise -ifn MipsPipelineCPU.xst -ofn MipsPipelineCPU.syr
+xst -ise "C:/cod/COD-LAB28/ISE/MipsPipelineCPU.ise" -intstyle ise -ifn MipsPipelineCPU.xst -ofn MipsPipelineCPU.syr
+netgen -ise "C:/cod/COD-LAB28/ISE/MipsPipelineCPU.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim MipsPipelineCPU.ngc MipsPipelineCPU_synthesis.v
+ngdbuild -ise "C:/cod/COD-LAB28/ISE/MipsPipelineCPU.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc2vp30-ff896-7 "MipsPipelineCPU.ngc" MipsPipelineCPU.ngd
+map -ise "C:/cod/COD-LAB28/ISE/MipsPipelineCPU.ise" -intstyle ise -p xc2vp30-ff896-7 -cm area -pr b -k 4 -c 100 -tx off -o MipsPipelineCPU_map.ncd MipsPipelineCPU.ngd MipsPipelineCPU.pcf
+par -ise "C:/cod/COD-LAB28/ISE/MipsPipelineCPU.ise" -w -intstyle ise -ol std -t 1 MipsPipelineCPU_map.ncd MipsPipelineCPU.ncd MipsPipelineCPU.pcf
+trce -ise "C:/cod/COD-LAB28/ISE/MipsPipelineCPU.ise" -intstyle ise -e 3 -s 7 -xml MipsPipelineCPU MipsPipelineCPU.ncd -o MipsPipelineCPU.twr MipsPipelineCPU.pcf
+netgen -ise "C:/cod/COD-LAB28/ISE/MipsPipelineCPU.ise" -intstyle ise -s 7 -pcf MipsPipelineCPU.pcf -sdf_anno true -sdf_path netgen/par -insert_glbl true -insert_pp_buffers false -w -dir netgen/par -ofmt verilog -sim MipsPipelineCPU.ncd MipsPipelineCPU_timesim.v
+netgen -ise "C:/cod/COD-LAB28/ISE/MipsPipelineCPU.ise" -intstyle ise -insert_glbl true -w -dir netgen/translate -ofmt verilog -sim MipsPipelineCPU.ngd MipsPipelineCPU_translate.v
+netgen -ise "C:/cod/COD-LAB28/ISE/MipsPipelineCPU.ise" -intstyle ise -s 7 -pcf MipsPipelineCPU.pcf -sdf_anno true -sdf_path netgen/map -insert_glbl true -w -dir netgen/map -ofmt verilog -sim MipsPipelineCPU_map.ncd MipsPipelineCPU_map.v
+netgen -ise "C:/cod/COD-LAB28/ISE/MipsPipelineCPU.ise" -intstyle ise -s 7 -pcf MipsPipelineCPU.pcf -sdf_anno true -sdf_path netgen/par -insert_glbl true -insert_pp_buffers false -w -dir netgen/par -ofmt verilog -sim MipsPipelineCPU.ncd MipsPipelineCPU_timesim.v

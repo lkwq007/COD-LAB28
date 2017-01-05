@@ -1,0 +1,53 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\cod\COD-LAB28\ISE
+T_opt
+Vnh60@@YOB34E^Km^<7jEE0
+04 8 4 work top_tb_v fast 0
+04 4 4 work glbl fast 0
+Z1 =1-000c29a3f4b0-586cf267-234-950
+Z2 o-quiet -auto_acc_if_foreign -work work -L simprims_ver +maxdelays
+Z3 n@_opt
+Z4 OE;O;6.5;42
+vglbl
+Z5 IB;@1jEXmEfQXL`;Kf0IBZ3
+Z6 VnN]4Gon>inod6>M^M2[SV1
+Z7 w1179523376
+Z8 8C:/Xilinx92i/verilog/src/glbl.v
+Z9 FC:/Xilinx92i/verilog/src/glbl.v
+L0 5
+Z10 OE;L;6.5;42
+r1
+31
+Z11 o+acc -L mtiAvm -L mtiOvm -L mtiUPF
+Z12 !s100 T?5S;>bN`@zG_25]R_4A33
+!s85 0
+vMipsPipelineCPU
+Z13 ICBTB0Oo7z]Z9cUSdXb[c]2
+Z14 VjF@T?3159HM[[CD^bzQ<W1
+Z15 w1483534789
+Z16 8netgen/par/MipsPipelineCPU_timesim.v
+Z17 Fnetgen/par/MipsPipelineCPU_timesim.v
+L0 37
+R10
+r1
+31
+R11
+Z18 n@mips@pipeline@c@p@u
+Z19 !s100 IP`dR;VcdBl@@d4R[?O1J2
+!s85 0
+vtop_tb_v
+Z20 ITb^P9Jjk4<TYPZ24^0OVf0
+Z21 Vb`ho<^?2]17_>iDcjNoLk1
+Z22 w1481773620
+Z23 8../SIM/top/top_tb.v
+Z24 F../SIM/top/top_tb.v
+L0 25
+R10
+r1
+31
+R11
+Z25 !s100 mfo_hSE;6obEc7nM_M6GN0
+!s85 0

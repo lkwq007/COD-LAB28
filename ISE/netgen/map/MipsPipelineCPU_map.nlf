@@ -1,0 +1,29 @@
+Release 9.2i - netgen J.36
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+
+Command Line: netgen -intstyle ise -s 7 -pcf MipsPipelineCPU.pcf -sdf_anno true
+-sdf_path netgen/map -insert_glbl true -w -dir netgen/map -ofmt verilog -sim
+MipsPipelineCPU_map.ncd MipsPipelineCPU_map.v  
+
+Read and Annotate design 'MipsPipelineCPU_map.ncd' ...
+Loading device for application Rf_Device from file '2vp30.nph' in environment
+C:\Xilinx92i.
+   "MipsPipelineCPU" is an NCD, version 3.1, device xc2vp30, package ff896,
+speed -7
+Loading constraints from 'MipsPipelineCPU.pcf'...
+The speed grade (-7) differs from the speed grade specified in the .ncd file
+(-7).
+The number of routable networks is 1908
+Flattening design ...
+Processing design ... 
+  Preping design's networks ...
+  Preping design's macros ...
+Writing Verilog SDF file 'netgen\map\mipspipelinecpu_map.sdf' ...
+Writing Verilog netlist file
+'C:\cod\COD-LAB28\ISE\netgen\map\MipsPipelineCPU_map.v' ...
+INFO:NetListWriters:633 - The generated Verilog netlist contains Xilinx SIMPRIM
+   simulation primitives and has to be used with SIMPRIM simulation library for
+   correct compilation and simulation. 
+Number of warnings: 0
+Number of info messages: 1
+Total memory usage is 180776 kilobytes
