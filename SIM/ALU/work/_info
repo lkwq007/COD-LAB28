@@ -7,18 +7,18 @@ vadder_32bits
 VH3MfAaUBUHMniOHlZdcI;0
 r1
 31
-I<KTcoC2z_ia?[Z<@]nF671
+IB90lReG?PK:UNWazG0Z2E2
 Z0 dD:\Course\Computer-Organization\Homework\lab28\PipelineCPU\SIM\ALU
-w1477535173
+w1483530445
 8D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/adder_32bits.v
 FD:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/adder_32bits.v
 L0 14
 Z1 OL;L;10.1c;51
 Z2 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
 !s85 0
-!s100 UDZ@=[VzP2K0Z<;W?DR?T3
 !s90 -reportprogress|300|-work|work|-vopt|D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/adder_32bits.v|
-!s108 1481767281.174000
+!s100 WK1AI:<SW[DjoiFm[03Q00
+!s108 1483541372.883000
 !s107 D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/adder_32bits.v|
 !i10b 1
 vadder_4bits
@@ -27,7 +27,7 @@ r1
 31
 I>kcm^ZOPMTb13>8m?NI>V0
 Z3 dD:\Course\Computer-Organization\Homework\lab28\PipelineCPU\SIM\ALU
-w1477109818
+w1483530316
 8D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/adder_4bits.v
 FD:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/adder_4bits.v
 L0 14
@@ -36,16 +36,16 @@ R2
 !s85 0
 !s100 U>LXIM=Cnf;m7lO>dW;<^3
 !s90 -reportprogress|300|-work|work|-vopt|D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/adder_4bits.v|
-!s108 1481767280.926000
+!s108 1483541372.399000
 !s107 D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/adder_4bits.v|
 !i10b 1
 vALU
 VQnT0`R43FCATQnQRK9k:G2
 r1
 31
-I4PbA22mCbGd;K;eio_Mlz0
+I_]MlkV0[igoPMPC2VPG_41
 R3
-w1481767272
+w1483530585
 8D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/ALU.v
 FD:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/ALU.v
 L0 15
@@ -54,8 +54,8 @@ R2
 n@a@l@u
 !s85 0
 !s90 -reportprogress|300|-work|work|-vopt|D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/ALU.v|
-!s100 H0ZNhk>_8H_f>:TGcJPZP3
-!s108 1481767281.427000
+!s100 Pg=b;jFGdK8e[2UnYIPI@2
+!s108 1483541373.105000
 !s107 D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/ALU.v|
 !i10b 1
 vALU_tb_v
@@ -74,7 +74,7 @@ n@a@l@u_tb_v
 !s85 0
 !s100 B=fSMz2BM3gj`A6fj0HT00
 !s90 -reportprogress|300|-work|work|-vopt|D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SIM/ALU/ALU_tb.v|
-!s108 1481767281.612000
+!s108 1483541373.436000
 !s107 D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SIM/ALU/ALU_tb.v|
 !i10b 1
 vmux_2_to_1
@@ -93,5 +93,5 @@ R2
 !s100 cL3><ln`lb`U9T<gUU45Y3
 !s90 -reportprogress|300|-work|work|-vopt|D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/mux_2_to_1.v|
 !i10b 1
-!s108 1481767281.775000
+!s108 1483541373.667000
 !s107 D:/Course/Computer-Organization/Homework/lab28/PipelineCPU/SRC/mux_2_to_1.v|
