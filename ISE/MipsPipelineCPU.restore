@@ -763,35 +763,13 @@ proc restore { { project_dir "" } } {
     RestoreProjectSettings $iProjHelper $project_settings 
   } "A problem occured while restoring project settings."
 
-  set user_files { 
-      "../SIM/top/top_tb.v" 
-      "../SRC/ALU.v" 
-      "../SRC/Decode.v" 
-      "../SRC/EX.v" 
-      "../SRC/ID.v" 
-      "../SRC/IF.v" 
-      "../SRC/InstructionROM.v" 
-      "../SRC/MipsPipelineCPU.v" 
-      "../SRC/Registers.v" 
-      "../SRC/adder_32bits.v" 
-      "../SRC/adder_4bits.v" 
-      "../SRC/ff_lib.v" 
-      "../SRC/mux_2_to_1.v" 
-      "DataRAM.xco"}
+  set user_files {}
 
   HandleException {
     AddUserFiles $iProjHelper $user_files
   } "A problem occured while restoring user files."
 
-  set imported_files { 
-      "DataRAM.asy" 
-      "DataRAM.ngc" 
-      "DataRAM.sym" 
-      "DataRAM.v" 
-      "DataRAM.veo" 
-      "DataRAM.vhd" 
-      "DataRAM.vho" 
-      "MipsPipelineCPU_guide.ncd"}
+  set imported_files {}
 
   set origination 2
 
