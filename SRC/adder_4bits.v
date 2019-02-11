@@ -1,7 +1,7 @@
 //==================================================================================================
 //  Filename      : adder_4bits.v
 //  Created On    : 2016-10-15 17:02:18
-//  Last Modified : 2017-01-04 19:45:16
+//  Last Modified : 2019-02-11 21:44:55
 //  Revision      : 
 //  Author        : Lnyan
 //  Company       : College of Information Science and Electronic Engineering, Zhejiang University

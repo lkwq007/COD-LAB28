@@ -6,9 +6,8 @@
 // The ALU performs all the arithmetic/logical integer operations 
 // specified by the ALUsel from the decoder. 
 // 
-// verilog written QMJ
-// modified by Lnyan
-// modified by 
+// verilog written QMJ (module spec)
+// modified by Lnyan (implementation)
 //
 //******************************************************************************
 

@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Company: ZJU
+// Engineer: Lnyan
 // 
 // Create Date:	20:30:20 11/12/2009 
 // Design Name: 

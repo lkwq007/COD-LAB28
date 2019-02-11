@@ -1,7 +1,7 @@
 //==================================================================================================
 //  Filename      : mux_2_to_1.v
 //  Created On    : 2016-10-15 17:29:48
-//  Last Modified : 2016-10-22 12:45:28
+//  Last Modified : 2019-02-11 21:45:51
 //  Revision      : 
 //  Author        : Lnyan
 //  Company       : College of Information Science and Electronic Engineering, Zhejiang University
